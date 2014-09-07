@@ -144,7 +144,7 @@ To create a fluent interface,
 var flow = compute.flow();
 ```
 
-A `flow` pipeline must be initialized.
+A `flow` pipeline should be initialized.
 
 ``` javascript
 flow.value( data );
