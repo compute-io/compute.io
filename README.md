@@ -163,8 +163,29 @@ flow
 To return the flow `value`,
 
 ``` javascript
-console.log( flow.value() );
+var mean = flow.value();
 ```
+
+To help understand the transformations comprising a data pipeline, `flow` exposes an `inspect()` method, which logs the current `value` to the console while maintaining the fluent interface.
+
+``` javascript
+flow.inspect();
+```
+
+The above `flow` can be modified accordingly,
+
+``` javascript
+flow
+	.value( data )
+	.inspect()
+	.roundn( -3 )
+	.inspect()
+	.mean()
+	.inspect()
+	.roundn( 0 )
+	.inspect();
+```
+
 
 
 
