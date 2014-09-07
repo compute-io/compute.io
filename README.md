@@ -186,6 +186,24 @@ flow
 	.inspect();
 ```
 
+To summarize the `flow` API...
+
+#### flow.value( [value] )
+
+This method is a setter/getter. If no `value` is provided, returns the current flow `value`. If a `value` is provided, sets the flow `value`.
+
+``` javascript
+flow.value( [ 4, 3, 6, 2 ] );
+```
+
+
+#### flow.inspect()
+
+Logs the current flow `value` to the console, while maintaining the fluent interface.
+
+``` javascript
+flow.inspect();
+```
 
 
 
