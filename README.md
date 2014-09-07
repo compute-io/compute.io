@@ -11,6 +11,7 @@ Compute.io
 1. 	[Usage](#usage)
 	- 	[Utilities](#utilities)
 	- 	[Statistics](#statistics)
+1. 	[Fluent Interface](#fluent-interface)
 1. 	[Tests](#tests)
 	- 	[Unit](#unit)
 	-	[Coverage](#test-coverage)
@@ -122,6 +123,49 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.stdev( data ) );
 ```
+
+
+## Fluent Interface
+
+For data pipelines, invoking serial methods can become verbose.
+
+``` javascript
+data = compute.roundn( data, -3 );
+data = compute.mean( data );
+data = compute.roundn( 0 );
+...
+```
+
+[Fluent](http://en.wikipedia.org/wiki/Fluent_interface) interfaces can help alleviate this problem. Such interfaces have been popularized by libraries such as [jQuery](http://jquery.com) and [D3](http://d3js.org) which utilize method chaining.
+
+To create a fluent interface,
+
+``` javascript
+var flow = compute.flow();
+```
+
+A `flow` pipeline must be initialized.
+
+``` javascript
+flow.value( data );
+```
+
+Once initialized, all compute methods are now available. The lone difference is that data does not need to be explicitly passed as an argument. For example,
+
+``` javascript
+flow
+	.value( data )
+	.roundn( -3 )
+	.mean()
+	.roundn( 0 );
+```
+
+To return the flow `value`,
+
+``` javascript
+console.log( flow.value() );
+```
+
 
 
 ## Tests

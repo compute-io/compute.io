@@ -48,10 +48,6 @@ describe( 'compute.io', function tests() {
 		expect( compute ).to.be.an( 'object' );
 	});
 
-	it ( 'should only have the properties specified in the tests', function test() {
-		assert.strictEqual( Object.keys( compute ).length, properties.length );
-	});
-
 	// Run the property tests...
 	for ( var i = 0; i < properties.length; i++ ) {
 		test_property( properties[ i ] );
