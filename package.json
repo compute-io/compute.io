@@ -1,0 +1,58 @@
+{
+  "name": "compute.io",
+  "version": "0.0.0",
+  "description": "Computation library.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "kgryte@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "kgryte@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "test-cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coveralls/coverage --report lcovonly -- -R spec && cat ./reports/coveralls/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./reports/coveralls"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/compute-io/compute.io.git"
+  },
+  "keywords": [
+    "compute.io",
+    "compute",
+    "computation",
+    "statistics",
+    "stats",
+    "utilities",
+    "utils"
+  ],
+  "bugs": {
+    "url": "https://github.com/compute-io/compute.io/issues"
+  },
+  "dependencies": {
+    "compute-max": "0.0.0",
+    "compute-mean": "^1.0.0",
+    "compute-min": "0.0.0",
+    "compute-roundn": "^1.0.0",
+    "compute-stdev": "^1.0.0",
+    "compute-sum": "^1.0.0",
+    "compute-variance": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "1.x.x",
+    "coveralls": "^2.11.1",
+    "istanbul": "^0.3.0",
+    "mocha": "1.x.x"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ]
+}

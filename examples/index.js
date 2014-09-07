@@ -1,0 +1,1 @@
+var compute = require( './../lib' );
