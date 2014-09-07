@@ -150,7 +150,7 @@ A `flow` pipeline must be initialized.
 flow.value( data );
 ```
 
-Once initialized, all compute methods are now available. The lone difference is that data does not need to be explicitly passed as an argument. For example,
+Once initialized, all compute methods are now available. The lone difference is that data should __not__ be explicitly passed as an argument. For example,
 
 ``` javascript
 flow
