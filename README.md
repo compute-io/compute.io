@@ -40,7 +40,7 @@ The compute module has the following methods...
 
 #### [compute.roundn( x, n )](https://github.com/compute-io/roundn)
 
-Round values to the nearest multiple of 10^n. `x` may be either a single numeric value or an array of values. `n` must be an `integer`.
+Round values to the nearest multiple of `10^n`. `x` may be either a single numeric value or an array of values. `n` must be an `integer`.
 
 ``` javascript
 console.log( compute.roundn( Math.PI, -2 ) );
