@@ -53,4 +53,8 @@ describe( 'compute.io', function tests() {
 		test_property( properties[ i ] );
 	}
 
+	it( 'should have a fluent interface', function test() {
+		expect( compute.flow ).to.be.a( 'function' );
+	});
+
 });

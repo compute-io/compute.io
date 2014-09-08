@@ -132,7 +132,7 @@ For data pipelines, invoking serial methods can become verbose.
 ``` javascript
 data = compute.roundn( data, -3 );
 data = compute.mean( data );
-data = compute.roundn( 0 );
+data = compute.roundn( data, 0 );
 ...
 ```
 
@@ -205,6 +205,11 @@ Logs the current flow `value` to the console, while maintaining the fluent inter
 flow.inspect();
 ```
 
+
+## Notes
+
+1. 	When creating flows, ensure that the output from one computation matches the input argument requirements for the next computation.
+2. 	For large datasets, rather than loading datasets into memory, consider using file streams utilizing stream tools such as [Flow.io](https://github.com/flow-io/flow.io).
 
 
 ## Tests
