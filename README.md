@@ -209,7 +209,7 @@ flow.inspect();
 ## Notes
 
 1. 	When creating flows, ensure that the output from one computation matches the input argument requirements for the next computation.
-2. 	For large datasets, rather than loading datasets into memory, consider using file streams utilizing stream tools such as [Flow.io](https://github.com/flow-io/flow.io).
+2. 	For large datasets, rather than loading datasets into memory, consider using file streams and utilize stream tools such as [Flow.io](https://github.com/flow-io/flow.io).
 
 
 ## Tests
