@@ -38,6 +38,7 @@
     "compute-max": "0.0.0",
     "compute-mean": "^1.0.0",
     "compute-min": "0.0.0",
+    "compute-mode": "^1.0.0",
     "compute-roundn": "^1.0.0",
     "compute-stdev": "^1.0.0",
     "compute-sum": "^1.0.0",

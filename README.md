@@ -125,6 +125,17 @@ console.log( compute.stdev( data ) );
 ```
 
 
+#### [compute.mode( arr )](https://github.com/compute-io/mode)
+
+Computes the mode of an array.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.mode( data ) );
+```
+
+
 ## Fluent Interface
 
 For data pipelines, invoking serial methods can become verbose.

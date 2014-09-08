@@ -41,7 +41,8 @@ describe( 'compute.io', function tests() {
 			'sum',
 			'mean',
 			'variance',
-			'stdev'
+			'stdev',
+			'mode'
 		];
 
 	it( 'should export an object', function test() {
