@@ -43,6 +43,7 @@ describe( 'compute.io', function tests() {
 			'variance',
 			'stdev',
 			'mode',
+			'median',
 			'hypot',
 			'hamdist'
 		];

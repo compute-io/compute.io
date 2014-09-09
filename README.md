@@ -138,6 +138,18 @@ console.log( compute.mode( data ) );
 ```
 
 
+#### [compute.median( arr )](https://github.com/compute-io/median)
+
+Computes the median of an array.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.median( data ) );
+```
+
+
+
 ### Geometry
 
 #### [compute.hypot( a, b )](https://github.com/compute-io/hypot)

@@ -39,6 +39,7 @@
     "compute-hypot": "^1.0.0",
     "compute-max": "^1.0.0",
     "compute-mean": "^1.0.0",
+    "compute-median": "^1.0.0",
     "compute-min": "^1.0.0",
     "compute-mode": "^1.0.0",
     "compute-roundn": "^1.0.0",
