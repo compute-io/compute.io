@@ -149,6 +149,17 @@ console.log( compute.median( data ) );
 ```
 
 
+#### [compute.quantiles( arr, num )](https://github.com/compute-io/quantiles)
+
+Computes quantiles for an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.quantiles( data, 3 ) );
+```
+
+
 
 ### Geometry
 

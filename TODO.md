@@ -1,6 +1,10 @@
 TODO
 ====
 
+## General
+
+1. 	Method to throw all methods into the global namespace; compute.mean() --> mean(). How to prevent methods from getting clobbered?
+
 
 ## Fluent
 

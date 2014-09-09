@@ -44,6 +44,7 @@ describe( 'compute.io', function tests() {
 			'stdev',
 			'mode',
 			'median',
+			'quantiles',
 			'hypot',
 			'hamdist'
 		];
