@@ -11,6 +11,7 @@ Compute.io
 1. 	[Usage](#usage)
 	- 	[Utilities](#utilities)
 	- 	[Statistics](#statistics)
+	-	[Geometry](#geometry)
 1. 	[Fluent Interface](#fluent-interface)
 1. 	[Tests](#tests)
 	- 	[Unit](#unit)
@@ -134,6 +135,21 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.mode( data ) );
 ```
+
+
+### Geometry
+
+#### [compute.hypot( a, b )](https://github.com/compute-io/hypot)
+
+Computes the hypotenuse of a right triangle.
+
+``` javascript
+var a = 10,
+	b = 12;
+
+console.log( compute.hypot( a, b ) );
+```
+
 
 
 ## Fluent Interface
