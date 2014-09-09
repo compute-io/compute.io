@@ -35,6 +35,7 @@
     "url": "https://github.com/compute-io/compute.io/issues"
   },
   "dependencies": {
+    "compute-hamming": "^1.0.0",
     "compute-hypot": "^1.0.0",
     "compute-max": "^1.0.0",
     "compute-mean": "^1.0.0",

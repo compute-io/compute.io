@@ -43,7 +43,8 @@ describe( 'compute.io', function tests() {
 			'variance',
 			'stdev',
 			'mode',
-			'hypot'
+			'hypot',
+			'hamdist'
 		];
 
 	it( 'should export an object', function test() {

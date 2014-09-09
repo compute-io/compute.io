@@ -12,6 +12,7 @@ Compute.io
 	- 	[Utilities](#utilities)
 	- 	[Statistics](#statistics)
 	-	[Geometry](#geometry)
+	- 	[Information Theory](#information-theory)
 1. 	[Fluent Interface](#fluent-interface)
 1. 	[Tests](#tests)
 	- 	[Unit](#unit)
@@ -148,6 +149,25 @@ var a = 10,
 	b = 12;
 
 console.log( compute.hypot( a, b ) );
+```
+
+
+### Information Theory
+
+#### [compute.hamdist( a, b )](https://github.com/compute-io/hamming)
+
+Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) between two sequences of equal length.
+
+``` javascript
+var a = 'beep',
+	b = 'boop';
+
+console.log( compute.hamdist( a, b ) );
+
+var c = [ 4, 2, 3, 4 ],
+	d = [ 2, 4, 3, 1 ];
+
+console.log( compute.hamdist( c, d ) );
 ```
 
 
