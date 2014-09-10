@@ -38,6 +38,7 @@
     "compute-csum": "^1.0.0",
     "compute-hamming": "^1.0.0",
     "compute-hypot": "^1.0.0",
+    "compute-iqr": "^1.0.0",
     "compute-max": "^1.0.0",
     "compute-mean": "^1.0.0",
     "compute-median": "^1.0.0",
