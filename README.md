@@ -94,6 +94,18 @@ console.log( compute.sum( data ) );
 ```
 
 
+#### [compute.csum( arr )](https://github.com/compute-io/csum)
+
+Computes the cumulative sum of an array.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.csum( data ) );
+```
+
+
+
 #### [compute.mean( arr )](https://github.com/compute-io/mean)
 
 Computes the mean over an array of values.
@@ -102,6 +114,17 @@ Computes the mean over an array of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.mean( data ) );
+```
+
+#### [compute.wmean( arr, weights )](https://github.com/compute-io/wmean)
+
+Computes a weighted mean over an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ],
+	weights = [ 1, 2, 1, 4, 0 ];
+
+console.log( compute.wmean( data, weights ) );
 ```
 
 
