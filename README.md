@@ -194,6 +194,17 @@ console.log( compute.iqr( data ) );
 ```
 
 
+#### [compute.skewness( arr )](https://github.com/compute-io/skewness)
+
+Computes the skewness of an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.skewness( data ) );
+```
+
+
 
 ### Geometry
 
