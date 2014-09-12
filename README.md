@@ -196,12 +196,23 @@ console.log( compute.iqr( data ) );
 
 #### [compute.skewness( arr )](https://github.com/compute-io/skewness)
 
-Computes the skewness of an array of values.
+Computes the sample skewness of an array of values.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.skewness( data ) );
+```
+
+
+#### [compute.kurtosis( arr )](https://github.com/compute-io/kurtosis)
+
+Computes the sample excess kurtosis of an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.kurtosis( data ) );
 ```
 
 

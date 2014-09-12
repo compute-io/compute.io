@@ -49,6 +49,7 @@ describe( 'compute.io', function tests() {
 			'quantiles',
 			'iqr',
 			'skewness',
+			'kurtosis',
 			'hypot',
 			'hamdist'
 		];
