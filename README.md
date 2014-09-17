@@ -62,9 +62,9 @@ console.log( compute.roundn( data, -2 ) );
 
 ### Special Functions
 
-#### [compute.erf( arr )](https://github.com/compute-io/erf)
+#### [compute.erf( x )](https://github.com/compute-io/erf)
 
-Evaluates the error function for each value of an input `array`.
+Evaluates the error function, where `x` maybe be a single `numeric` value or an `array` of numeric values.
 
 ``` javascript
 var data = [ -10, -1, 0, 1, 10 ];
