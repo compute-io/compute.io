@@ -70,7 +70,6 @@ Evaluates the error function for each value of an input `array`.
 var data = [ -10, -1, 0, 1, 10 ];
 
 console.log( compute.erf( data ) );
-// Returns [...]
 ```
 
 
