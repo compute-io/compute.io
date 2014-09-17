@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "compute-csum": "^1.0.0",
+    "compute-erf": "^1.0.0",
     "compute-hamming": "^1.0.0",
     "compute-hypot": "^1.0.0",
     "compute-iqr": "^1.0.0",

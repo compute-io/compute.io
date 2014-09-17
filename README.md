@@ -10,6 +10,7 @@ Compute.io
 1. 	[Installation](#installation)
 1. 	[Usage](#usage)
 	- 	[Utilities](#utilities)
+	-	[Special Functions](#special-functions)
 	- 	[Statistics](#statistics)
 	-	[Geometry](#geometry)
 	- 	[Information Theory](#information-theory)
@@ -56,6 +57,20 @@ var data = [ 2.342, 4.943, 2.234, 7.992, 3.142 ];
 
 console.log( compute.roundn( data, -2 ) );
 // Returns [...] where each value is rounded to nearest hundredth
+```
+
+
+### Special Functions
+
+#### [compute.erf( arr )](https://github.com/compute-io/erf)
+
+Evaluates the error function for each value of an input `array`.
+
+``` javascript
+var data = [ -10, -1, 0, 1, 10 ];
+
+console.log( compute.erf( data ) );
+// Returns [...]
 ```
 
 

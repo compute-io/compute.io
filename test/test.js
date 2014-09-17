@@ -36,6 +36,7 @@ describe( 'compute.io', function tests() {
 
 	var properties = [
 			'roundn',
+			'erf',
 			'min',
 			'max',
 			'sum',
