@@ -73,6 +73,17 @@ console.log( compute.erf( data ) );
 ```
 
 
+#### [compute.erfc( x )](https://github.com/compute-io/erfc)
+
+Evaluates the complementary error function, where `x` maybe be a single `numeric` value or an `array` of numeric values.
+
+``` javascript
+var data = [ -10, -1, 0, 1, 10 ];
+
+console.log( compute.erfc( data ) );
+```
+
+
 ### Statistics
 
 #### [compute.min( arr )](https://github.com/compute-io/min)
