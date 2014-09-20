@@ -60,11 +60,22 @@ console.log( compute.roundn( data, -2 ) );
 ```
 
 
+#### [compute.polyval( coef, x )](https://github.com/compute-io/polynomial)
+
+Evaluates a polynomial with coefficients `coef`, where `x` may be a single `numeric` value or an `array` of numeric values.
+
+``` javascript
+var coef = [ 4, 2, 6, -17 ];
+
+console.log( compute.polyval( coef, [ 10, -3] ) );
+```
+
+
 ### Special Functions
 
 #### [compute.erf( x )](https://github.com/compute-io/erf)
 
-Evaluates the error function, where `x` maybe be a single `numeric` value or an `array` of numeric values.
+Evaluates the error function, where `x` may be a single `numeric` value or an `array` of numeric values.
 
 ``` javascript
 var data = [ -10, -1, 0, 1, 10 ];
@@ -75,7 +86,7 @@ console.log( compute.erf( data ) );
 
 #### [compute.erfc( x )](https://github.com/compute-io/erfc)
 
-Evaluates the complementary error function, where `x` maybe be a single `numeric` value or an `array` of numeric values.
+Evaluates the complementary error function, where `x` may be a single `numeric` value or an `array` of numeric values.
 
 ``` javascript
 var data = [ -10, -1, 0, 1, 10 ];

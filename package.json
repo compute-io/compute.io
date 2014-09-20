@@ -47,6 +47,7 @@
     "compute-median": "^1.0.0",
     "compute-min": "^1.0.0",
     "compute-mode": "^1.0.0",
+    "compute-polynomial": "^1.0.0",
     "compute-quantiles": "^1.0.0",
     "compute-roundn": "^1.0.0",
     "compute-skewness": "^1.0.0",
