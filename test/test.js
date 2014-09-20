@@ -40,6 +40,7 @@ describe( 'compute.io', function tests() {
 			'erf',
 			'erfc',
 			'erfinv',
+			'erfcinv',
 			'min',
 			'max',
 			'sum',

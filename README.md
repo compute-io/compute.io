@@ -105,6 +105,17 @@ console.log( compute.erfinv( data ) );
 ```
 
 
+#### [compute.erfcinv( x )](https://github.com/compute-io/erfcinv)
+
+Evaluates the inverse complementary error function, where `x` may be a single `numeric` value or an `array` of numeric values.
+
+``` javascript
+var data = [ 0, 0.5, 1, 1.5, 2 ];
+
+console.log( compute.erfcinv( data ) );
+```
+
+
 ### Statistics
 
 #### [compute.min( arr )](https://github.com/compute-io/min)
