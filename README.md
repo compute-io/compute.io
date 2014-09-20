@@ -94,6 +94,16 @@ var data = [ -10, -1, 0, 1, 10 ];
 console.log( compute.erfc( data ) );
 ```
 
+#### [compute.erfinv( x )](https://github.com/compute-io/erfinv)
+
+Evaluates the inverse error function, where `x` may be a single `numeric` value or an `array` of numeric values.
+
+``` javascript
+var data = [ -1, -0.5, 0, 0.5, 1 ];
+
+console.log( compute.erfinv( data ) );
+```
+
 
 ### Statistics
 

@@ -39,6 +39,7 @@ describe( 'compute.io', function tests() {
 			'polyval',
 			'erf',
 			'erfc',
+			'erfinv',
 			'min',
 			'max',
 			'sum',
