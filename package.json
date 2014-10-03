@@ -51,6 +51,7 @@
     "compute-mode": "^1.0.0",
     "compute-polynomial": "^1.0.0",
     "compute-quantiles": "^1.0.0",
+    "compute-reverse": "^1.0.0",
     "compute-roundn": "^1.0.0",
     "compute-skewness": "^1.0.0",
     "compute-stdev": "^1.0.0",

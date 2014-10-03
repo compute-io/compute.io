@@ -71,6 +71,20 @@ console.log( compute.polyval( coef, [ 10, -3] ) );
 ```
 
 
+#### [compute.reverse( arr )](https://github.com/compute-io/reverse)
+
+Reverses an `array` in place.
+
+``` javascript
+var arr = [ 1, 2, 3, 4 ];
+
+console.log( reverse( arr ) );
+// Returns [ 4, 3, 2, 1 ];
+```
+
+Note: the `array` is mutated.
+
+
 ### Special Functions
 
 #### [compute.erf( x )](https://github.com/compute-io/erf)

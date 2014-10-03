@@ -37,6 +37,7 @@ describe( 'compute.io', function tests() {
 	var properties = [
 			'roundn',
 			'polyval',
+			'reverse',
 			'erf',
 			'erfc',
 			'erfinv',
