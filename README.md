@@ -275,6 +275,17 @@ console.log( compute.stdev( data ) );
 ```
 
 
+#### [compute.nanstdev( arr )](https://github.com/compute-io/nanstdev)
+
+Computes the sample standard deviation over an array of values ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
+
+console.log( compute.nanstdev( data ) );
+```
+
+
 #### [compute.mode( arr )](https://github.com/compute-io/mode)
 
 Computes the mode of an array.

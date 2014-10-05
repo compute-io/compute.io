@@ -55,6 +55,7 @@ describe( 'compute.io', function tests() {
 			'variance',
 			'nanvariance',
 			'stdev',
+			'nanstdev',
 			'mode',
 			'median',
 			'quantiles',
