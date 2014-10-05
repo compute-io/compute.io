@@ -175,6 +175,16 @@ var data = [ 2, 4, 2, 7, 3 ];
 console.log( compute.sum( data ) );
 ```
 
+#### [compute.nansum( arr )](https://github.com/compute-io/nansum)
+
+Computes the sum of an array ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
+
+console.log( compute.nansum( data ) );
+```
+
 
 #### [compute.csum( arr )](https://github.com/compute-io/csum)
 

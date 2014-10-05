@@ -46,6 +46,7 @@ describe( 'compute.io', function tests() {
 			'min',
 			'max',
 			'sum',
+			'nansum',
 			'csum',
 			'mean',
 			'nanmean',
