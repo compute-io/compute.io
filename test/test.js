@@ -48,6 +48,7 @@ describe( 'compute.io', function tests() {
 			'sum',
 			'csum',
 			'mean',
+			'nanmean',
 			'wmean',
 			'variance',
 			'stdev',

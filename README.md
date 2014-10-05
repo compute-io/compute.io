@@ -198,6 +198,17 @@ var data = [ 2, 4, 2, 7, 3 ];
 console.log( compute.mean( data ) );
 ```
 
+#### [compute.nanmean( arr )](https://github.com/compute-io/nanmean)
+
+Computes the mean over an array of values ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
+
+console.log( compute.nanmean( data ) );
+```
+
+
 #### [compute.wmean( arr, weights )](https://github.com/compute-io/wmean)
 
 Computes a weighted mean over an array of values.
