@@ -87,6 +87,17 @@ Note: the `array` is mutated.
 
 ### Special Functions
 
+#### [compute.signum( x )](https://github.com/compute-io/signum)
+
+Evaluates the signum function, where `x` may be a single `numeric` value or an `array` of numeric values.
+
+``` javascript
+var data = [ -10, -1, -0, 0, 1, 10 ];
+
+console.log( compute.signum( data ) );
+```
+
+
 #### [compute.erf( x )](https://github.com/compute-io/erf)
 
 Evaluates the error function, where `x` may be a single `numeric` value or an `array` of numeric values.
