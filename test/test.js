@@ -45,6 +45,7 @@ describe( 'compute.io', function tests() {
 			'erfcinv',
 			'min',
 			'max',
+			'range',
 			'sum',
 			'nansum',
 			'csum',

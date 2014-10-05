@@ -165,6 +165,17 @@ console.log( compute.max( data ) );
 ```
 
 
+#### [compute.range( arr )](https://github.com/compute-io/range)
+
+Computes the arithmetic range of an array.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.range( data ) );
+```
+
+
 #### [compute.sum( arr )](https://github.com/compute-io/sum)
 
 Computes the sum of an array.
