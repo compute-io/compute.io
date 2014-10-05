@@ -253,6 +253,17 @@ console.log( compute.variance( data ) );
 ```
 
 
+#### [compute.nanvariance( arr )](https://github.com/compute-io/nanvariance)
+
+Computes the sample variance over an array of values ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
+
+console.log( compute.nanvariance( data ) );
+```
+
+
 #### [compute.stdev( arr )](https://github.com/compute-io/stdev)
 
 Computes the sample standard deviation over an array of values.
