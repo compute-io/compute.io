@@ -48,15 +48,15 @@ Rounds values to the nearest multiple of `10^n`. `x` may be either a single nume
 
 ``` javascript
 console.log( compute.roundn( Math.PI, -2 ) );
-// Returns 3.14
+// returns 3.14
 
 console.log( compute.roundn( 111, 2 ) );
-// Returns 100
+// returns 100
 
 var data = [ 2.342, 4.943, 2.234, 7.992, 3.142 ];
 
 console.log( compute.roundn( data, -2 ) );
-// Returns [...] where each value is rounded to nearest hundredth
+// returns [...] where each value is rounded to nearest hundredth
 ```
 
 
@@ -79,10 +79,25 @@ Reverses an `array` in place.
 var arr = [ 1, 2, 3, 4 ];
 
 console.log( reverse( arr ) );
-// Returns [ 4, 3, 2, 1 ];
+// returns [ 4, 3, 2, 1 ];
 ```
 
 Note: the `array` is mutated.
+
+
+#### [compute.diff( arr )](https://github.com/compute-io/diff)
+
+Calculates the differences between adjacent elements in an `array`.
+
+``` javascript
+var arr = [ 2, 1, 3, 4 ];
+
+console.log( diff( arr ) );
+// returns [ 1, -2, -1 ];
+```
+
+Note: the length of the returned `array` is one less than the length of the original `array`.
+
 
 
 ### Special Functions
@@ -498,7 +513,7 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
