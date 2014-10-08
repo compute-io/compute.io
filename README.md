@@ -257,6 +257,17 @@ console.log( compute.wmean( data, weights ) );
 ```
 
 
+#### [compute.gmean( arr )](https://github.com/compute-io/gmean)
+
+Computes the geometric mean over an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.gmean( data ) );
+```
+
+
 #### [compute.variance( arr )](https://github.com/compute-io/variance)
 
 Computes the sample variance over an array of values.

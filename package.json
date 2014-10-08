@@ -43,6 +43,7 @@
     "compute-erfc": "^1.0.0",
     "compute-erfcinv": "^1.0.0",
     "compute-erfinv": "^1.0.0",
+    "compute-gmean": "^1.0.0",
     "compute-hamming": "^1.0.0",
     "compute-hypot": "^1.0.0",
     "compute-iqr": "^1.0.0",
