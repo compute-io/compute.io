@@ -33,6 +33,7 @@ Compute.io
 		*	[gmean( arr )](#gmean)
 		*	[nangmean( arr )](#nangmean)
 		*	[hmean( arr )](#hmean)
+		*	[nanhmean( arr )](#nanhmean)
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
 		*	[stdev( arr )](#stdev)
@@ -337,6 +338,17 @@ Computes the harmonic mean over an array of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.hmean( data ) );
+```
+
+<a name="nanhmean"></a>
+#### [compute.nanhmean( arr )](https://github.com/compute-io/nanhmean)
+
+Computes the harmonic mean over an array of values ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
+
+console.log( compute.nanhmean( data ) );
 ```
 
 
