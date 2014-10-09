@@ -10,10 +10,42 @@ Compute.io
 1. 	[Installation](#installation)
 1. 	[Usage](#usage)
 	- 	[Utilities](#utilities)
+		* 	[roundn()](#roundn)
+		*	[polyval()](#polyval)
+		*	[reverse()](#reverse)
+		*	[diff()](#diff)
 	-	[Special Functions](#special-functions)
+		*	[signum()](#signum)
+		*	[erf()](#erf)
+		*	[erfc()](#erfc)
+		*	[erfinv()](#erfinv)
+		*	[erfcinv()](#erfcinv)
 	- 	[Statistics](#statistics)
+		*	[min()](#min)
+		*	[max()](#max)
+		*	[range()](#range)
+		*	[sum()](#sum)
+		*	[nansum()](#nansum)
+		*	[csum()](#csum)
+		*	[mean()](#mean)
+		*	[nanmean()](#nanmean)
+		*	[wmean()](#wmean)
+		*	[gmean()](#gmean)
+		*	[hmean()](#hmean)
+		*	[variance()](#variance)
+		*	[nanvariance()](#nanvariance)
+		*	[stdev()](#stdev)
+		*	[nanstdev()](#nanstdev)
+		*	[mode()](#mode)
+		*	[median()](#median)
+		*	[quantiles()](#quantiles)
+		*	[iqr()](#iqr)
+		*	[skewness()](#skewness)
+		*	[kurtosis()](#kurtosis)
 	-	[Geometry](#geometry)
+		*	[hypot()](#hypot)
 	- 	[Information Theory](#information-theory)
+		*	[hamdist()](#hamdist)
 1. 	[Fluent Interface](#fluent-interface)
 1. 	[Tests](#tests)
 	- 	[Unit](#unit)
@@ -42,6 +74,7 @@ The compute module has the following methods...
 
 ### Utilities
 
+<a name="roundn"></a>
 #### [compute.roundn( x, n )](https://github.com/compute-io/roundn)
 
 Rounds values to the nearest multiple of `10^n`. `x` may be either a single numeric value or an array of values. `n` must be an `integer`.
@@ -59,7 +92,7 @@ console.log( compute.roundn( data, -2 ) );
 // returns [...] where each value is rounded to nearest hundredth
 ```
 
-
+<a name="polyval"></a>
 #### [compute.polyval( coef, x )](https://github.com/compute-io/polynomial)
 
 Evaluates a polynomial with coefficients `coef`, where `x` may be a single `numeric` value or an `array` of numeric values.
@@ -71,6 +104,7 @@ console.log( compute.polyval( coef, [ 10, -3] ) );
 ```
 
 
+<a name="reverse"></a>
 #### [compute.reverse( arr )](https://github.com/compute-io/reverse)
 
 Reverses an `array` in place.
@@ -85,6 +119,7 @@ console.log( reverse( arr ) );
 Note: the `array` is mutated.
 
 
+<a name="diff"></a>
 #### [compute.diff( arr )](https://github.com/compute-io/diff)
 
 Calculates the differences between adjacent elements in an `array`.
@@ -102,6 +137,7 @@ Note: the length of the returned `array` is one less than the length of the orig
 
 ### Special Functions
 
+<a name="signum"></a>
 #### [compute.signum( x )](https://github.com/compute-io/signum)
 
 Evaluates the signum function, where `x` may be a single `numeric` value or an `array` of numeric values.
@@ -112,7 +148,7 @@ var data = [ -10, -1, -0, 0, 1, 10 ];
 console.log( compute.signum( data ) );
 ```
 
-
+<a name="erf"></a>
 #### [compute.erf( x )](https://github.com/compute-io/erf)
 
 Evaluates the error function, where `x` may be a single `numeric` value or an `array` of numeric values.
@@ -124,6 +160,7 @@ console.log( compute.erf( data ) );
 ```
 
 
+<a name="erfc"></a>
 #### [compute.erfc( x )](https://github.com/compute-io/erfc)
 
 Evaluates the complementary error function, where `x` may be a single `numeric` value or an `array` of numeric values.
@@ -134,6 +171,7 @@ var data = [ -10, -1, 0, 1, 10 ];
 console.log( compute.erfc( data ) );
 ```
 
+<a name="erfinv"></a>
 #### [compute.erfinv( x )](https://github.com/compute-io/erfinv)
 
 Evaluates the inverse error function, where `x` may be a single `numeric` value or an `array` of numeric values.
@@ -145,6 +183,7 @@ console.log( compute.erfinv( data ) );
 ```
 
 
+<a name="erfcinv"></a>
 #### [compute.erfcinv( x )](https://github.com/compute-io/erfcinv)
 
 Evaluates the inverse complementary error function, where `x` may be a single `numeric` value or an `array` of numeric values.
@@ -158,6 +197,7 @@ console.log( compute.erfcinv( data ) );
 
 ### Statistics
 
+<a name="min"></a>
 #### [compute.min( arr )](https://github.com/compute-io/min)
 
 Computes the minimum value of an array.
@@ -169,6 +209,7 @@ console.log( compute.min( data ) );
 ```
 
 
+<a name="max"></a>
 #### [compute.max( arr )](https://github.com/compute-io/max)
 
 Computes the maximum value of an array.
@@ -180,6 +221,7 @@ console.log( compute.max( data ) );
 ```
 
 
+<a name="range"></a>
 #### [compute.range( arr )](https://github.com/compute-io/range)
 
 Computes the arithmetic range of an array.
@@ -191,6 +233,7 @@ console.log( compute.range( data ) );
 ```
 
 
+<a name="sum"></a>
 #### [compute.sum( arr )](https://github.com/compute-io/sum)
 
 Computes the sum of an array.
@@ -201,6 +244,7 @@ var data = [ 2, 4, 2, 7, 3 ];
 console.log( compute.sum( data ) );
 ```
 
+<a name="nansum"></a>
 #### [compute.nansum( arr )](https://github.com/compute-io/nansum)
 
 Computes the sum of an array ignoring any non-numeric values.
@@ -212,6 +256,7 @@ console.log( compute.nansum( data ) );
 ```
 
 
+<a name="csum"></a>
 #### [compute.csum( arr )](https://github.com/compute-io/csum)
 
 Computes the cumulative sum of an array.
@@ -223,7 +268,7 @@ console.log( compute.csum( data ) );
 ```
 
 
-
+<a name="mean"></a>
 #### [compute.mean( arr )](https://github.com/compute-io/mean)
 
 Computes the mean over an array of values.
@@ -234,6 +279,7 @@ var data = [ 2, 4, 2, 7, 3 ];
 console.log( compute.mean( data ) );
 ```
 
+<a name="nanmean"></a>
 #### [compute.nanmean( arr )](https://github.com/compute-io/nanmean)
 
 Computes the mean over an array of values ignoring any non-numeric values.
@@ -245,6 +291,7 @@ console.log( compute.nanmean( data ) );
 ```
 
 
+<a name="wmean"></a>
 #### [compute.wmean( arr, weights )](https://github.com/compute-io/wmean)
 
 Computes a weighted mean over an array of values.
@@ -256,7 +303,7 @@ var data = [ 2, 4, 2, 7, 3 ],
 console.log( compute.wmean( data, weights ) );
 ```
 
-
+<a name="gmean"></a>
 #### [compute.gmean( arr )](https://github.com/compute-io/gmean)
 
 Computes the geometric mean over an array of values.
@@ -267,7 +314,7 @@ var data = [ 2, 4, 2, 7, 3 ];
 console.log( compute.gmean( data ) );
 ```
 
-
+<a name="hmean"></a>
 #### [compute.hmean( arr )](https://github.com/compute-io/hmean)
 
 Computes the harmonic mean over an array of values.
@@ -279,7 +326,7 @@ console.log( compute.hmean( data ) );
 ```
 
 
-
+<a name="variance"></a>
 #### [compute.variance( arr )](https://github.com/compute-io/variance)
 
 Computes the sample variance over an array of values.
@@ -291,6 +338,7 @@ console.log( compute.variance( data ) );
 ```
 
 
+<a name="nanvariance"></a>
 #### [compute.nanvariance( arr )](https://github.com/compute-io/nanvariance)
 
 Computes the sample variance over an array of values ignoring any non-numeric values.
@@ -302,6 +350,7 @@ console.log( compute.nanvariance( data ) );
 ```
 
 
+<a name="stdev"></a>
 #### [compute.stdev( arr )](https://github.com/compute-io/stdev)
 
 Computes the sample standard deviation over an array of values.
@@ -313,6 +362,7 @@ console.log( compute.stdev( data ) );
 ```
 
 
+<a name="nanstdev"></a>
 #### [compute.nanstdev( arr )](https://github.com/compute-io/nanstdev)
 
 Computes the sample standard deviation over an array of values ignoring any non-numeric values.
@@ -324,6 +374,7 @@ console.log( compute.nanstdev( data ) );
 ```
 
 
+<a name="mode"></a>
 #### [compute.mode( arr )](https://github.com/compute-io/mode)
 
 Computes the mode of an array.
@@ -335,6 +386,7 @@ console.log( compute.mode( data ) );
 ```
 
 
+<a name="median"></a>
 #### [compute.median( arr )](https://github.com/compute-io/median)
 
 Computes the median of an array.
@@ -346,6 +398,7 @@ console.log( compute.median( data ) );
 ```
 
 
+<a name="quantiles"></a>
 #### [compute.quantiles( arr, num )](https://github.com/compute-io/quantiles)
 
 Computes quantiles for an array of values.
@@ -357,6 +410,7 @@ console.log( compute.quantiles( data, 3 ) );
 ```
 
 
+<a name="iqr"></a>
 #### [compute.iqr( arr )](https://github.com/compute-io/iqr)
 
 Computes the interquartile range for an array of values.
@@ -368,6 +422,7 @@ console.log( compute.iqr( data ) );
 ```
 
 
+<a name="skewness"></a>
 #### [compute.skewness( arr )](https://github.com/compute-io/skewness)
 
 Computes the sample skewness of an array of values.
@@ -379,6 +434,7 @@ console.log( compute.skewness( data ) );
 ```
 
 
+<a name="kurtosis"></a>
 #### [compute.kurtosis( arr )](https://github.com/compute-io/kurtosis)
 
 Computes the sample excess kurtosis of an array of values.
@@ -393,6 +449,7 @@ console.log( compute.kurtosis( data ) );
 
 ### Geometry
 
+<a name="hypot"></a>
 #### [compute.hypot( a, b )](https://github.com/compute-io/hypot)
 
 Computes the hypotenuse of a right triangle.
@@ -407,6 +464,7 @@ console.log( compute.hypot( a, b ) );
 
 ### Information Theory
 
+<a name="hamdist"></a>
 #### [compute.hamdist( a, b )](https://github.com/compute-io/hamming)
 
 Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) between two sequences of equal length.
