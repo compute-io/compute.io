@@ -268,6 +268,18 @@ console.log( compute.gmean( data ) );
 ```
 
 
+#### [compute.hmean( arr )](https://github.com/compute-io/hmean)
+
+Computes the harmonic mean over an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.hmean( data ) );
+```
+
+
+
 #### [compute.variance( arr )](https://github.com/compute-io/variance)
 
 Computes the sample variance over an array of values.

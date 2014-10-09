@@ -45,6 +45,7 @@
     "compute-erfinv": "^1.0.0",
     "compute-gmean": "^1.0.0",
     "compute-hamming": "^1.0.0",
+    "compute-hmean": "^1.0.0",
     "compute-hypot": "^1.0.0",
     "compute-iqr": "^1.0.0",
     "compute-kurtosis": "^1.0.0",
