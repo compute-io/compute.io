@@ -31,6 +31,7 @@ Compute.io
 		*	[nanmean( arr )](#nanmean)
 		*	[wmean( arr, weights )](#wmean)
 		*	[gmean( arr )](#gmean)
+		*	[nangmean( arr )](#nangmean)
 		*	[hmean( arr )](#hmean)
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
@@ -313,6 +314,19 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.gmean( data ) );
 ```
+
+
+<a name="nangmean"></a>
+#### [compute.nangmean( arr )](https://github.com/compute-io/nangmean)
+
+Computes the geometric mean over an array of values ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
+
+console.log( compute.nangmean( data ) );
+```
+
 
 <a name="hmean"></a>
 #### [compute.hmean( arr )](https://github.com/compute-io/hmean)

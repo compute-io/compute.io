@@ -54,6 +54,7 @@ describe( 'compute.io', function tests() {
 			'nanmean',
 			'wmean',
 			'gmean',
+			'nangmean',
 			'hmean',
 			'variance',
 			'nanvariance',
