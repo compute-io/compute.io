@@ -55,7 +55,7 @@
     "compute-min": "^1.0.0",
     "compute-mode": "^1.0.0",
     "compute-nangmean": "^1.0.0",
-    "compute-nanhmean": "0.0.0",
+    "compute-nanhmean": "^1.0.0",
     "compute-nanmean": "^1.0.0",
     "compute-nanstdev": "^1.0.0",
     "compute-nansum": "^1.0.0",
