@@ -37,6 +37,7 @@ Compute.io
 		*	[nangmean( arr )](#nangmean)
 		*	[hmean( arr )](#hmean)
 		*	[nanhmean( arr )](#nanhmean)
+		*	[qmean( arr )](#qmean)
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
 		*	[stdev( arr )](#stdev)
@@ -377,6 +378,18 @@ Computes the harmonic mean over an `array` of values ignoring any non-numeric va
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
 console.log( compute.nanhmean( data ) );
+```
+
+
+<a name="qmean"></a>
+#### [compute.qmean( arr )](https://github.com/compute-io/qmean)
+
+Computes the quadratic mean (root mean square) over an `array` of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.qmean( data ) );
 ```
 
 

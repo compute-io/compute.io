@@ -66,6 +66,7 @@
     "compute-nansum": "^1.0.0",
     "compute-nanvariance": "^1.0.0",
     "compute-polynomial": "^1.0.0",
+    "compute-qmean": "^1.0.0",
     "compute-quantiles": "^1.0.0",
     "compute-range": "^1.0.0",
     "compute-reverse": "^1.0.0",
