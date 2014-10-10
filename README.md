@@ -20,6 +20,8 @@ Compute.io
 		*	[erfc( x )](#erfc)
 		*	[erfinv( x )](#erfinv)
 		*	[erfcinv( x )](#erfcinv)
+	-	[Linear Algebra](#linear-algebra)
+		* 	[l2norm( arr )](#l2norm)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[max( arr )](#max)
@@ -194,6 +196,20 @@ Evaluates the inverse complementary error function, where `x` may be a single `n
 var data = [ 0, 0.5, 1, 1.5, 2 ];
 
 console.log( compute.erfcinv( data ) );
+```
+
+
+### Linear Algebra
+
+<a name="l2norm"></a>
+#### [compute.l2norm( arr )](https://github.com/compute-io/l2norm)
+
+Computes the _L2_ norm (Euclidean norm) of an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.l2norm( data ) );
 ```
 
 
