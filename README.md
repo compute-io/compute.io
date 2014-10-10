@@ -38,6 +38,7 @@ Compute.io
 		*	[hmean( arr )](#hmean)
 		*	[nanhmean( arr )](#nanhmean)
 		*	[qmean( arr )](#qmean)
+		*	[nanqmean( arr )](#nanqmean)
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
 		*	[stdev( arr )](#stdev)
@@ -390,6 +391,18 @@ Computes the quadratic mean (root mean square) over an `array` of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.qmean( data ) );
+```
+
+
+<a name="nanqmean"></a>
+#### [compute.nanqmean( arr )](https://github.com/compute-io/nanqmean)
+
+Computes the quadratic mean (root mean square) over an `array` of values ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
+
+console.log( compute.nanqmean( data ) );
 ```
 
 

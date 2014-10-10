@@ -60,6 +60,7 @@ describe( 'compute.io', function tests() {
 			'hmean',
 			'nanhmean',
 			'qmean',
+			'nanqmean',
 			'variance',
 			'nanvariance',
 			'stdev',
