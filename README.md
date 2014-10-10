@@ -21,6 +21,7 @@ Compute.io
 		*	[erfinv( x )](#erfinv)
 		*	[erfcinv( x )](#erfcinv)
 	-	[Linear Algebra](#linear-algebra)
+		* 	[l1norm( arr )](#l1norm)
 		* 	[l2norm( arr )](#l2norm)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
@@ -200,6 +201,17 @@ console.log( compute.erfcinv( data ) );
 
 
 ### Linear Algebra
+
+<a name="l1norm"></a>
+#### [compute.l1norm( arr )](https://github.com/compute-io/l1norm)
+
+Computes the _L1_ norm (Manhattan/Taxicab norm) of an array of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.l1norm( data ) );
+```
 
 <a name="l2norm"></a>
 #### [compute.l2norm( arr )](https://github.com/compute-io/l2norm)
