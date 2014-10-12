@@ -239,6 +239,18 @@ var data = [ 2, 4, 2, -7, 3 ];
 console.log( compute.linfnorm( data ) );
 ```
 
+<a name="lpnorm"></a>
+#### [compute.lpnorm( arr[, p] )](https://github.com/compute-io/lpnorm)
+
+Computes the _Lp_ norm of an `array` of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+// Compute the L5 norm:
+console.log( compute.lpnorm( data, 5 ) );
+```
+
 
 ### Statistics
 
