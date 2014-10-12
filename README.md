@@ -24,6 +24,7 @@ Compute.io
 		* 	[l1norm( arr )](#l1norm)
 		* 	[l2norm( arr )](#l2norm)
 		* 	[linfnorm( arr )](#linfnorm)
+		* 	[lpnorm( arr )](#lpnorm)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[max( arr )](#max)
