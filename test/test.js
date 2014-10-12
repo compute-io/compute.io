@@ -46,6 +46,7 @@ describe( 'compute.io', function tests() {
 			'erfcinv',
 			'l1norm',
 			'l2norm',
+			'linfnorm',
 			'min',
 			'max',
 			'range',

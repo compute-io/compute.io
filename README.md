@@ -23,6 +23,7 @@ Compute.io
 	-	[Linear Algebra](#linear-algebra)
 		* 	[l1norm( arr )](#l1norm)
 		* 	[l2norm( arr )](#l2norm)
+		* 	[linfnorm( arr )](#linfnorm)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[max( arr )](#max)
@@ -224,6 +225,18 @@ Computes the _L2_ norm (Euclidean norm) of an `array` of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.l2norm( data ) );
+```
+
+
+<a name="linfnorm"></a>
+#### [compute.linfnorm( arr )](https://github.com/compute-io/linfnorm)
+
+Computes the infinity norm (Chebyshev/maximum/supremum/uniform norm) of an `array` of values.
+
+``` javascript
+var data = [ 2, 4, 2, -7, 3 ];
+
+console.log( compute.linfnorm( data ) );
 ```
 
 
