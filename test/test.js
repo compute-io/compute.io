@@ -56,6 +56,7 @@ describe( 'compute.io', function tests() {
 			'csum',
 			'mean',
 			'nanmean',
+			'incrmean',
 			'wmean',
 			'gmean',
 			'nangmean',

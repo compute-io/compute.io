@@ -16,6 +16,18 @@ TODO
 6. 	interdecile range (idr)
 7. 	truncated mean
 8. 	winsorized mean
+9. 	incrsum
+10. incrvariance
+11. incrmin
+12. incrmax
+13. incrkurtosis
+14. incrskewness
+15. incrwmean
+16. incrnanmean
+17. incrgmean
+18. incrhmean
+19. incrstdev
+20. 
 
 
 ## Fluent

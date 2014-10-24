@@ -34,6 +34,7 @@ Compute.io
 		*	[csum( arr )](#csum)
 		*	[mean( arr )](#mean)
 		*	[nanmean( arr )](#nanmean)
+		*	[incrmean()](#incrmean)
 		*	[wmean( arr, weights )](#wmean)
 		*	[gmean( arr )](#gmean)
 		*	[nangmean( arr )](#nangmean)
@@ -346,6 +347,25 @@ Computes the mean over an `array` of values ignoring any non-numeric values.
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
 console.log( compute.nanmean( data ) );
+```
+
+
+<a name="incrmean"></a>
+#### [compute.incrmean()](https://github.com/compute-io/incrmean)
+
+Returns a method to compute an arithmetic mean incrementally.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var mean = incrmean(),
+	mu;
+
+for ( var i = 0; i < data.length; i++ ) {
+	mu = mean( data[ i ] );
+	console.log( mu );
+}
+console.log( mean() );
 ```
 
 
