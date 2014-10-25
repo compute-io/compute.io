@@ -50,6 +50,7 @@ describe( 'compute.io', function tests() {
 			'lpnorm',
 			'min',
 			'max',
+			'incrmax',
 			'range',
 			'sum',
 			'nansum',

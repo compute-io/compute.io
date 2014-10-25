@@ -28,6 +28,7 @@ Compute.io
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[max( arr )](#max)
+		*	[incrmax()](#incrmax)
 		*	[range( arr )](#range)
 		*	[sum( arr )](#sum)
 		*	[nansum( arr )](#nansum)
@@ -283,6 +284,25 @@ console.log( compute.max( data ) );
 ```
 
 
+<a name="incrmax"></a>
+#### [compute.incrmax()](https://github.com/compute-io/incrmax)
+
+Returns a method to compute a maximum value incrementally.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var max = incrmax(),
+	m;
+
+for ( var i = 0; i < data.length; i++ ) {
+	m = max( data[ i ] );
+	console.log( m );
+}
+console.log( max() );
+```
+
+
 <a name="range"></a>
 #### [compute.range( arr )](https://github.com/compute-io/range)
 
@@ -351,7 +371,7 @@ console.log( compute.csum( data ) );
 <a name="mean"></a>
 #### [compute.mean( arr )](https://github.com/compute-io/mean)
 
-Computes the mean over an `array` of values.
+Computes the arithmetic mean over an `array` of values.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
@@ -362,7 +382,7 @@ console.log( compute.mean( data ) );
 <a name="nanmean"></a>
 #### [compute.nanmean( arr )](https://github.com/compute-io/nanmean)
 
-Computes the mean over an `array` of values ignoring any non-numeric values.
+Computes the arithmetic mean over an `array` of values ignoring any non-numeric values.
 
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];

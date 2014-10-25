@@ -16,10 +16,10 @@ TODO
 6. 	interdecile range (idr)
 7. 	truncated mean
 8. 	winsorized mean
-9. 	
+9. 	nanmedian
 10. nanmin
 11. incrmin
-12. incrmax
+12. 
 13. incrkurtosis
 14. incrskewness
 15. incrwmean
@@ -34,6 +34,11 @@ TODO
 24. incrnangmean
 25. incrnanhmean
 26. incrnansum
+27. incrwmean --> wmean( x, w )
+28. nanmode
+29. nanquantiles
+30. naniqr
+31. nanrange
 
 
 ## Fluent
