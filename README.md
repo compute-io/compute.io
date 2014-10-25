@@ -47,6 +47,7 @@ Compute.io
 		*	[incrvariance()](#incrvariance)
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
+		*	[incrstdev()](#incrstdev)
 		*	[mode( arr )](#mode)
 		*	[median( arr )](#median)
 		*	[quantiles( arr, num )](#quantiles)
@@ -516,6 +517,24 @@ Computes the sample standard deviation over an `array` of values ignoring any no
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
 console.log( compute.nanstdev( data ) );
+```
+
+<a name="incrstdev"></a>
+#### [compute.incrstdev()](https://github.com/compute-io/incrstdev)
+
+Returns a method to compute a sample standard deviation incrementally.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var stdev = incrstdev(),
+	sigma;
+
+for ( var i = 0; i < data.length; i++ ) {
+	sigma = stdev( data[ i ] );
+	console.log( sigma );
+}
+console.log( stdev() );
 ```
 
 

@@ -26,7 +26,7 @@ TODO
 16. incrnanmean
 17. incrgmean
 18. incrhmean
-19. incrstdev
+19. 
 20. 
 
 

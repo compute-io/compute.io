@@ -69,6 +69,7 @@ describe( 'compute.io', function tests() {
 			'incrvariance',
 			'stdev',
 			'nanstdev',
+			'incrstdev',
 			'mode',
 			'median',
 			'quantiles',
