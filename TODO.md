@@ -17,7 +17,7 @@ TODO
 7. 	truncated mean
 8. 	winsorized mean
 9. 	incrsum
-10. incrvariance
+10. 
 11. incrmin
 12. incrmax
 13. incrkurtosis

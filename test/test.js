@@ -66,6 +66,7 @@ describe( 'compute.io', function tests() {
 			'nanqmean',
 			'variance',
 			'nanvariance',
+			'incrvariance',
 			'stdev',
 			'nanstdev',
 			'mode',

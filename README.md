@@ -44,6 +44,7 @@ Compute.io
 		*	[nanqmean( arr )](#nanqmean)
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
+		*	[incrvariance()](#incrvariance)
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
 		*	[mode( arr )](#mode)
@@ -473,6 +474,24 @@ Computes the sample variance over an `array` of values ignoring any non-numeric 
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
 console.log( compute.nanvariance( data ) );
+```
+
+<a name="incrvariance"></a>
+#### [compute.incrvariance()](https://github.com/compute-io/incrvariance)
+
+Returns a method to compute a sample variance incrementally.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var variance = incrvariance(),
+	s2;
+
+for ( var i = 0; i < data.length; i++ ) {
+	s2 = variance( data[ i ] );
+	console.log( s2 );
+}
+console.log( variance() );
 ```
 
 

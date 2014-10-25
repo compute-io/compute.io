@@ -51,6 +51,7 @@
     "compute-hmean": "^1.0.0",
     "compute-hypot": "^1.0.0",
     "compute-incrmean": "^1.0.0",
+    "compute-incrvariance": "^1.0.0",
     "compute-iqr": "^1.0.0",
     "compute-kurtosis": "^1.0.0",
     "compute-l1norm": "^1.0.0",
