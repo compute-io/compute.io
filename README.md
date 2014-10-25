@@ -31,6 +31,7 @@ Compute.io
 		*	[range( arr )](#range)
 		*	[sum( arr )](#sum)
 		*	[nansum( arr )](#nansum)
+		*	[incrsum()](#incrsum)
 		*	[csum( arr )](#csum)
 		*	[mean( arr )](#mean)
 		*	[nanmean( arr )](#nanmean)
@@ -314,6 +315,24 @@ Computes the sum of an `array` ignoring any non-numeric values.
 var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
 
 console.log( compute.nansum( data ) );
+```
+
+<a name="incrsum"></a>
+#### [compute.incrsum()](https://github.com/compute-io/incrsum)
+
+Returns a method to compute a sum incrementally.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var sum = incrsum(),
+	s;
+
+for ( var i = 0; i < data.length; i++ ) {
+	s = sum( data[ i ] );
+	console.log( s );
+}
+console.log( sum() );
 ```
 
 
