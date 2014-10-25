@@ -52,6 +52,7 @@
     "compute-hypot": "^1.0.0",
     "compute-incrmax": "^1.0.0",
     "compute-incrmean": "^1.0.0",
+    "compute-incrmin": "^1.0.0",
     "compute-incrstdev": "^1.0.0",
     "compute-incrsum": "^1.0.0",
     "compute-incrvariance": "^1.0.0",

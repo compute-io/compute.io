@@ -27,6 +27,7 @@ Compute.io
 		* 	[lpnorm( arr )](#lpnorm)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
+		*	[incrmin()](#incrmin)
 		*	[max( arr )](#max)
 		*	[incrmax()](#incrmax)
 		*	[range( arr )](#range)
@@ -269,6 +270,24 @@ Computes the minimum value of an `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.min( data ) );
+```
+
+<a name="incrmin"></a>
+#### [compute.incrmin()](https://github.com/compute-io/incrmin)
+
+Returns a method to compute a minimum value incrementally.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var min = incrmin(),
+	m;
+
+for ( var i = 0; i < data.length; i++ ) {
+	m = min( data[ i ] );
+	console.log( m );
+}
+console.log( min() );
 ```
 
 

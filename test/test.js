@@ -49,6 +49,7 @@ describe( 'compute.io', function tests() {
 			'linfnorm',
 			'lpnorm',
 			'min',
+			'incrmin',
 			'max',
 			'incrmax',
 			'range',

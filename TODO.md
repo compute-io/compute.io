@@ -18,7 +18,7 @@ TODO
 8. 	winsorized mean
 9. 	nanmedian
 10. nanmin
-11. incrmin
+11. 
 12. 
 13. incrkurtosis
 14. incrskewness
