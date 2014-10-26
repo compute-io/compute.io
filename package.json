@@ -80,6 +80,7 @@
     "compute-range": "^1.0.0",
     "compute-reverse": "^1.0.0",
     "compute-roundn": "^1.0.0",
+    "compute-shuffle": "^1.0.0",
     "compute-signum": "^1.0.0",
     "compute-skewness": "^1.0.0",
     "compute-stdev": "^1.0.0",

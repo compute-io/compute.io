@@ -38,6 +38,7 @@ describe( 'compute.io', function tests() {
 			'roundn',
 			'polyval',
 			'reverse',
+			'shuffle',
 			'diff',
 			'signum',
 			'erf',

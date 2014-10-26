@@ -13,6 +13,7 @@ Compute.io
 		* 	[roundn( x, n )](#roundn)
 		*	[polyval( coef, x )](#polyval)
 		*	[reverse( arr )](#reverse)
+		*	[shuffle( arr )](#shuffle)
 		*	[diff( arr )](#diff)
 	-	[Special Functions](#special-functions)
 		*	[signum( x )](#signum)
@@ -129,6 +130,20 @@ var arr = [ 1, 2, 3, 4 ];
 
 console.log( reverse( arr ) );
 // returns [ 4, 3, 2, 1 ];
+```
+
+Note: the `array` is mutated.
+
+
+<a name="shuffle"></a>
+#### [compute.shuffle( arr )](https://github.com/compute-io/shuffle)
+
+Generates a random permutation (shuffles) an `array` in place.
+
+``` javascript
+var arr = [ 1, 2, 3, 4 ];
+
+console.log( shuffle( arr ) );
 ```
 
 Note: the `array` is mutated.
