@@ -57,6 +57,7 @@ describe( 'compute.io', function tests() {
 			'sum',
 			'nansum',
 			'incrsum',
+			'msum',
 			'csum',
 			'mean',
 			'nanmean',

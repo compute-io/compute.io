@@ -35,6 +35,7 @@ Compute.io
 		*	[sum( arr )](#sum)
 		*	[nansum( arr )](#nansum)
 		*	[incrsum()](#incrsum)
+		*	[msum( arr, window )](#msum)
 		*	[csum( arr )](#csum)
 		*	[mean( arr )](#mean)
 		*	[nanmean( arr )](#nanmean)
@@ -387,6 +388,18 @@ for ( var i = 0; i < data.length; i++ ) {
 	console.log( s );
 }
 console.log( sum() );
+```
+
+
+<a name="msum"></a>
+#### [compute.msum( arr, window )](https://github.com/compute-io/msum)
+
+Computes a moving sum over a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.msum( data, 2 ) );
 ```
 
 
