@@ -40,6 +40,7 @@ Compute.io
 		*	[mean( arr )](#mean)
 		*	[nanmean( arr )](#nanmean)
 		*	[incrmean()](#incrmean)
+		*	[mmean( arr, window )](#mmean)
 		*	[wmean( arr, weights )](#wmean)
 		*	[gmean( arr )](#gmean)
 		*	[nangmean( arr )](#nangmean)
@@ -139,7 +140,7 @@ Note: the `array` is mutated.
 <a name="shuffle"></a>
 #### [compute.shuffle( arr )](https://github.com/compute-io/shuffle)
 
-Generates a random permutation (shuffles) an `array` in place.
+Generates a random permutation of (shuffles) an `array` in place.
 
 ``` javascript
 var arr = [ 1, 2, 3, 4 ];
@@ -454,6 +455,18 @@ for ( var i = 0; i < data.length; i++ ) {
 	console.log( mu );
 }
 console.log( mean() );
+```
+
+
+<a name="mmean"></a>
+#### [compute.mmean( arr, window )](https://github.com/compute-io/mmean)
+
+Computes a moving arithmetic mean (sliding window average) over a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.mmean( data, 2 ) );
 ```
 
 

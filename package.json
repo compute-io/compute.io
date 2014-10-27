@@ -66,6 +66,7 @@
     "compute-mean": "^1.0.0",
     "compute-median": "^1.0.0",
     "compute-min": "^1.0.0",
+    "compute-mmean": "^1.0.0",
     "compute-mode": "^1.0.0",
     "compute-msum": "^1.0.0",
     "compute-nangmean": "^1.0.0",

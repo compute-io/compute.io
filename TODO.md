@@ -18,8 +18,8 @@ TODO
 8. 	winsorized mean
 9. 	nanmedian
 10. nanmin
-11. 
-12. 
+11. incrmmean
+12. incrmsum
 13. incrkurtosis
 14. incrskewness
 15. incrwmean
@@ -39,6 +39,10 @@ TODO
 29. nanquantiles
 30. naniqr
 31. nanrange
+32. incrmmax
+33. incrmmin
+34. incrmvariance
+35. incrmstdev
 
 
 ## Fluent
