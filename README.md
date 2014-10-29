@@ -32,6 +32,7 @@ Compute.io
 		*	[mmin( arr, window )](#mmin)
 		*	[max( arr )](#max)
 		*	[incrmax()](#incrmax)
+		*	[mmax( arr, window )](#mmax)
 		*	[range( arr )](#range)
 		*	[sum( arr )](#sum)
 		*	[nansum( arr )](#nansum)
@@ -348,6 +349,17 @@ for ( var i = 0; i < data.length; i++ ) {
 	console.log( m );
 }
 console.log( max() );
+```
+
+<a name="mmax"></a>
+#### [compute.mmax( arr, window )](https://github.com/compute-io/mmax)
+
+Computes a moving maximum over a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.mmax( data, 2 ) );
 ```
 
 

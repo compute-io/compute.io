@@ -54,6 +54,7 @@ describe( 'compute.io', function tests() {
 			'mmin',
 			'max',
 			'incrmax',
+			'mmax',
 			'range',
 			'sum',
 			'nansum',
