@@ -29,6 +29,7 @@ Compute.io
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[incrmin()](#incrmin)
+		*	[mmin( arr, window )](#mmin)
 		*	[max( arr )](#max)
 		*	[incrmax()](#incrmax)
 		*	[range( arr )](#range)
@@ -305,6 +306,17 @@ for ( var i = 0; i < data.length; i++ ) {
 	console.log( m );
 }
 console.log( min() );
+```
+
+<a name="mmin"></a>
+#### [compute.mmin( arr, window )](https://github.com/compute-io/mmin)
+
+Computes a moving minimum over a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.mmin( data, 2 ) );
 ```
 
 

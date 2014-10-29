@@ -51,6 +51,7 @@ describe( 'compute.io', function tests() {
 			'lpnorm',
 			'min',
 			'incrmin',
+			'mmin',
 			'max',
 			'incrmax',
 			'range',
