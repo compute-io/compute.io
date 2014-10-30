@@ -47,3 +47,4 @@ Desktop.ini
 #############
 .jshintrc
 .travis.yml
+.editorconfig
