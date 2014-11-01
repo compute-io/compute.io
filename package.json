@@ -89,6 +89,7 @@
     "compute-skewness": "^1.0.0",
     "compute-stdev": "^1.0.0",
     "compute-sum": "^1.0.0",
+    "compute-unique": "^1.0.0",
     "compute-variance": "^1.0.0",
     "compute-wmean": "^1.0.0"
   },

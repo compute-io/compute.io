@@ -21,6 +21,8 @@ Compute.io
 		*	[erfc( x )](#erfc)
 		*	[erfinv( x )](#erfinv)
 		*	[erfcinv( x )](#erfcinv)
+	- 	[Sets](#sets)
+		*	[unique( arr, sorted )](#unique)
 	-	[Linear Algebra](#linear-algebra)
 		* 	[l1norm( arr )](#l1norm)
 		* 	[l2norm( arr )](#l2norm)
@@ -227,6 +229,23 @@ var data = [ 0, 0.5, 1, 1.5, 2 ];
 
 console.log( compute.erfcinv( data ) );
 ```
+
+
+### Sets
+
+<a name="unique"></a>
+#### [compute.unique( arr[, sorted] )](https://github.com/compute-io/unique)
+
+Removes duplicate values from a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.unique( data ) );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+
 
 
 ### Linear Algebra
