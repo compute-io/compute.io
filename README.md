@@ -60,6 +60,7 @@ Compute.io
 		*	[incrstdev()](#incrstdev)
 		*	[mode( arr )](#mode)
 		*	[median( arr )](#median)
+		*	[quantile( arr, p, opts )](#quantile)
 		*	[quantiles( arr, num )](#quantiles)
 		*	[iqr( arr )](#iqr)
 		*	[skewness( arr )](#skewness)
@@ -236,7 +237,7 @@ console.log( compute.erfcinv( data ) );
 <a name="unique"></a>
 #### [compute.unique( arr[, sorted] )](https://github.com/compute-io/unique)
 
-Removes duplicate values from a numeric `array`.
+Removes duplicate values to determine the subset containing all unique values of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
@@ -701,6 +702,30 @@ Computes the median of an `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.median( data ) );
+```
+
+
+<a name="quantile"></a>
+#### [compute.quantile( arr, p[, opts] )](https://github.com/compute-io/quantile)
+
+Computes a quantile for an `array` of values.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.quantile( data, 0.25 ) );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
+
+``` javascript
+var opts = {
+	'sorted': true
+};
+
+var data = [ 2, 2, 3, 4, 7 ];
+
+console.log( compute.quantile( data, 0.25, opts ) );
 ```
 
 

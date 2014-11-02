@@ -13,7 +13,7 @@ TODO
 3. 	midsummary
 4. 	iqm
 5. 	midrange
-6. 	interdecile range (idr)
+6. 	
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian
@@ -43,6 +43,15 @@ TODO
 33. incrmmin
 34. incrmvariance
 35. incrmstdev
+36. cmin
+37. cmax
+38. mean deviation
+39. cumulative mean deviation
+40. repmat
+41. mean absolute deviation
+42. z-score
+43. linear regression
+44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
 
 
 ## Fluent

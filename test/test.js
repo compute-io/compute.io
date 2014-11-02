@@ -81,6 +81,7 @@ describe( 'compute.io', function tests() {
 			'incrstdev',
 			'mode',
 			'median',
+			'quantile',
 			'quantiles',
 			'iqr',
 			'skewness',
