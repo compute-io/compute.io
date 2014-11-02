@@ -1,6 +1,6 @@
 {
   "name": "compute.io",
-  "version": "0.45.0",
+  "version": "0.46.0",
   "description": "Computation library.",
   "author": {
     "name": "Athan Reines",
