@@ -61,7 +61,7 @@ Compute.io
 		*	[mode( arr )](#mode)
 		*	[median( arr )](#median)
 		*	[quantile( arr, p, opts )](#quantile)
-		*	[quantiles( arr, num )](#quantiles)
+		*	[quantiles( arr, num, opts )](#quantiles)
 		*	[iqr( arr, opts )](#iqr)
 		*	[idr( arr, opts )](#idr)
 		*	[skewness( arr )](#skewness)
@@ -731,7 +731,7 @@ console.log( compute.quantile( data, 0.25, opts ) );
 
 
 <a name="quantiles"></a>
-#### [compute.quantiles( arr, num )](https://github.com/compute-io/quantiles)
+#### [compute.quantiles( arr, num[, opts] )](https://github.com/compute-io/quantiles)
 
 Computes quantiles for an `array` of values.
 
@@ -739,6 +739,18 @@ Computes quantiles for an `array` of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.quantiles( data, 3 ) );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
+
+``` javascript
+var opts = {
+	'sorted': true
+};
+
+var data = [ 2, 2, 3, 4, 7 ];
+
+console.log( compute.quantiles( data, 2, opts ) );
 ```
 
 
