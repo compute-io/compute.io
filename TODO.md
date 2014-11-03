@@ -52,6 +52,7 @@ TODO
 42. z-score
 43. linear regression
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
+45. update quantiles to include opts argument.
 
 
 ## Fluent

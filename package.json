@@ -50,7 +50,7 @@
     "compute-hamming": "^1.0.0",
     "compute-hmean": "^1.0.0",
     "compute-hypot": "^1.0.0",
-    "compute-idr": "^1.0.0",
+    "compute-idr": "^1.0.1",
     "compute-incrmax": "^1.0.0",
     "compute-incrmean": "^1.0.0",
     "compute-incrmin": "^1.0.0",

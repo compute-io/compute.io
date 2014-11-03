@@ -63,7 +63,7 @@ Compute.io
 		*	[quantile( arr, p, opts )](#quantile)
 		*	[quantiles( arr, num )](#quantiles)
 		*	[iqr( arr )](#iqr)
-		*	[idr( arr, sorted )](#idr)
+		*	[idr( arr, opts )](#idr)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
 	-	[Geometry](#geometry)
@@ -755,7 +755,7 @@ console.log( compute.iqr( data ) );
 
 
 <a name="idr"></a>
-#### [compute.idr( arr[, sorted] )](https://github.com/compute-io/idr)
+#### [compute.idr( arr[, opts] )](https://github.com/compute-io/idr)
 
 Computes the interdecile range for an `array` of values.
 
@@ -765,7 +765,7 @@ var data = [ 2, 4, 2, 7, 3 ];
 console.log( compute.idr( data ) );
 ```
 
-If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
 
 
 
