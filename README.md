@@ -743,7 +743,7 @@ console.log( compute.quantiles( data, 3 ) );
 
 
 <a name="iqr"></a>
-#### [compute.iqr( arr, opts )](https://github.com/compute-io/iqr)
+#### [compute.iqr( arr[, opts] )](https://github.com/compute-io/iqr)
 
 Computes the interquartile range for an `array` of values.
 
