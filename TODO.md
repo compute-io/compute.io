@@ -9,7 +9,7 @@ TODO
 ## Functions
 
 1. 	trimean
-2. 	midhinge
+2. 	
 3. 	midsummary
 4. 	iqm
 5. 	midrange
@@ -52,7 +52,7 @@ TODO
 42. z-score
 43. linear regression
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
-45. 
+45. moving median (polish)
 
 
 ## Fluent

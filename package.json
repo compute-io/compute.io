@@ -66,6 +66,7 @@
     "compute-max": "^1.0.0",
     "compute-mean": "^1.0.0",
     "compute-median": "^1.1.0",
+    "compute-midhinge": "^1.0.1",
     "compute-min": "^1.0.0",
     "compute-mmax": "^1.0.0",
     "compute-mmean": "^1.0.0",

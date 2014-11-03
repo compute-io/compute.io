@@ -64,6 +64,7 @@ Compute.io
 		*	[quantiles( arr, num, opts )](#quantiles)
 		*	[iqr( arr, opts )](#iqr)
 		*	[idr( arr, opts )](#idr)
+		*	[midhinge( arr, opts )](#midhinge)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
 	-	[Geometry](#geometry)
@@ -759,7 +760,7 @@ console.log( compute.quantiles( data, 2, opts ) );
 <a name="iqr"></a>
 #### [compute.iqr( arr[, opts] )](https://github.com/compute-io/iqr)
 
-Computes the interquartile range for an `array` of values.
+Computes the interquartile range of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
@@ -773,12 +774,26 @@ If the input `array` is already sorted in __ascending__ order, set the `sorted` 
 <a name="idr"></a>
 #### [compute.idr( arr[, opts] )](https://github.com/compute-io/idr)
 
-Computes the interdecile range for an `array` of values.
+Computes the interdecile range of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.idr( data ) );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
+
+
+<a name="midhinge"></a>
+#### [compute.midhinge( arr[, opts] )](https://github.com/compute-io/midhinge)
+
+Computes the midhinge of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.midhinge( data ) );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
