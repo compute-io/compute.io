@@ -62,7 +62,7 @@ Compute.io
 		*	[median( arr )](#median)
 		*	[quantile( arr, p, opts )](#quantile)
 		*	[quantiles( arr, num )](#quantiles)
-		*	[iqr( arr )](#iqr)
+		*	[iqr( arr, opts )](#iqr)
 		*	[idr( arr, opts )](#idr)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
@@ -743,7 +743,7 @@ console.log( compute.quantiles( data, 3 ) );
 
 
 <a name="iqr"></a>
-#### [compute.iqr( arr )](https://github.com/compute-io/iqr)
+#### [compute.iqr( arr, opts )](https://github.com/compute-io/iqr)
 
 Computes the interquartile range for an `array` of values.
 
@@ -752,6 +752,8 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.iqr( data ) );
 ```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
 
 
 <a name="idr"></a>
