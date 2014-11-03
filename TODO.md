@@ -9,11 +9,11 @@ TODO
 ## Functions
 
 1. 	trimean
-2. 	
+2. 	upper semi-midmean (umidmean)
 3. 	midsummary
-4. 	iqm
+4. 	
 5. 	midrange
-6. 	
+6. 	lower semi-midmean (lmidmean)
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian

@@ -65,6 +65,7 @@ Compute.io
 		*	[iqr( arr, opts )](#iqr)
 		*	[idr( arr, opts )](#idr)
 		*	[midhinge( arr, opts )](#midhinge)
+		*	[midmean( arr, sorted )](#midmean)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
 	-	[Geometry](#geometry)
@@ -797,6 +798,21 @@ console.log( compute.midhinge( data ) );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
+
+
+
+<a name="midmean"></a>
+#### [compute.midmean( arr[, sorted] )](https://github.com/compute-io/midmean)
+
+Computes the midmean of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+console.log( compute.midmean( data ) );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
 
 
 
