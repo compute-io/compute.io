@@ -59,7 +59,7 @@ Compute.io
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
 		*	[mode( arr )](#mode)
-		*	[median( arr )](#median)
+		*	[median( arr, sorted )](#median)
 		*	[quantile( arr, p, opts )](#quantile)
 		*	[quantiles( arr, num, opts )](#quantiles)
 		*	[iqr( arr, opts )](#iqr)
@@ -695,7 +695,7 @@ console.log( compute.mode( data ) );
 
 
 <a name="median"></a>
-#### [compute.median( arr )](https://github.com/compute-io/median)
+#### [compute.median( arr[, sorted] )](https://github.com/compute-io/median)
 
 Computes the median of an `array`.
 
@@ -704,6 +704,8 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 console.log( compute.median( data ) );
 ```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
 
 
 <a name="quantile"></a>
