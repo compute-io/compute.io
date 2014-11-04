@@ -48,11 +48,17 @@ TODO
 38. mean deviation
 39. cumulative mean deviation
 40. repmat
-41. mean absolute deviation
+41. mean/median absolute deviation
+	- mad( arr, opts )
+		- 
 42. z-score
 43. linear regression
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
 45. moving median (polish)
+46. absolute deviation (absdev)
+	- 	absdev( arr )
+47. Holt-Winters time series forecasting algorithm
+
 
 
 ## Fluent

@@ -40,8 +40,10 @@
     "url": "https://github.com/compute-io/compute.io/issues"
   },
   "dependencies": {
+    "compute-add": "^1.0.1",
     "compute-csum": "^1.0.0",
     "compute-diff": "^1.0.0",
+    "compute-divide": "^1.0.0",
     "compute-erf": "^1.1.0",
     "compute-erfc": "^1.0.0",
     "compute-erfcinv": "^1.0.0",
@@ -74,6 +76,7 @@
     "compute-mmin": "^1.0.0",
     "compute-mode": "^1.0.0",
     "compute-msum": "^1.0.0",
+    "compute-multiply": "^1.0.0",
     "compute-nangmean": "^1.0.0",
     "compute-nanhmean": "^1.0.0",
     "compute-nanmean": "^1.0.0",
@@ -92,6 +95,7 @@
     "compute-signum": "^1.0.0",
     "compute-skewness": "^1.0.0",
     "compute-stdev": "^1.0.0",
+    "compute-subtract": "^1.0.1",
     "compute-sum": "^1.0.0",
     "compute-unique": "^1.0.0",
     "compute-variance": "^1.0.0",

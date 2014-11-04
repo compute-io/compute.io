@@ -21,6 +21,11 @@ Compute.io
 		*	[erfc( x )](#erfc)
 		*	[erfinv( x )](#erfinv)
 		*	[erfcinv( x )](#erfcinv)
+	- 	[Arithmetic](#arithmetic)
+		*	[add( arr, x )](#add)
+		*	[subtract( arr, x )](#subtract)
+		*	[multiply( arr, x )](#multiply)
+		*	[divide( arr, x )](#divide)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	-	[Linear Algebra](#linear-algebra)
@@ -106,17 +111,20 @@ The compute module has the following methods...
 Rounds values to the nearest multiple of `10^n`. `x` may be either a single numeric value or an array of values. `n` must be an `integer`.
 
 ``` javascript
-console.log( compute.roundn( Math.PI, -2 ) );
+compute.roundn( Math.PI, -2 );
 // returns 3.14
 
-console.log( compute.roundn( 111, 2 ) );
+compute.roundn( 111, 2 );
 // returns 100
 
 var data = [ 2.342, 4.943, 2.234, 7.992, 3.142 ];
 
-console.log( compute.roundn( data, -2 ) );
+compute.roundn( data, -2 );
 // returns [...] where each value is rounded to nearest hundredth
 ```
+
+Note: if provided an `array`, the `array` is mutated.
+
 
 <a name="polyval"></a>
 #### [compute.polyval( coef, x )](https://github.com/compute-io/polynomial)
@@ -126,7 +134,7 @@ Evaluates a polynomial with coefficients `coef`, where `x` may be a single `nume
 ``` javascript
 var coef = [ 4, 2, 6, -17 ];
 
-console.log( compute.polyval( coef, [ 10, -3] ) );
+compute.polyval( coef, [ 10, -3] );
 ```
 
 
@@ -138,7 +146,7 @@ Reverses an `array` in place.
 ``` javascript
 var arr = [ 1, 2, 3, 4 ];
 
-console.log( reverse( arr ) );
+reverse( arr );
 // returns [ 4, 3, 2, 1 ];
 ```
 
@@ -153,7 +161,7 @@ Generates a random permutation of (shuffles) an `array` in place.
 ``` javascript
 var arr = [ 1, 2, 3, 4 ];
 
-console.log( shuffle( arr ) );
+shuffle( arr );
 ```
 
 Note: the `array` is mutated.
@@ -167,7 +175,7 @@ Calculates the differences between adjacent elements in an `array`.
 ``` javascript
 var arr = [ 2, 1, 3, 4 ];
 
-console.log( diff( arr ) );
+diff( arr );
 // returns [ 1, -2, -1 ];
 ```
 
@@ -185,7 +193,7 @@ Evaluates the signum function, where `x` may be a single `numeric` value or an `
 ``` javascript
 var data = [ -10, -1, -0, 0, 1, 10 ];
 
-console.log( compute.signum( data ) );
+compute.signum( data );
 ```
 
 <a name="erf"></a>
@@ -196,7 +204,7 @@ Evaluates the error function, where `x` may be a single `numeric` value or an `a
 ``` javascript
 var data = [ -10, -1, 0, 1, 10 ];
 
-console.log( compute.erf( data ) );
+compute.erf( data );
 ```
 
 
@@ -208,7 +216,7 @@ Evaluates the complementary error function, where `x` may be a single `numeric` 
 ``` javascript
 var data = [ -10, -1, 0, 1, 10 ];
 
-console.log( compute.erfc( data ) );
+compute.erfc( data );
 ```
 
 <a name="erfinv"></a>
@@ -219,7 +227,7 @@ Evaluates the inverse error function, where `x` may be a single `numeric` value 
 ``` javascript
 var data = [ -1, -0.5, 0, 0.5, 1 ];
 
-console.log( compute.erfinv( data ) );
+compute.erfinv( data );
 ```
 
 
@@ -231,8 +239,65 @@ Evaluates the inverse complementary error function, where `x` may be a single `n
 ``` javascript
 var data = [ 0, 0.5, 1, 1.5, 2 ];
 
-console.log( compute.erfcinv( data ) );
+compute.erfcinv( data );
 ```
+
+
+### Arithmetic
+
+<a name="add"></a>
+#### [compute.add( arr, x )](https://github.com/compute-io/add)
+
+Computes an element-wise addition of a numeric `array`, where `x` may be an `array` of equal length or a `numeric` value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.add( data, 5.5 );
+```
+
+Note: mutates the input `array`.
+
+
+<a name="subtract"></a>
+#### [compute.subtract( arr, x )](https://github.com/compute-io/subtract)
+
+Computes an element-wise subtraction of a numeric `array`, where `x` may be an `array` of equal length or a `numeric` value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.subtract( data, 5.5 );
+```
+
+Note: mutates the input `array`.
+
+
+<a name="multiply"></a>
+#### [compute.multiply( arr, x )](https://github.com/compute-io/multiply)
+
+Computes an element-wise multiplication of a numeric `array`, where `x` may be an `array` of equal length or a `numeric` value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.multiply( data, 5.5 );
+```
+
+Note: mutates the input `array`.
+
+<a name="divide"></a>
+#### [compute.divide( arr, x )](https://github.com/compute-io/divide)
+
+Computes an element-wise division of a numeric `array`, where `x` may be an `array` of equal length or a `numeric` value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.divide( data, 5.5 );
+```
+
+Note: mutates the input `array`.
 
 
 ### Sets
@@ -245,10 +310,12 @@ Removes duplicate values to determine the subset containing all unique values of
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.unique( data ) );
+compute.unique( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+
+Note: mutates the input `array`.
 
 
 
@@ -262,7 +329,7 @@ Computes the _L1_ norm (Manhattan/Taxicab norm) of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.l1norm( data ) );
+compute.l1norm( data );
 ```
 
 <a name="l2norm"></a>
@@ -273,7 +340,7 @@ Computes the _L2_ norm (Euclidean norm) of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.l2norm( data ) );
+compute.l2norm( data );
 ```
 
 
@@ -285,7 +352,7 @@ Computes the infinity norm (Chebyshev/maximum/supremum/uniform norm) of an `arra
 ``` javascript
 var data = [ 2, 4, 2, -7, 3 ];
 
-console.log( compute.linfnorm( data ) );
+compute.linfnorm( data );
 ```
 
 <a name="lpnorm"></a>
@@ -297,7 +364,7 @@ Computes the _Lp_ norm of an `array` of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 // Compute the L5 norm:
-console.log( compute.lpnorm( data, 5 ) );
+compute.lpnorm( data, 5 );
 ```
 
 
@@ -306,12 +373,12 @@ console.log( compute.lpnorm( data, 5 ) );
 <a name="min"></a>
 #### [compute.min( arr )](https://github.com/compute-io/min)
 
-Computes the minimum value of an `array`.
+Computes the minimum value of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.min( data ) );
+compute.min( data );
 ```
 
 <a name="incrmin"></a>
@@ -340,19 +407,19 @@ Computes a moving minimum over a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.mmin( data, 2 ) );
+compute.mmin( data, 2 );
 ```
 
 
 <a name="max"></a>
 #### [compute.max( arr )](https://github.com/compute-io/max)
 
-Computes the maximum value of an `array`.
+Computes the maximum value of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.max( data ) );
+compute.max( data );
 ```
 
 
@@ -382,31 +449,31 @@ Computes a moving maximum over a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.mmax( data, 2 ) );
+compute.mmax( data, 2 );
 ```
 
 
 <a name="range"></a>
 #### [compute.range( arr )](https://github.com/compute-io/range)
 
-Computes the arithmetic range of an `array`.
+Computes the arithmetic range of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.range( data ) );
+compute.range( data );
 ```
 
 
 <a name="sum"></a>
 #### [compute.sum( arr )](https://github.com/compute-io/sum)
 
-Computes the sum of an `array`.
+Computes the sum of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.sum( data ) );
+compute.sum( data );
 ```
 
 <a name="nansum"></a>
@@ -417,7 +484,7 @@ Computes the sum of an `array` ignoring any non-numeric values.
 ``` javascript
 var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
 
-console.log( compute.nansum( data ) );
+compute.nansum( data );
 ```
 
 <a name="incrsum"></a>
@@ -447,31 +514,31 @@ Computes a moving sum over a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.msum( data, 2 ) );
+compute.msum( data, 2 );
 ```
 
 
 <a name="csum"></a>
 #### [compute.csum( arr )](https://github.com/compute-io/csum)
 
-Computes the cumulative sum of an `array`.
+Computes the cumulative sum of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.csum( data ) );
+compute.csum( data );
 ```
 
 
 <a name="mean"></a>
 #### [compute.mean( arr )](https://github.com/compute-io/mean)
 
-Computes the arithmetic mean over an `array` of values.
+Computes the arithmetic mean of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.mean( data ) );
+compute.mean( data );
 ```
 
 <a name="nanmean"></a>
@@ -482,7 +549,7 @@ Computes the arithmetic mean over an `array` of values ignoring any non-numeric 
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-console.log( compute.nanmean( data ) );
+compute.nanmean( data );
 ```
 
 
@@ -513,31 +580,31 @@ Computes a moving arithmetic mean (sliding window average) over a numeric `array
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.mmean( data, 2 ) );
+compute.mmean( data, 2 );
 ```
 
 
 <a name="wmean"></a>
 #### [compute.wmean( arr, weights )](https://github.com/compute-io/wmean)
 
-Computes a weighted mean over an `array` of values.
+Computes a weighted mean of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ],
 	weights = [ 1, 2, 1, 4, 0 ];
 
-console.log( compute.wmean( data, weights ) );
+compute.wmean( data, weights );
 ```
 
 <a name="gmean"></a>
 #### [compute.gmean( arr )](https://github.com/compute-io/gmean)
 
-Computes the geometric mean over an `array` of values.
+Computes the geometric mean of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.gmean( data ) );
+compute.gmean( data );
 ```
 
 
@@ -549,19 +616,19 @@ Computes the geometric mean over an `array` of values ignoring any non-numeric v
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-console.log( compute.nangmean( data ) );
+compute.nangmean( data );
 ```
 
 
 <a name="hmean"></a>
 #### [compute.hmean( arr )](https://github.com/compute-io/hmean)
 
-Computes the harmonic mean over an `array` of values.
+Computes the harmonic mean of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.hmean( data ) );
+compute.hmean( data );
 ```
 
 <a name="nanhmean"></a>
@@ -572,19 +639,19 @@ Computes the harmonic mean over an `array` of values ignoring any non-numeric va
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-console.log( compute.nanhmean( data ) );
+compute.nanhmean( data );
 ```
 
 
 <a name="qmean"></a>
 #### [compute.qmean( arr )](https://github.com/compute-io/qmean)
 
-Computes the quadratic mean (root mean square) over an `array` of values.
+Computes the quadratic mean (root mean square) of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.qmean( data ) );
+compute.qmean( data );
 ```
 
 
@@ -596,19 +663,19 @@ Computes the quadratic mean (root mean square) over an `array` of values ignorin
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-console.log( compute.nanqmean( data ) );
+compute.nanqmean( data );
 ```
 
 
 <a name="variance"></a>
 #### [compute.variance( arr )](https://github.com/compute-io/variance)
 
-Computes the sample variance over an `array` of values.
+Computes the sample variance over a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.variance( data ) );
+compute.variance( data );
 ```
 
 
@@ -620,7 +687,7 @@ Computes the sample variance over an `array` of values ignoring any non-numeric 
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-console.log( compute.nanvariance( data ) );
+compute.nanvariance( data );
 ```
 
 <a name="incrvariance"></a>
@@ -645,12 +712,12 @@ console.log( variance() );
 <a name="stdev"></a>
 #### [compute.stdev( arr )](https://github.com/compute-io/stdev)
 
-Computes the sample standard deviation over an `array` of values.
+Computes the sample standard deviation of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.stdev( data ) );
+compute.stdev( data );
 ```
 
 
@@ -662,7 +729,7 @@ Computes the sample standard deviation over an `array` of values ignoring any no
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-console.log( compute.nanstdev( data ) );
+compute.nanstdev( data );
 ```
 
 <a name="incrstdev"></a>
@@ -692,19 +759,19 @@ Computes the mode of an `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.mode( data ) );
+compute.mode( data );
 ```
 
 
 <a name="median"></a>
 #### [compute.median( arr[, sorted] )](https://github.com/compute-io/median)
 
-Computes the median of an `array`.
+Computes the median of a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.median( data ) );
+compute.median( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
@@ -713,12 +780,12 @@ If the input `array` is already sorted in __ascending__ order, set the `sorted` 
 <a name="quantile"></a>
 #### [compute.quantile( arr, p[, opts] )](https://github.com/compute-io/quantile)
 
-Computes a quantile for an `array` of values.
+Computes a quantile for a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.quantile( data, 0.25 ) );
+compute.quantile( data, 0.25 );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
@@ -730,19 +797,19 @@ var opts = {
 
 var data = [ 2, 2, 3, 4, 7 ];
 
-console.log( compute.quantile( data, 0.25, opts ) );
+compute.quantile( data, 0.25, opts );
 ```
 
 
 <a name="quantiles"></a>
 #### [compute.quantiles( arr, num[, opts] )](https://github.com/compute-io/quantiles)
 
-Computes quantiles for an `array` of values.
+Computes quantiles for a numeric `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.quantiles( data, 3 ) );
+compute.quantiles( data, 3 );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
@@ -754,7 +821,7 @@ var opts = {
 
 var data = [ 2, 2, 3, 4, 7 ];
 
-console.log( compute.quantiles( data, 2, opts ) );
+compute.quantiles( data, 2, opts );
 ```
 
 
@@ -766,7 +833,7 @@ Computes the interquartile range of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.iqr( data ) );
+compute.iqr( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -780,7 +847,7 @@ Computes the interdecile range of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.idr( data ) );
+compute.idr( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -794,7 +861,7 @@ Computes the midhinge of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.midhinge( data ) );
+compute.midhinge( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -809,7 +876,7 @@ Computes the midmean of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.midmean( data ) );
+compute.midmean( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
@@ -824,7 +891,7 @@ Computes the sample skewness of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.skewness( data ) );
+compute.skewness( data );
 ```
 
 
@@ -836,7 +903,7 @@ Computes the sample excess kurtosis of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-console.log( compute.kurtosis( data ) );
+compute.kurtosis( data );
 ```
 
 
@@ -852,7 +919,7 @@ Computes the hypotenuse of a right triangle.
 var a = 10,
 	b = 12;
 
-console.log( compute.hypot( a, b ) );
+compute.hypot( a, b );
 ```
 
 
@@ -867,12 +934,12 @@ Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) b
 var a = 'beep',
 	b = 'boop';
 
-console.log( compute.hamdist( a, b ) );
+compute.hamdist( a, b );
 
 var c = [ 4, 2, 3, 4 ],
 	d = [ 2, 4, 3, 1 ];
 
-console.log( compute.hamdist( c, d ) );
+compute.hamdist( c, d );
 ```
 
 
