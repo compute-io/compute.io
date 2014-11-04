@@ -71,6 +71,7 @@ Compute.io
 		*	[idr( arr, opts )](#idr)
 		*	[midhinge( arr, opts )](#midhinge)
 		*	[midmean( arr, sorted )](#midmean)
+		*	[trimean( arr, opts )](#trimean)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
 	-	[Geometry](#geometry)
@@ -880,6 +881,20 @@ compute.midmean( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+
+
+<a name="trimean"></a>
+#### [compute.trimean( arr[, opts] )](https://github.com/compute-io/trimean)
+
+Computes the trimean of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.trimean( data );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
 
 
 

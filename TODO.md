@@ -8,7 +8,7 @@ TODO
 
 ## Functions
 
-1. 	trimean
+1. 	
 2. 	upper semi-midmean (umidmean)
 3. 	midsummary
 4. 	
