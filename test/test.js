@@ -60,6 +60,7 @@ describe( 'compute.io', function tests() {
 			'max',
 			'incrmax',
 			'mmax',
+			'cmax',
 			'range',
 			'sum',
 			'nansum',

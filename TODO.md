@@ -10,7 +10,7 @@ TODO
 
 1. 	
 2. 	upper semi-midmean (umidmean)
-3. 	midsummary
+3. 	
 4. 	
 5. 	midrange
 6. 	lower semi-midmean (lmidmean)
@@ -47,7 +47,7 @@ TODO
 37. cmax
 38. mean deviation
 39. cumulative mean deviation
-40. repmat
+40. repmat (???)
 41. mean/median absolute deviation
 	- mad( arr, opts )
 		- 
@@ -56,7 +56,7 @@ TODO
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
 45. moving median (polish)
 46. absolute deviation (absdev)
-	- 	absdev( arr )
+	- 	absdev( arr, x )
 47. Holt-Winters time series forecasting algorithm
 
 
