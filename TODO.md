@@ -43,8 +43,8 @@ TODO
 33. incrmmin
 34. incrmvariance
 35. incrmstdev
-36. cmin
-37. cmax
+36. 
+37. 
 38. mean deviation
 39. cumulative mean deviation
 40. repmat (???)

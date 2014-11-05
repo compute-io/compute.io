@@ -42,6 +42,7 @@
   "dependencies": {
     "compute-add": "^1.0.1",
     "compute-cmax": "^1.0.0",
+    "compute-cmin": "^1.0.0",
     "compute-csum": "^1.0.0",
     "compute-diff": "^1.0.0",
     "compute-divide": "^1.0.0",

@@ -57,6 +57,7 @@ describe( 'compute.io', function tests() {
 			'min',
 			'incrmin',
 			'mmin',
+			'cmin',
 			'max',
 			'incrmax',
 			'mmax',

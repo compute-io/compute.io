@@ -37,6 +37,7 @@ Compute.io
 		*	[min( arr )](#min)
 		*	[incrmin()](#incrmin)
 		*	[mmin( arr, window )](#mmin)
+		*	[cmin( arr )](#cmin)
 		*	[max( arr )](#max)
 		*	[incrmax()](#incrmax)
 		*	[mmax( arr, window )](#mmax)
@@ -410,6 +411,18 @@ Computes a moving minimum over a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 compute.mmin( data, 2 );
+```
+
+
+<a name="cmin"></a>
+#### [compute.cmin( arr )](https://github.com/compute-io/cmin)
+
+Computes the cumulative minimum of a numeric `array`.
+
+``` javascript
+var data = [ 7, 4, 2, 4, 3 ];
+
+compute.cmin( data );
 ```
 
 
