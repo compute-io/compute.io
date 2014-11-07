@@ -151,7 +151,7 @@ Reverses an `array` in place.
 var arr = [ 1, 2, 3, 4 ];
 
 reverse( arr );
-// returns [ 4, 3, 2, 1 ];
+// returns [ 4, 3, 2, 1 ]
 ```
 
 Note: the `array` is mutated.
@@ -180,7 +180,7 @@ Calculates the differences between adjacent elements in an `array`.
 var arr = [ 2, 1, 3, 4 ];
 
 diff( arr );
-// returns [ 1, -2, -1 ];
+// returns [ 1, -2, -1 ]
 ```
 
 Note: the length of the returned `array` is one less than the length of the original `array`.
@@ -204,7 +204,7 @@ function condition( val ) {
 }
 
 var results = compute.find( arr, opts, condition );
-// returns [ [2,3], [1,1] ];
+// returns [ [2,3], [1,1] ]
 ```
 
 For further documentation, see the [compute-find](https://github.com/compute-io/find) module.
