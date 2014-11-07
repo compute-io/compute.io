@@ -40,6 +40,7 @@ describe( 'compute.io', function tests() {
 			'reverse',
 			'shuffle',
 			'diff',
+			'find',
 			'signum',
 			'erf',
 			'erfc',

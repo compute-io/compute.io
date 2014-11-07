@@ -15,6 +15,7 @@ Compute.io
 		*	[reverse( arr )](#reverse)
 		*	[shuffle( arr )](#shuffle)
 		*	[diff( arr )](#diff)
+		*	[find( arr, opts, clbk)](#find)
 	-	[Special Functions](#special-functions)
 		*	[signum( x )](#signum)
 		*	[erf( x )](#erf)
@@ -184,6 +185,29 @@ diff( arr );
 
 Note: the length of the returned `array` is one less than the length of the original `array`.
 
+
+<a name="find"></a>
+#### [compute.find( arr, [opts,] clbk )](https://github.com/compute-io/find)
+
+Finds `array` elements which satisfy a test condition.
+
+``` javascript
+var arr = [ 2, 1, 3, 4 ];
+
+var opts = {
+	'k': -2,
+	'returns': '*'
+};
+
+function condition( val ) {
+	return val < 4;
+}
+
+find( arr, opts, condition );
+// returns [ [2,3], [1,1] ];
+```
+
+For further documentation, see the [compute-find](https://github.com/compute-io/find) module.
 
 
 ### Special Functions

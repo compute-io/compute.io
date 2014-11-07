@@ -10,8 +10,8 @@ TODO
 
 1. 	
 2. 	upper semi-midmean (umidmean)
-3. 	
-4. 	
+3. 	mpcc
+4. 	mcov
 5. 	midrange
 6. 	lower semi-midmean (lmidmean)
 7. 	truncated mean
@@ -43,8 +43,8 @@ TODO
 33. incrmmin
 34. incrmvariance
 35. incrmstdev
-36. 
-37. 
+36. incrpcc
+37. incrcov
 38. mean deviation
 39. cumulative mean deviation
 40. repmat (???)
