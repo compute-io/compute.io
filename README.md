@@ -15,7 +15,7 @@ Compute.io
 		*	[reverse( arr )](#reverse)
 		*	[shuffle( arr )](#shuffle)
 		*	[diff( arr )](#diff)
-		*	[find( arr, opts, clbk)](#find)
+		*	[find( arr, opts, clbk )](#find)
 	-	[Special Functions](#special-functions)
 		*	[signum( x )](#signum)
 		*	[erf( x )](#erf)
@@ -203,7 +203,7 @@ function condition( val ) {
 	return val < 4;
 }
 
-find( arr, opts, condition );
+compute.find( arr, opts, condition );
 // returns [ [2,3], [1,1] ];
 ```
 
