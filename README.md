@@ -203,7 +203,7 @@ function condition( val ) {
 	return val < 4;
 }
 
-compute.find( arr, opts, condition );
+var results = compute.find( arr, opts, condition );
 // returns [ [2,3], [1,1] ];
 ```
 
