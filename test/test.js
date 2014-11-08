@@ -92,6 +92,7 @@ describe( 'compute.io', function tests() {
 			'quantiles',
 			'iqr',
 			'idr',
+			'midrange',
 			'midhinge',
 			'midsummary',
 			'midmean',

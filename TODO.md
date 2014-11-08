@@ -12,7 +12,7 @@ TODO
 2. 	upper semi-midmean (umidmean)
 3. 	mpcc
 4. 	mcov
-5. 	midrange
+5. 	
 6. 	lower semi-midmean (lmidmean)
 7. 	truncated mean
 8. 	winsorized mean

@@ -73,6 +73,7 @@
     "compute-median": "^1.1.0",
     "compute-midhinge": "^1.0.1",
     "compute-midmean": "^1.0.0",
+    "compute-midrange": "^1.0.0",
     "compute-midsummary": "^1.0.2",
     "compute-min": "^1.0.0",
     "compute-mmax": "^1.0.0",

@@ -72,6 +72,7 @@ Compute.io
 		*	[quantiles( arr, num, opts )](#quantiles)
 		*	[iqr( arr, opts )](#iqr)
 		*	[idr( arr, opts )](#idr)
+		*	[midrange( arr, sorted )](#midrange)
 		*	[midhinge( arr, opts )](#midhinge)
 		*	[midsummary( arr, n, opts )](#midsummary)
 		*	[midmean( arr, sorted )](#midmean)
@@ -903,6 +904,20 @@ var idr = compute.idr( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
+
+
+<a name="midrange"></a>
+#### [compute.midrange( arr[, sorted] )](https://github.com/compute-io/midrange)
+
+Computes the mid-range (mid-extreme) of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var mr = compute.midrange( data );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
 
 
 <a name="midhinge"></a>
