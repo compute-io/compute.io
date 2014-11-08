@@ -93,6 +93,7 @@ describe( 'compute.io', function tests() {
 			'iqr',
 			'idr',
 			'midhinge',
+			'midsummary',
 			'midmean',
 			'trimean',
 			'skewness',

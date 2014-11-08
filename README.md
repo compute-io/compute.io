@@ -73,6 +73,7 @@ Compute.io
 		*	[iqr( arr, opts )](#iqr)
 		*	[idr( arr, opts )](#idr)
 		*	[midhinge( arr, opts )](#midhinge)
+		*	[midsummary( arr, n, opts )](#midsummary)
 		*	[midmean( arr, sorted )](#midmean)
 		*	[trimean( arr, opts )](#trimean)
 		*	[skewness( arr )](#skewness)
@@ -913,6 +914,20 @@ Computes the midhinge of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 compute.midhinge( data );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
+
+
+<a name="midsummary"></a>
+#### [compute.midsummary( arr, n[, opts] )](https://github.com/compute-io/midsummary)
+
+Computes the *n*% midsummary of a numeric `array`. `n` exists on the interval `[0.0, 0.50]` and specifies the proportion of values to discard in the distribution tails.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.midsummary( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
