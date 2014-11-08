@@ -119,7 +119,7 @@ Rounds values to the nearest multiple of `10^n`. `x` may be either a single nume
 compute.roundn( Math.PI, -2 );
 // returns 3.14
 
-compute.roundn( 111, 2 );
+var x = compute.roundn( 111, 2 );
 // returns 100
 
 var data = [ 2.342, 4.943, 2.234, 7.992, 3.142 ];
@@ -139,7 +139,7 @@ Evaluates a polynomial with coefficients `coef`, where `x` may be a single `nume
 ``` javascript
 var coef = [ 4, 2, 6, -17 ];
 
-compute.polyval( coef, [ 10, -3] );
+var x = compute.polyval( coef, [ 10, -3] );
 ```
 
 
@@ -151,7 +151,7 @@ Reverses an `array` in place.
 ``` javascript
 var arr = [ 1, 2, 3, 4 ];
 
-reverse( arr );
+compute.reverse( arr );
 // returns [ 4, 3, 2, 1 ]
 ```
 
@@ -166,7 +166,7 @@ Generates a random permutation of (shuffles) an `array` in place.
 ``` javascript
 var arr = [ 1, 2, 3, 4 ];
 
-shuffle( arr );
+compute.shuffle( arr );
 ```
 
 Note: the `array` is mutated.
@@ -180,7 +180,7 @@ Calculates the differences between adjacent elements in an `array`.
 ``` javascript
 var arr = [ 2, 1, 3, 4 ];
 
-diff( arr );
+var diff = compute.diff( arr );
 // returns [ 1, -2, -1 ]
 ```
 
@@ -221,7 +221,7 @@ Evaluates the signum function, where `x` may be a single `numeric` value or an `
 ``` javascript
 var data = [ -10, -1, -0, 0, 1, 10 ];
 
-compute.signum( data );
+var x = compute.signum( data );
 ```
 
 <a name="erf"></a>
@@ -232,7 +232,7 @@ Evaluates the error function, where `x` may be a single `numeric` value or an `a
 ``` javascript
 var data = [ -10, -1, 0, 1, 10 ];
 
-compute.erf( data );
+var x = compute.erf( data );
 ```
 
 
@@ -244,7 +244,7 @@ Evaluates the complementary error function, where `x` may be a single `numeric` 
 ``` javascript
 var data = [ -10, -1, 0, 1, 10 ];
 
-compute.erfc( data );
+var x = compute.erfc( data );
 ```
 
 <a name="erfinv"></a>
@@ -255,7 +255,7 @@ Evaluates the inverse error function, where `x` may be a single `numeric` value 
 ``` javascript
 var data = [ -1, -0.5, 0, 0.5, 1 ];
 
-compute.erfinv( data );
+var x = compute.erfinv( data );
 ```
 
 
@@ -267,7 +267,7 @@ Evaluates the inverse complementary error function, where `x` may be a single `n
 ``` javascript
 var data = [ 0, 0.5, 1, 1.5, 2 ];
 
-compute.erfcinv( data );
+var x = compute.erfcinv( data );
 ```
 
 
@@ -357,7 +357,7 @@ Computes the _L1_ norm (Manhattan/Taxicab norm) of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.l1norm( data );
+var norm = compute.l1norm( data );
 ```
 
 <a name="l2norm"></a>
@@ -368,7 +368,7 @@ Computes the _L2_ norm (Euclidean norm) of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.l2norm( data );
+var norm = compute.l2norm( data );
 ```
 
 
@@ -380,7 +380,7 @@ Computes the infinity norm (Chebyshev/maximum/supremum/uniform norm) of an `arra
 ``` javascript
 var data = [ 2, 4, 2, -7, 3 ];
 
-compute.linfnorm( data );
+var norm = compute.linfnorm( data );
 ```
 
 <a name="lpnorm"></a>
@@ -392,7 +392,7 @@ Computes the _Lp_ norm of an `array` of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 // Compute the L5 norm:
-compute.lpnorm( data, 5 );
+var norm = compute.lpnorm( data, 5 );
 ```
 
 
@@ -406,7 +406,7 @@ Computes the minimum value of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.min( data );
+var min = compute.min( data );
 ```
 
 <a name="incrmin"></a>
@@ -435,7 +435,7 @@ Computes a moving minimum over a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.mmin( data, 2 );
+var arr = compute.mmin( data, 2 );
 ```
 
 
@@ -447,7 +447,7 @@ Computes the cumulative minimum of a numeric `array`.
 ``` javascript
 var data = [ 7, 4, 2, 4, 3 ];
 
-compute.cmin( data );
+var arr = compute.cmin( data );
 ```
 
 
@@ -459,7 +459,7 @@ Computes the maximum value of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.max( data );
+var max = compute.max( data );
 ```
 
 
@@ -489,7 +489,7 @@ Computes a moving maximum over a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.mmax( data, 2 );
+var arr = compute.mmax( data, 2 );
 ```
 
 
@@ -501,7 +501,7 @@ Computes the cumulative maximum of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.cmax( data );
+var arr = compute.cmax( data );
 ```
 
 
@@ -513,7 +513,7 @@ Computes the arithmetic range of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.range( data );
+var range = compute.range( data );
 ```
 
 
@@ -525,7 +525,7 @@ Computes the sum of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.sum( data );
+var sum = compute.sum( data );
 ```
 
 <a name="nansum"></a>
@@ -536,7 +536,7 @@ Computes the sum of an `array` ignoring any non-numeric values.
 ``` javascript
 var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
 
-compute.nansum( data );
+var sum = compute.nansum( data );
 ```
 
 <a name="incrsum"></a>
@@ -566,7 +566,7 @@ Computes a moving sum over a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.msum( data, 2 );
+var arr = compute.msum( data, 2 );
 ```
 
 
@@ -578,7 +578,7 @@ Computes the cumulative sum of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.csum( data );
+var arr = compute.csum( data );
 ```
 
 
@@ -590,7 +590,7 @@ Computes the arithmetic mean of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.mean( data );
+var mean = compute.mean( data );
 ```
 
 <a name="nanmean"></a>
@@ -601,7 +601,7 @@ Computes the arithmetic mean over an `array` of values ignoring any non-numeric 
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-compute.nanmean( data );
+var mean = compute.nanmean( data );
 ```
 
 
@@ -632,7 +632,7 @@ Computes a moving arithmetic mean (sliding window average) over a numeric `array
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.mmean( data, 2 );
+var arr = compute.mmean( data, 2 );
 ```
 
 
@@ -645,7 +645,7 @@ Computes a weighted mean of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ],
 	weights = [ 1, 2, 1, 4, 0 ];
 
-compute.wmean( data, weights );
+var wmean = compute.wmean( data, weights );
 ```
 
 <a name="gmean"></a>
@@ -656,7 +656,7 @@ Computes the geometric mean of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.gmean( data );
+var gmean = compute.gmean( data );
 ```
 
 
@@ -668,7 +668,7 @@ Computes the geometric mean over an `array` of values ignoring any non-numeric v
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-compute.nangmean( data );
+var gmean = compute.nangmean( data );
 ```
 
 
@@ -680,7 +680,7 @@ Computes the harmonic mean of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.hmean( data );
+var hmean = compute.hmean( data );
 ```
 
 <a name="nanhmean"></a>
@@ -691,7 +691,7 @@ Computes the harmonic mean over an `array` of values ignoring any non-numeric va
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-compute.nanhmean( data );
+var hmean = compute.nanhmean( data );
 ```
 
 
@@ -703,7 +703,7 @@ Computes the quadratic mean (root mean square) of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.qmean( data );
+var qmean = compute.qmean( data );
 ```
 
 
@@ -715,7 +715,7 @@ Computes the quadratic mean (root mean square) over an `array` of values ignorin
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-compute.nanqmean( data );
+var qmean = compute.nanqmean( data );
 ```
 
 
@@ -727,7 +727,7 @@ Computes the sample variance over a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.variance( data );
+var s2 = compute.variance( data );
 ```
 
 
@@ -739,7 +739,7 @@ Computes the sample variance over an `array` of values ignoring any non-numeric 
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-compute.nanvariance( data );
+var s2 = compute.nanvariance( data );
 ```
 
 <a name="incrvariance"></a>
@@ -769,7 +769,7 @@ Computes the sample standard deviation of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.stdev( data );
+var stdev = compute.stdev( data );
 ```
 
 
@@ -781,7 +781,7 @@ Computes the sample standard deviation over an `array` of values ignoring any no
 ``` javascript
 var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 
-compute.nanstdev( data );
+var stdev = compute.nanstdev( data );
 ```
 
 <a name="incrstdev"></a>
@@ -811,7 +811,7 @@ Computes the mode of an `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.mode( data );
+var mode = compute.mode( data );
 ```
 
 
@@ -823,7 +823,7 @@ Computes the median of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.median( data );
+var median = compute.median( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
@@ -837,7 +837,7 @@ Computes a quantile for a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.quantile( data, 0.25 );
+var q = compute.quantile( data, 0.25 );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
@@ -849,7 +849,7 @@ var opts = {
 
 var data = [ 2, 2, 3, 4, 7 ];
 
-compute.quantile( data, 0.25, opts );
+var q = compute.quantile( data, 0.25, opts );
 ```
 
 
@@ -861,7 +861,7 @@ Computes quantiles for a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.quantiles( data, 3 );
+var arr = compute.quantiles( data, 3 );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
@@ -873,7 +873,7 @@ var opts = {
 
 var data = [ 2, 2, 3, 4, 7 ];
 
-compute.quantiles( data, 2, opts );
+var arr = compute.quantiles( data, 2, opts );
 ```
 
 
@@ -885,7 +885,7 @@ Computes the interquartile range of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.iqr( data );
+var iqr = compute.iqr( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -899,7 +899,7 @@ Computes the interdecile range of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.idr( data );
+var idr = compute.idr( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -913,7 +913,7 @@ Computes the midhinge of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.midhinge( data );
+var mh = compute.midhinge( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -927,7 +927,7 @@ Computes the *n*% midsummary of a numeric `array`. `n` exists on the interval `[
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.midsummary( data );
+var ms = compute.midsummary( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -942,7 +942,7 @@ Computes the midmean of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.midmean( data );
+var mm = compute.midmean( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
@@ -956,7 +956,7 @@ Computes the trimean of a numeric `array`.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.trimean( data );
+var trimean = compute.trimean( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -971,7 +971,7 @@ Computes the sample skewness of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.skewness( data );
+var skew = compute.skewness( data );
 ```
 
 
@@ -983,7 +983,7 @@ Computes the sample excess kurtosis of an `array` of values.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-compute.kurtosis( data );
+var kur = compute.kurtosis( data );
 ```
 
 
@@ -999,7 +999,7 @@ Computes the hypotenuse of a right triangle.
 var a = 10,
 	b = 12;
 
-compute.hypot( a, b );
+var c = compute.hypot( a, b );
 ```
 
 
@@ -1014,12 +1014,12 @@ Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) b
 var a = 'beep',
 	b = 'boop';
 
-compute.hamdist( a, b );
+var dist = compute.hamdist( a, b );
 
 var c = [ 4, 2, 3, 4 ],
 	d = [ 2, 4, 3, 1 ];
 
-compute.hamdist( c, d );
+var dist = compute.hamdist( c, d );
 ```
 
 
