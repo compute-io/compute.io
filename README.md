@@ -417,7 +417,7 @@ Returns a method to compute a minimum value incrementally.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var min = incrmin(),
+var min = compute.incrmin(),
 	m;
 
 for ( var i = 0; i < data.length; i++ ) {
@@ -471,7 +471,7 @@ Returns a method to compute a maximum value incrementally.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var max = incrmax(),
+var max = compute.incrmax(),
 	m;
 
 for ( var i = 0; i < data.length; i++ ) {
@@ -547,7 +547,7 @@ Returns a method to compute a sum incrementally.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var sum = incrsum(),
+var sum = compute.incrsum(),
 	s;
 
 for ( var i = 0; i < data.length; i++ ) {
@@ -613,7 +613,7 @@ Returns a method to compute an arithmetic mean incrementally.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var mean = incrmean(),
+var mean = compute.incrmean(),
 	mu;
 
 for ( var i = 0; i < data.length; i++ ) {
@@ -750,7 +750,7 @@ Returns a method to compute a sample variance incrementally.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var variance = incrvariance(),
+var variance = compute.incrvariance(),
 	s2;
 
 for ( var i = 0; i < data.length; i++ ) {
@@ -792,7 +792,7 @@ Returns a method to compute a sample standard deviation incrementally.
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var stdev = incrstdev(),
+var stdev = compute.incrstdev(),
 	sigma;
 
 for ( var i = 0; i < data.length; i++ ) {
