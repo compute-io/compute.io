@@ -46,6 +46,7 @@ describe( 'compute.io', function tests() {
 			'erfc',
 			'erfinv',
 			'erfcinv',
+			'abs',
 			'add',
 			'subtract',
 			'multiply',

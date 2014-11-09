@@ -23,6 +23,7 @@ Compute.io
 		*	[erfinv( x )](#erfinv)
 		*	[erfcinv( x )](#erfcinv)
 	- 	[Arithmetic](#arithmetic)
+		*	[abs( arr )](#abs)
 		*	[add( arr, x )](#add)
 		*	[subtract( arr, x )](#subtract)
 		*	[multiply( arr, x )](#multiply)
@@ -275,6 +276,20 @@ var x = compute.erfcinv( data );
 
 
 ### Arithmetic
+
+<a name="abs"></a>
+#### [compute.abs( arr )](https://github.com/compute-io/abs)
+
+Computes an element-wise absolute value for each element of a numeric `array`.
+
+``` javascript
+var data = [ 2, -4, 2, -7, 3 ];
+
+compute.abs( data );
+```
+
+Note: mutates the input `array`.
+
 
 <a name="add"></a>
 #### [compute.add( arr, x )](https://github.com/compute-io/add)

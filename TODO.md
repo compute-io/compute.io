@@ -58,7 +58,7 @@ TODO
 46. absolute deviation (absdev)
 	- 	absdev( arr, x )
 47. Holt-Winters time series forecasting algorithm
-48. abs (element-wise)
+48. 
 49. sqrt (element-wise)
 50. floor (element-wise)
 51. ceil (element-wise)
