@@ -34,7 +34,7 @@ TODO
 24. incrnangmean
 25. incrnanhmean
 26. incrnansum
-27. incrwmean --> wmean( x, w )
+27. incrwmean --> wmean( x, w ) new weight
 28. nanmode
 29. nanquantiles
 30. naniqr
@@ -54,10 +54,72 @@ TODO
 42. z-score
 43. linear regression
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
-45. moving median (polish)
+45. moving median (clean-up)
 46. absolute deviation (absdev)
 	- 	absdev( arr, x )
 47. Holt-Winters time series forecasting algorithm
+48. abs (element-wise)
+49. sqrt (element-wise)
+50. floor (element-wise)
+51. ceil (element-wise)
+52. pow (element-wise)
+53. exp (element-wise)
+54. sin (element-wise)
+55. cos (element-wise)
+56. acos (element-wise)
+57. asin (element-wise)
+58. atan/atan2 (element-wise)
+59. cosh (element-wise)
+60. sinh (element-wise)
+61. sec (element-wise)
+62. sech (element-wise)
+63. cot (element-wise)
+64. coth (element-wise)
+65. mod (element-wise)
+66. rem (element-wise)
+67. tan (element-wise)
+68. log (element-wise)
+69. log10 (element-wise)
+70. eq (element-wise)
+71. neq (element-wise)
+72. geq (element-wise)
+73. leq (element-wise)
+74. gt (element-wise)
+75. lt (element-wise)
+76. isNaN (element-wise)
+77. isFinite (element-wise)
+78. deg2rad
+79. rad2deg
+80. cross
+81. 
+82. gcd
+83. egcd
+84. lcm
+85. loess
+86. kmeans
+87. kde
+88. bandwidth
+89. r2 (coef determination)
+90. binocoef (see substack)
+91. factorial (bignum; <=171)
+92. unit conversion
+93. linear regression
+94. loess
+95. splines
+96. fft
+97. dfft
+98. ifft
+99. idfft
+100. viterbi
+101. intersect
+102. setdiff
+103. nanunique
+104. mttest (vassili)
+105. mbtest
+106. ttest
+107. gtest
+108. mva
+109. sorting (hsort, isort, qsort, msort, ...)
 
 
 
@@ -65,3 +127,17 @@ TODO
 
 1. 	implement `then` method, which takes a callback to which data is returned
 2. 	how to handle asynchronous computation? Currently, assume all synchronous tasks. If computations are outsourced to other languages, bindings, etc, which are asynchronous, how do we handle that? --> compute.async().roundn().mean()...
+
+
+
+## Prior Art
+
+*	jstat.js
+*	ratio.js
+*	numeric.js
+*	science.js
+*	math.js
+*	numbers.js
+*	sylvester.js
+*	decimal.js
+*	bignum.js

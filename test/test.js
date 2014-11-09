@@ -55,6 +55,7 @@ describe( 'compute.io', function tests() {
 			'l2norm',
 			'linfnorm',
 			'lpnorm',
+			'dot',
 			'min',
 			'incrmin',
 			'mmin',

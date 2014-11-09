@@ -34,6 +34,7 @@ Compute.io
 		* 	[l2norm( arr )](#l2norm)
 		* 	[linfnorm( arr )](#linfnorm)
 		* 	[lpnorm( arr )](#lpnorm)
+		*	[dot( x, y )](#dot)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[incrmin()](#incrmin)
@@ -394,6 +395,16 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 // Compute the L5 norm:
 var norm = compute.lpnorm( data, 5 );
+```
+
+
+<a name="dot"></a>
+#### [compute.dot( x, y )](https://github.com/compute-io/dot)
+
+Computes the dot product between two `arrays` of equal length.
+
+``` javascript
+var val = compute.dot( [1,2,3], [4,5,6] );
 ```
 
 
