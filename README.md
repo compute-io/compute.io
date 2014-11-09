@@ -28,6 +28,7 @@ Compute.io
 		*	[subtract( arr, x )](#subtract)
 		*	[multiply( arr, x )](#multiply)
 		*	[divide( arr, x )](#divide)
+		*	[sqrt( arr )](#sqrt)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	-	[Linear Algebra](#linear-algebra)
@@ -341,6 +342,19 @@ Computes an element-wise division of a numeric `array`, where `x` may be an `arr
 var data = [ 2, 4, 2, 7, 3 ];
 
 compute.divide( data, 5.5 );
+```
+
+Note: mutates the input `array`.
+
+<a name="sqrt"></a>
+#### [compute.sqrt( arr )](https://github.com/compute-io/sqrt)
+
+Computes an element-wise square root for each element of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.sqrt( data );
 ```
 
 Note: mutates the input `array`.

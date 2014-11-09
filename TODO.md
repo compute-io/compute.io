@@ -59,7 +59,7 @@ TODO
 	- 	absdev( arr, x )
 47. Holt-Winters time series forecasting algorithm
 48. 
-49. sqrt (element-wise)
+49. 
 50. floor (element-wise)
 51. ceil (element-wise)
 52. pow (element-wise)

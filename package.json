@@ -102,6 +102,7 @@
     "compute-shuffle": "^1.0.0",
     "compute-signum": "^1.0.0",
     "compute-skewness": "^1.0.0",
+    "compute-sqrt": "^1.0.0",
     "compute-stdev": "^1.0.0",
     "compute-subtract": "^1.0.1",
     "compute-sum": "^1.0.0",

@@ -51,6 +51,7 @@ describe( 'compute.io', function tests() {
 			'subtract',
 			'multiply',
 			'divide',
+			'sqrt',
 			'unique',
 			'l1norm',
 			'l2norm',
