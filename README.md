@@ -16,19 +16,21 @@ Compute.io
 		*	[shuffle( arr )](#shuffle)
 		*	[diff( arr )](#diff)
 		*	[find( arr, opts, clbk )](#find)
+		*	[deg2rad( x )](#deg2rad)
+		*	[rad2deg( x )](#rad2deg)
 	-	[Special Functions](#special-functions)
+		*	[abs( arr )](#abs)
+		*	[sqrt( arr )](#sqrt)
 		*	[signum( x )](#signum)
 		*	[erf( x )](#erf)
 		*	[erfc( x )](#erfc)
 		*	[erfinv( x )](#erfinv)
 		*	[erfcinv( x )](#erfcinv)
 	- 	[Arithmetic](#arithmetic)
-		*	[abs( arr )](#abs)
 		*	[add( arr, x )](#add)
 		*	[subtract( arr, x )](#subtract)
 		*	[multiply( arr, x )](#multiply)
 		*	[divide( arr, x )](#divide)
-		*	[sqrt( arr )](#sqrt)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	-	[Linear Algebra](#linear-algebra)
@@ -216,67 +218,41 @@ var results = compute.find( arr, opts, condition );
 For further documentation, see the [compute-find](https://github.com/compute-io/find) module.
 
 
+<a name="deg2rad"></a>
+#### [compute.deg2rad( x )](https://github.com/compute-io/deg2rad)
+
+Converts degrees to radians, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var val = compute.deg2rad( 90 );
+// returns pi/2
+
+var data = [ 0, 45, 90, 135, 180 ];
+compute.deg2rad( data );
+// returns [ 0, pi/4, pi/2, 3pi/4, pi ]
+```
+
+Note: mutates the input `array`.
+
+
+<a name="rad2deg"></a>
+#### [compute.rad2deg( x )](https://github.com/compute-io/rad2deg)
+
+Converts radians to degrees, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var val = compute.rad2deg( Math.PI/2 );
+// returns 90
+
+var data = [ 0, Math.PI/4, Math.PI/2, 3*Math.PI/4, Math.PI ];
+compute.rad2deg( data );
+// returns [ 0, 45, 90, 135, 180 ]
+```
+
+Note: mutates the input `array`.
+
+
 ### Special Functions
-
-<a name="signum"></a>
-#### [compute.signum( x )](https://github.com/compute-io/signum)
-
-Evaluates the signum function, where `x` may be a single `numeric` value or an `array` of numeric values.
-
-``` javascript
-var data = [ -10, -1, -0, 0, 1, 10 ];
-
-var x = compute.signum( data );
-```
-
-<a name="erf"></a>
-#### [compute.erf( x )](https://github.com/compute-io/erf)
-
-Evaluates the error function, where `x` may be a single `numeric` value or an `array` of numeric values.
-
-``` javascript
-var data = [ -10, -1, 0, 1, 10 ];
-
-var x = compute.erf( data );
-```
-
-
-<a name="erfc"></a>
-#### [compute.erfc( x )](https://github.com/compute-io/erfc)
-
-Evaluates the complementary error function, where `x` may be a single `numeric` value or an `array` of numeric values.
-
-``` javascript
-var data = [ -10, -1, 0, 1, 10 ];
-
-var x = compute.erfc( data );
-```
-
-<a name="erfinv"></a>
-#### [compute.erfinv( x )](https://github.com/compute-io/erfinv)
-
-Evaluates the inverse error function, where `x` may be a single `numeric` value or an `array` of numeric values.
-
-``` javascript
-var data = [ -1, -0.5, 0, 0.5, 1 ];
-
-var x = compute.erfinv( data );
-```
-
-
-<a name="erfcinv"></a>
-#### [compute.erfcinv( x )](https://github.com/compute-io/erfcinv)
-
-Evaluates the inverse complementary error function, where `x` may be a single `numeric` value or an `array` of numeric values.
-
-``` javascript
-var data = [ 0, 0.5, 1, 1.5, 2 ];
-
-var x = compute.erfcinv( data );
-```
-
-
-### Arithmetic
 
 <a name="abs"></a>
 #### [compute.abs( arr )](https://github.com/compute-io/abs)
@@ -290,6 +266,81 @@ compute.abs( data );
 ```
 
 Note: mutates the input `array`.
+
+
+<a name="sqrt"></a>
+#### [compute.sqrt( arr )](https://github.com/compute-io/sqrt)
+
+Computes an element-wise principal square root for each element of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+compute.sqrt( data );
+```
+
+Note: mutates the input `array`.
+
+
+<a name="signum"></a>
+#### [compute.signum( x )](https://github.com/compute-io/signum)
+
+Evaluates the signum function, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var data = [ -10, -1, -0, 0, 1, 10 ];
+
+var x = compute.signum( data );
+```
+
+<a name="erf"></a>
+#### [compute.erf( x )](https://github.com/compute-io/erf)
+
+Evaluates the error function, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var data = [ -10, -1, 0, 1, 10 ];
+
+var x = compute.erf( data );
+```
+
+
+<a name="erfc"></a>
+#### [compute.erfc( x )](https://github.com/compute-io/erfc)
+
+Evaluates the complementary error function, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var data = [ -10, -1, 0, 1, 10 ];
+
+var x = compute.erfc( data );
+```
+
+<a name="erfinv"></a>
+#### [compute.erfinv( x )](https://github.com/compute-io/erfinv)
+
+Evaluates the inverse error function, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var data = [ -1, -0.5, 0, 0.5, 1 ];
+
+var x = compute.erfinv( data );
+```
+
+
+<a name="erfcinv"></a>
+#### [compute.erfcinv( x )](https://github.com/compute-io/erfcinv)
+
+Evaluates the inverse complementary error function, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var data = [ 0, 0.5, 1, 1.5, 2 ];
+
+var x = compute.erfcinv( data );
+```
+
+
+### Arithmetic
 
 
 <a name="add"></a>
@@ -342,19 +393,6 @@ Computes an element-wise division of a numeric `array`, where `x` may be an `arr
 var data = [ 2, 4, 2, 7, 3 ];
 
 compute.divide( data, 5.5 );
-```
-
-Note: mutates the input `array`.
-
-<a name="sqrt"></a>
-#### [compute.sqrt( arr )](https://github.com/compute-io/sqrt)
-
-Computes an element-wise square root for each element of a numeric `array`.
-
-``` javascript
-var data = [ 2, 4, 2, 7, 3 ];
-
-compute.sqrt( data );
 ```
 
 Note: mutates the input `array`.

@@ -88,8 +88,8 @@ TODO
 75. lt (element-wise)
 76. isNaN (element-wise)
 77. isFinite (element-wise)
-78. deg2rad
-79. rad2deg
+78. 
+79. 
 80. 
 81. 
 82. gcd
@@ -141,3 +141,4 @@ TODO
 *	sylvester.js
 *	decimal.js
 *	bignum.js
+*	numeral.js

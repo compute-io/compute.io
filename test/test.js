@@ -41,6 +41,8 @@ describe( 'compute.io', function tests() {
 			'shuffle',
 			'diff',
 			'find',
+			'deg2rad',
+			'rad2deg',
 			'signum',
 			'erf',
 			'erfc',
