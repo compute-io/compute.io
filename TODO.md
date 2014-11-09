@@ -90,7 +90,7 @@ TODO
 77. isFinite (element-wise)
 78. deg2rad
 79. rad2deg
-80. cross
+80. 
 81. 
 82. gcd
 83. egcd

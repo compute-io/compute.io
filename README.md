@@ -35,6 +35,7 @@ Compute.io
 		* 	[linfnorm( arr )](#linfnorm)
 		* 	[lpnorm( arr )](#lpnorm)
 		*	[dot( x, y )](#dot)
+		*	[cross( x, y )](#cross)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[incrmin()](#incrmin)
@@ -405,6 +406,16 @@ Computes the dot product between two `arrays` of equal length.
 
 ``` javascript
 var val = compute.dot( [1,2,3], [4,5,6] );
+```
+
+
+<a name="cross"></a>
+#### [compute.cross( x, y )](https://github.com/compute-io/cross)
+
+Computes the cross product between two `arrays` of length `3`.
+
+``` javascript
+var val = compute.cross( [1,2,3], [4,5,6] );
 ```
 
 
