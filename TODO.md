@@ -58,8 +58,8 @@ TODO
 46. absolute deviation (absdev)
 	- 	absdev( arr, x )
 47. Holt-Winters time series forecasting algorithm
-48. 
-49. 
+48. expm1 (element-wise)
+49. cbrt (element-wise)
 50. floor (element-wise)
 51. ceil (element-wise)
 52. pow (element-wise)
@@ -88,9 +88,9 @@ TODO
 75. lt (element-wise)
 76. isNaN (element-wise)
 77. isFinite (element-wise)
-78. 
-79. 
-80. 
+78. log2 (element-wise)
+79. log1p (element-wise)
+80. circshift
 81. 
 82. gcd
 83. egcd
@@ -132,13 +132,13 @@ TODO
 
 ## Prior Art
 
-*	jstat.js
-*	ratio.js
-*	numeric.js
-*	science.js
-*	math.js
-*	numbers.js
-*	sylvester.js
+*	jstat.js (250)
+*	ratio.js (<50)
+*	numeric.js (150)
+*	science.js (<70)
+*	math.js (110)
+*	numbers.js (<150)
+*	sylvester.js (<100)
 *	decimal.js
 *	bignum.js
 *	numeral.js

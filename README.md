@@ -18,6 +18,7 @@ Compute.io
 		*	[find( arr, opts, clbk )](#find)
 		*	[deg2rad( x )](#deg2rad)
 		*	[rad2deg( x )](#rad2deg)
+		*	[issorted( arr, clbk )](#issorted)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -250,6 +251,28 @@ compute.rad2deg( data );
 ```
 
 Note: mutates the input `array`.
+
+
+<a name="issorted"></a>
+#### [compute.issorted( arr[, comparator] )](https://github.com/compute-io/issorted)
+
+Returns a `boolean` indicating if an input `array` is sorted.
+
+``` javascript
+var bool = compute.issorted( [ 2, 3, 5, 4 ] );
+// returns false
+```
+
+By default, the method assumes __ascending__ order. To impose an arbitrary sort order, provide a `comparator` function.
+
+``` javascript
+function descending( a, b ) {
+	return b - a;
+}
+
+var bool = compute.issorted( [ 5, 4, 3, 2 ] );
+// returns true
+```
 
 
 ### Special Functions
