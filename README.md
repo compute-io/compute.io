@@ -14,12 +14,13 @@ Compute.io
 		*	[polyval( coef, x )](#polyval)
 		*	[reverse( arr )](#reverse)
 		*	[shuffle( arr )](#shuffle)
+		*	[circshift( x, k )](#circshift)
 		*	[diff( arr )](#diff)
 		*	[find( arr, opts, clbk )](#find)
 		*	[deg2rad( x )](#deg2rad)
 		*	[rad2deg( x )](#rad2deg)
 		*	[issorted( arr, clbk )](#issorted)
-		*	[circshift( x, k )](#circshift)
+		*	[isnan( arr )](#isnan)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -181,6 +182,22 @@ compute.shuffle( arr );
 Note: the `array` is mutated.
 
 
+<a name="circshift"></a>
+#### [compute.circshift( x, k )](https://github.com/compute-io/circshift)
+
+Circularly shifts elements/characters. `x` may be an `array` or a `string`. `k` is an `integer` specifying the number of positions to shift. The sign of `k` specifies the shift direction.
+
+``` javascript
+compute.circshift( [1,2,3,4,5], 2 );
+// returns [4,5,1,2,3]
+
+var str = compute.circshift( 'beepboop', -3 );
+// returns 'pboopbee'
+```
+
+Note: if provided an `array`, the `array`, is mutated.
+
+
 <a name="diff"></a>
 #### [compute.diff( arr )](https://github.com/compute-io/diff)
 
@@ -275,21 +292,15 @@ var bool = compute.issorted( [ 5, 4, 3, 2 ] );
 // returns true
 ```
 
+<a name="isnan"></a>
+#### [compute.isnan( arr )](https://github.com/compute-io/issorted)
 
-<a name="circshift"></a>
-#### [compute.circshift( x, k )](https://github.com/compute-io/circshift)
-
-Circularly shifts elements/characters. `x` may be an `array` or a `string`. `k` is an `integer` specifying the number of positions to shift. The sign of `k` specifies the shift direction.
+Computes for each `array` element whether an element is `NaN`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is `NaN` and `0` means that an element is __not__ `NaN`.
 
 ``` javascript
-compute.circshift( [1,2,3,4,5], 2 );
-// returns [4,5,1,2,3]
-
-var str = compute.circshift( 'beepboop', -3 );
-// returns 'pboopbee'
+var out = compute.isnan( [ 2, '3', 5, 4, null ] );
+// returns [ 0, 1, 0, 0, 1 ]
 ```
-
-Note: if provided an `array`, the `array`, is mutated.
 
 
 ### Special Functions

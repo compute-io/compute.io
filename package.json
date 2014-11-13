@@ -68,6 +68,7 @@
     "compute-incrsum": "^1.0.0",
     "compute-incrvariance": "^1.0.0",
     "compute-iqr": "^1.1.0",
+    "compute-isnan": "^1.0.0",
     "compute-issorted": "^1.0.0",
     "compute-kurtosis": "^1.0.0",
     "compute-l1norm": "^1.0.0",

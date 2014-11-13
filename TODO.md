@@ -86,12 +86,12 @@ TODO
 73. leq (element-wise)
 74. gt (element-wise)
 75. lt (element-wise)
-76. isNaN (element-wise)
+76. 
 77. isFinite (element-wise)
 78. log2 (element-wise)
 79. log1p (element-wise)
-80. 
-81. 
+80. isinteger (element-wise)
+81. isinf (element-wise)
 82. gcd
 83. egcd
 84. lcm
@@ -120,6 +120,8 @@ TODO
 107. gtest
 108. mva
 109. sorting (hsort, isort, qsort, msort, ...)
+110. isnumeric (element-wise)
+111. isfloat (element-wise)
 
 
 
