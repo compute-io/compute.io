@@ -90,7 +90,7 @@ TODO
 77. isFinite (element-wise)
 78. log2 (element-wise)
 79. log1p (element-wise)
-80. circshift
+80. 
 81. 
 82. gcd
 83. egcd

@@ -44,6 +44,7 @@ describe( 'compute.io', function tests() {
 			'deg2rad',
 			'rad2deg',
 			'issorted',
+			'circshift',
 			'abs',
 			'sqrt',
 			'signum',

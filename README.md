@@ -19,6 +19,7 @@ Compute.io
 		*	[deg2rad( x )](#deg2rad)
 		*	[rad2deg( x )](#rad2deg)
 		*	[issorted( arr, clbk )](#issorted)
+		*	[circshift( x, k )](#circshift)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -273,6 +274,22 @@ function descending( a, b ) {
 var bool = compute.issorted( [ 5, 4, 3, 2 ] );
 // returns true
 ```
+
+
+<a name="circshift"></a>
+#### [compute.circshift( x, k )](https://github.com/compute-io/circshift)
+
+Circularly shifts elements/characters. `x` may be an `array` or a `string`. `k` is an `integer` specifying the number of positions to shift. The sign of `k` specifies the shift direction.
+
+``` javascript
+compute.circshift( [1,2,3,4,5], 2 );
+// returns [4,5,1,2,3]
+
+var str = compute.circshift( 'beepboop', -3 );
+// returns 'pboopbee'
+```
+
+Note: if provided an `array`, the `array`, is mutated.
 
 
 ### Special Functions
