@@ -75,6 +75,7 @@
     "compute-l2norm": "^1.0.0",
     "compute-linfnorm": "^1.0.0",
     "compute-linspace": "^1.0.0",
+    "compute-logspace": "^1.0.0",
     "compute-lpnorm": "^1.0.0",
     "compute-max": "^1.0.0",
     "compute-mean": "^1.0.0",

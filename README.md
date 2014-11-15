@@ -23,6 +23,7 @@ Compute.io
 		*	[isnan( arr )](#isnan)
 		*	[zip( arr1, arr2,..., opts )](#zip)
 		*	[linspace( start, stop, length )](#linspace)
+		*	[logspace( a, b, length )](#logspace)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -328,6 +329,18 @@ Generates a linearly spaced numeric `array`. If a `length` is not provided, the 
 ``` javascript
 var arr = compute.linspace( 0, 100, 6 );
 // returns [ 0, 20, 40, 60, 80, 100 ]
+```
+
+
+
+<a name="logspace"></a>
+#### [compute.logspace( a, b[, length] )](https://github.com/compute-io/logspace)
+
+Generates a logarithmically spaced numeric `array`. If a `length` is not provided, the default output `array` length is `10`.
+
+``` javascript
+var arr = compute.logspace( 0, 2, 6 );
+// returns [ 1, ~2.5, ~6.31, ~15.85, ~39.81, 100 ]
 ```
 
 

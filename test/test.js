@@ -48,6 +48,7 @@ describe( 'compute.io', function tests() {
 			'isnan',
 			'zip',
 			'linspace',
+			'logspace',
 			'abs',
 			'sqrt',
 			'signum',
