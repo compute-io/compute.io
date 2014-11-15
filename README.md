@@ -22,6 +22,7 @@ Compute.io
 		*	[issorted( arr, clbk )](#issorted)
 		*	[isnan( arr )](#isnan)
 		*	[zip( arr1, arr2,..., opts )](#zip)
+		*	[linspace( start, stop, length )](#linspace)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -316,6 +317,18 @@ var zipped = compute.zip( [1,2], ['a','b'] );
 ```
 
 For function `options`, see the [compute-zip](https://github.com/compute-io/zip) module.
+
+
+
+<a name="linspace"></a>
+#### [compute.linspace( start, stop[, length] )](https://github.com/compute-io/linspace)
+
+Generates a linearly spaced numeric `array`. If a `length` is not provided, the default output `array` length is `100`.
+
+``` javascript
+var arr = compute.linspace( 0, 100, 6 );
+// returns [ 0, 20, 40, 60, 80, 100 ]
+```
 
 
 
