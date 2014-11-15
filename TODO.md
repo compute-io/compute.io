@@ -4,11 +4,15 @@ TODO
 ## General
 
 1. 	Method to throw all methods into the global namespace; compute.mean() --> mean(). How to prevent methods from getting clobbered?
+2. 	Should methods explicitly handle cases where the input `array` is empty? e.g., `mean([]) === null` or `NaN`, rather than returning `0`, an initialized value.
+	- 	How else to distinguish from between a mean of `0` and having provided an empty `array`?
+	-	Could also throw, but this may be a bit harsh. Type checking and throwing, okay, but throwing due to an empty `array` may be too disruptive.
 
 
 ## Functions
 
-1. 	
+1. 	midsummary
+	- 	add median special case (compute median inline; no need to import compute-median dependency)
 2. 	upper semi-midmean (umidmean)
 3. 	mpcc
 4. 	mcov

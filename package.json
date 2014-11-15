@@ -114,7 +114,8 @@
     "compute-trimean": "^1.0.0",
     "compute-unique": "^1.0.0",
     "compute-variance": "^1.0.0",
-    "compute-wmean": "^1.0.0"
+    "compute-wmean": "^1.0.0",
+    "compute-zip": "^1.0.0"
   },
   "devDependencies": {
     "chai": "1.x.x",

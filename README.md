@@ -21,6 +21,7 @@ Compute.io
 		*	[rad2deg( x )](#rad2deg)
 		*	[issorted( arr, clbk )](#issorted)
 		*	[isnan( arr )](#isnan)
+		*	[zip( arr1, arr2,..., opts )](#zip)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -301,6 +302,22 @@ Computes for each `array` element whether an element is `NaN`. The function retu
 var out = compute.isnan( [ 2, '3', 5, 4, null ] );
 // returns [ 0, 1, 0, 0, 1 ]
 ```
+
+
+
+<a name="zip"></a>
+#### [compute.zip( arr1, arr2,...[, opts] )](https://github.com/compute-io/zip)
+
+Returns an `array` of `arrays`, where the ith element (tuple) in the returned `array` contains the ith elements of the input `arrays`.
+
+``` javascript
+var zipped = compute.zip( [1,2], ['a','b'] );
+// returns [ [1,'a'], [2,'b'] ]
+```
+
+For function `options`, see the [compute-zip](https://github.com/compute-io/zip) module.
+
+
 
 
 ### Special Functions
