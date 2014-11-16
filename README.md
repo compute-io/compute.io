@@ -23,6 +23,7 @@ Compute.io
 		*	[isnan( arr )](#isnan)
 		*	[zip( arr1, arr2,..., opts )](#zip)
 		*	[linspace( start, stop, length )](#linspace)
+		*	[incrspace( start, stop, increment )](#incrspace)
 		*	[logspace( a, b, length )](#logspace)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
@@ -331,6 +332,16 @@ var arr = compute.linspace( 0, 100, 6 );
 // returns [ 0, 20, 40, 60, 80, 100 ]
 ```
 
+
+<a name="incrspace"></a>
+#### [compute.incrspace( start, stop[, increment] )](https://github.com/compute-io/incrspace)
+
+Generates a linearly spaced numeric `array`. If an `increment` is not provided, the default `increment` is `1`.
+
+``` javascript
+var arr = compute.incrspace( 0, 11, 2 );
+// returns [ 0, 2, 4, 6, 8, 10 ]
+```
 
 
 <a name="logspace"></a>

@@ -90,7 +90,7 @@ TODO
 73. leq (element-wise)
 74. gt (element-wise)
 75. lt (element-wise)
-76. incrspace
+76. 
 77. isFinite (element-wise)
 78. log2 (element-wise)
 79. log1p (element-wise)
@@ -126,6 +126,9 @@ TODO
 109. sorting (hsort, isort, qsort, msort, ...)
 110. isnumeric (element-wise)
 111. isfloat (element-wise)
+112. **performance optimization
+	- 	linspace/logspace/zip
+		- 	use push for arrays longer than fast element limit
 
 
 
