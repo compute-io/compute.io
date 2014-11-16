@@ -7,6 +7,11 @@ TODO
 2. 	Should methods explicitly handle cases where the input `array` is empty? e.g., `mean([]) === null` or `NaN`, rather than returning `0`, an initialized value.
 	- 	How else to distinguish from between a mean of `0` and having provided an empty `array`?
 	-	Could also throw, but this may be a bit harsh. Type checking and throwing, okay, but throwing due to an empty `array` may be too disruptive.
+3. 	**performance optimization**
+	- 	linspace/logspace/zip/<any method which creates an output array>
+		- 	use push for arrays longer than fast element limit
+		-	see incrspace
+4. 	move `deg2rad` and `rad2deg` to `trigonometry`
 
 
 ## Functions
@@ -95,7 +100,7 @@ TODO
 78. log2 (element-wise)
 79. log1p (element-wise)
 80. isinteger (element-wise)
-81. isinf (element-wise)
+81. 
 82. gcd
 83. egcd
 84. lcm
@@ -126,10 +131,10 @@ TODO
 109. sorting (hsort, isort, qsort, msort, ...)
 110. isnumeric (element-wise)
 111. isfloat (element-wise)
-112. **performance optimization
-	- 	linspace/logspace/zip
-		- 	use push for arrays longer than fast element limit
-
+112. select( indices|logical )
+113. partitions (math)
+114. imhist (?)
+115. weighted median (?)
 
 
 ## Fluent

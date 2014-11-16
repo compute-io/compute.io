@@ -21,6 +21,7 @@ Compute.io
 		*	[rad2deg( x )](#rad2deg)
 		*	[issorted( arr, clbk )](#issorted)
 		*	[isnan( arr )](#isnan)
+		*	[isinf( arr )](#isinf)
 		*	[zip( arr1, arr2,..., opts )](#zip)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
@@ -297,13 +298,24 @@ var bool = compute.issorted( [ 5, 4, 3, 2 ] );
 ```
 
 <a name="isnan"></a>
-#### [compute.isnan( arr )](https://github.com/compute-io/issorted)
+#### [compute.isnan( arr )](https://github.com/compute-io/isnan)
 
 Computes for each `array` element whether an element is `NaN`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is `NaN` and `0` means that an element is __not__ `NaN`.
 
 ``` javascript
 var out = compute.isnan( [ 2, '3', 5, 4, null ] );
 // returns [ 0, 1, 0, 0, 1 ]
+```
+
+
+<a name="isinf"></a>
+#### [compute.isinf( arr )](https://github.com/compute-io/isinf)
+
+Computes for each `array` element whether an element is infinite. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is infinite and `0` means that an element is __not__ infinite.
+
+``` javascript
+var out = compute.isinf( [ 2, 1/0, 'beep', 5, 4, -1/0 ] );
+// returns [ 0, 1, 0, 0, 0, 1 ]
 ```
 
 
