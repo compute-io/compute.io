@@ -47,6 +47,7 @@ describe( 'compute.io', function tests() {
 		'issorted',
 		'isnumeric',
 		'isnan',
+		'isfinite',
 		'isinf',
 		'zip',
 		'linspace',

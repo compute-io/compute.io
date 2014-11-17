@@ -54,7 +54,7 @@ TODO
 35. incrmstdev
 36. incrpcc
 37. incrcov
-38. mean deviation
+38. mean deviation (from any value)
 39. cumulative mean deviation
 40. repmat (???)
 41. mean/median absolute deviation
@@ -96,7 +96,7 @@ TODO
 74. gt (element-wise)
 75. lt (element-wise)
 76. 
-77. isFinite (element-wise)
+77. 
 78. log2 (element-wise)
 79. log1p (element-wise)
 80. isinteger (element-wise)
@@ -130,11 +130,15 @@ TODO
 108. mva
 109. sorting (hsort, isort, qsort, msort, ...)
 110. 
-111. 
+111. chunkify
 112. select( indices|logical )
 113. partitions (math)
 114. imhist (?)
 115. weighted median (?)
+116. weighted percentile
+117. selection algorithm, median of medians, quickselect
+118. zeros (?)
+119. ones (?)
 
 
 ## Fluent

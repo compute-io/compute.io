@@ -22,6 +22,7 @@ Compute.io
 		*	[issorted( arr, clbk )](#issorted)
 		*	[isnumeric( arr )](#isnumeric)
 		*	[isnan( arr )](#isnan)
+		*	[isfinite( arr )](#isfinite)
 		*	[isinf( arr )](#isinf)
 		*	[zip( arr1, arr2,..., opts )](#zip)
 		*	[linspace( start, stop, length )](#linspace)
@@ -319,6 +320,18 @@ Computes for each `array` element whether an element is `NaN`. The function retu
 var out = compute.isnan( [ 2, '3', 5, 4, null ] );
 // returns [ 0, 1, 0, 0, 1 ]
 ```
+
+
+<a name="isfinite"></a>
+#### [compute.isfinite( arr )](https://github.com/compute-io/isfinite)
+
+Computes for each `array` element whether an element is a finite `number`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is a finite `number` and `0` means that an element is __not__ a finite `number`.
+
+``` javascript
+var out = compute.isfinite( [ 2, 1/0, 'beep', 5, 4, -1/0, null, NaN ] );
+// returns [ 1, 0, 0, 1, 1, 0, 0, 0 ]
+```
+
 
 
 <a name="isinf"></a>
