@@ -20,6 +20,7 @@ Compute.io
 		*	[deg2rad( x )](#deg2rad)
 		*	[rad2deg( x )](#rad2deg)
 		*	[issorted( arr, clbk )](#issorted)
+		*	[isnumeric( arr )](#isnumeric)
 		*	[isnan( arr )](#isnan)
 		*	[isinf( arr )](#isinf)
 		*	[zip( arr1, arr2,..., opts )](#zip)
@@ -296,6 +297,18 @@ function descending( a, b ) {
 var bool = compute.issorted( [ 5, 4, 3, 2 ] );
 // returns true
 ```
+
+
+<a name="isnumeric"></a>
+#### [compute.isnumeric( arr )](https://github.com/compute-io/isnumeric)
+
+Computes for each `array` element whether an element is numeric. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is numeric and `0` means that an element is __not__ numeric.
+
+``` javascript
+var out = compute.isnumeric( [ 2, '3', 5, 4, null, NaN ] );
+// returns [ 1, 0, 1, 1, 0, 0 ]
+```
+
 
 <a name="isnan"></a>
 #### [compute.isnan( arr )](https://github.com/compute-io/isnan)

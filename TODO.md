@@ -100,7 +100,7 @@ TODO
 78. log2 (element-wise)
 79. log1p (element-wise)
 80. isinteger (element-wise)
-81. 
+81. isdecimal (element-wise)
 82. gcd
 83. egcd
 84. lcm
@@ -129,8 +129,8 @@ TODO
 107. gtest
 108. mva
 109. sorting (hsort, isort, qsort, msort, ...)
-110. isnumeric (element-wise)
-111. isfloat (element-wise)
+110. 
+111. 
 112. select( indices|logical )
 113. partitions (math)
 114. imhist (?)
