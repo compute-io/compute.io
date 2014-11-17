@@ -99,7 +99,7 @@ TODO
 77. 
 78. log2 (element-wise)
 79. log1p (element-wise)
-80. isinteger (element-wise)
+80. 
 81. isdecimal (element-wise)
 82. gcd
 83. egcd
