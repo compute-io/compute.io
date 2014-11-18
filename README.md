@@ -93,6 +93,8 @@ Compute.io
 		*	[midhinge( arr, opts )](#midhinge)
 		*	[midsummary( arr, n, opts )](#midsummary)
 		*	[midmean( arr, sorted )](#midmean)
+		*	[lmidmean( arr, sorted )](#lmidmean)
+		*	[umidmean( arr, sorted )](#umidmean)
 		*	[trimean( arr, opts )](#trimean)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
@@ -1202,6 +1204,34 @@ Computes the midmean of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var mm = compute.midmean( data );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+
+
+<a name="lmidmean"></a>
+#### [compute.lmidmean( arr[, sorted] )](https://github.com/compute-io/lmidmean)
+
+Computes the lower midmean of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3, 7, 5 ];
+
+var lmm = compute.lmidmean( data );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+
+
+<a name="umidmean"></a>
+#### [compute.umidmean( arr[, sorted] )](https://github.com/compute-io/umidmean)
+
+Computes the upper midmean of a numeric `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3, 7, 5 ];
+
+var umm = compute.umidmean( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.

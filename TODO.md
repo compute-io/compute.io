@@ -18,11 +18,11 @@ TODO
 
 1. 	midsummary
 	- 	add median special case (compute median inline; no need to import compute-median dependency)
-2. 	upper semi-midmean (umidmean)
+2. 	
 3. 	mpcc
 4. 	mcov
 5. 	
-6. 	lower semi-midmean (lmidmean)
+6. 	
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian
@@ -87,7 +87,7 @@ TODO
 65. mod (element-wise)
 66. rem (element-wise)
 67. tan (element-wise)
-68. log (element-wise)
+68. ln (element-wise)
 69. log10 (element-wise)
 70. eq (element-wise)
 71. neq (element-wise)
@@ -96,7 +96,7 @@ TODO
 74. gt (element-wise)
 75. lt (element-wise)
 76. 
-77. 
+77. log(element-wise; arbitrary base; default e)
 78. log2 (element-wise)
 79. log1p (element-wise)
 80. 
@@ -127,7 +127,7 @@ TODO
 105. mbtest
 106. ttest
 107. gtest
-108. mva
+108. mva --> mmoments (moving descriptive stats; mu,std,skew,kurt)
 109. sorting (hsort, isort, qsort, msort, ...)
 110. 
 111. chunkify
