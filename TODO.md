@@ -93,13 +93,13 @@ TODO
 71. neq (element-wise)
 72. geq (element-wise)
 73. leq (element-wise)
-74. gt (element-wise)
+74. 
 75. lt (element-wise)
-76. 
+76. setxor
 77. log(element-wise; arbitrary base; default e)
 78. log2 (element-wise)
 79. log1p (element-wise)
-80. 
+80. bitwise ops (element-wise)
 81. isdecimal (element-wise)
 82. gcd
 83. egcd
@@ -139,6 +139,8 @@ TODO
 117. selection algorithm, median of medians, quickselect
 118. zeros (?)
 119. ones (?)
+120. replace
+
 
 
 ## Fluent

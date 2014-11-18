@@ -42,6 +42,8 @@ Compute.io
 		*	[subtract( arr, x )](#subtract)
 		*	[multiply( arr, x )](#multiply)
 		*	[divide( arr, x )](#divide)
+	- 	[Relational Operations](#relational-operations)
+		*	[gt( arr, x )](#gt)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	-	[Linear Algebra](#linear-algebra)
@@ -553,6 +555,27 @@ compute.divide( data, 5.5 );
 ```
 
 Note: mutates the input `array`.
+
+
+### Relational Operations
+
+<a name="gt"></a>
+#### [compute.gt( arr, x )](https://github.com/compute-io/gt)
+
+Computes an element-wise comparison (greater than) of an `array`, where `x` may either be an `array` of equal length or a single value (`number` or `string`).
+
+The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is greater than a compared value and `0` means that an element is __not__ greater than a compared value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ],
+	out;
+
+out = compute.gt( data, 3.14 );
+// returns [ 0, 1, 0, 1, 0 ]
+
+out = compute.gt( data, [3, 5, 1, 4, 4 ] );
+// returns [ 0, 0, 1, 1, 0 ]
+```
 
 
 ### Sets
