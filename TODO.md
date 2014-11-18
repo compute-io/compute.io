@@ -93,7 +93,7 @@ TODO
 71. neq (element-wise)
 72. geq (element-wise)
 73. leq (element-wise)
-74. 
+74. seq (element-wise)
 75. lt (element-wise)
 76. setxor
 77. log(element-wise; arbitrary base; default e)
@@ -129,7 +129,7 @@ TODO
 107. gtest
 108. mva --> mmoments (moving descriptive stats; mu,std,skew,kurt)
 109. sorting (hsort, isort, qsort, msort, ...)
-110. 
+110. sneq (element-wise)
 111. chunkify
 112. select( indices|logical )
 113. partitions (math)
