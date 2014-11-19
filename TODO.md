@@ -92,7 +92,7 @@ TODO
 69. log10 (element-wise)
 70. eq (element-wise)
 71. neq (element-wise)
-72. geq (element-wise)
+72. 
 73. 
 74. seq (element-wise)
 75. sneq (element-wise)

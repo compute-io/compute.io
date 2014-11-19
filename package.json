@@ -56,6 +56,7 @@
     "compute-erfcinv": "^1.0.0",
     "compute-erfinv": "^1.0.0",
     "compute-find": "^1.0.0",
+    "compute-geq": "^1.0.0",
     "compute-gmean": "^1.0.0",
     "compute-gt": "^1.0.0",
     "compute-hamming": "^1.0.0",

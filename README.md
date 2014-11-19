@@ -44,6 +44,7 @@ Compute.io
 		*	[divide( arr, x )](#divide)
 	- 	[Relational Operations](#relational-operations)
 		*	[gt( arr, x )](#gt)
+		*	[geq( arr, x )](#geq)
 		*	[lt( arr, x )](#lt)
 		*	[leq( arr, x )](#leq)
 	- 	[Sets](#sets)
@@ -576,6 +577,25 @@ out = compute.gt( data, 3.14 );
 // returns [ 0, 1, 0, 1, 0 ]
 
 out = compute.gt( data, [3, 5, 1, 4, 4 ] );
+// returns [ 0, 0, 1, 1, 0 ]
+```
+
+
+<a name="geq"></a>
+#### [compute.geq( arr, x )](https://github.com/compute-io/geq)
+
+Computes an element-wise comparison (greater than or equal to) of an `array`, where `x` may either be an `array` of equal length or a single value (`number` or `string`).
+
+The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is greater than or equal to a compared value and `0` means that an element is __not__ greater than or equal to a compared value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ],
+	out;
+
+out = compute.geq( data, 3.14 );
+// returns [ 0, 1, 0, 1, 0 ]
+
+out = compute.geq( data, [3, 5, 1, 7, 4 ] );
 // returns [ 0, 0, 1, 1, 0 ]
 ```
 
