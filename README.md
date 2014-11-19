@@ -45,6 +45,7 @@ Compute.io
 	- 	[Relational Operations](#relational-operations)
 		*	[gt( arr, x )](#gt)
 		*	[lt( arr, x )](#lt)
+		*	[leq( arr, x )](#leq)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	-	[Linear Algebra](#linear-algebra)
@@ -595,6 +596,25 @@ out = compute.lt( data, 3.14 );
 
 out = compute.lt( data, [3, 5, 1, 4, 4 ] );
 // returns [ 1, 1, 0, 0, 1 ]
+```
+
+
+<a name="leq"></a>
+#### [compute.leq( arr, x )](https://github.com/compute-io/leq)
+
+Computes an element-wise comparison (less than or equal to) of an `array`, where `x` may either be an `array` of equal length or a single value (`number` or `string`).
+
+The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is less than or equal to a compared value and `0` means that an element is __not__ less than or equal to a compared value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ],
+	out;
+
+out = compute.leq( data, 3.14 );
+// returns [ 1, 0, 1, 0, 1 ]
+
+out = compute.leq( data, [3, 5, 1, 7, 4 ] );
+// returns [ 1, 1, 0, 1, 1 ]
 ```
 
 
