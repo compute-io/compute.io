@@ -90,12 +90,12 @@ TODO
 67. tan (element-wise)
 68. ln (element-wise)
 69. log10 (element-wise)
-70. eq (element-wise)
+70. 
 71. neq (element-wise)
 72. 
-73. 
-74. seq (element-wise)
-75. sneq (element-wise)
+73. silhouette values (kmeans)
+74. voronoi algo (lloyds algo)
+75. kmeans++
 76. setxor
 77. log(element-wise; arbitrary base; default e)
 78. log2 (element-wise)

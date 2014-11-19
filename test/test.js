@@ -65,6 +65,7 @@ describe( 'compute.io', function tests() {
 		'subtract',
 		'multiply',
 		'divide',
+		'eq',
 		'gt',
 		'geq',
 		'lt',
