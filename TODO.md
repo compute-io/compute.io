@@ -91,7 +91,7 @@ TODO
 68. ln (element-wise)
 69. log10 (element-wise)
 70. 
-71. neq (element-wise)
+71. 
 72. 
 73. silhouette values (kmeans)
 74. voronoi algo (lloyds algo)

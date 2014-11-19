@@ -44,6 +44,7 @@ Compute.io
 		*	[divide( arr, x )](#divide)
 	- 	[Relational Operations](#relational-operations)
 		* 	[eq( arr, x, opts)](#eq)
+		* 	[neq( arr, x, opts)](#neq)
 		*	[gt( arr, x )](#gt)
 		*	[geq( arr, x )](#geq)
 		*	[lt( arr, x )](#lt)
@@ -578,11 +579,32 @@ var data = [ 2, 4, 2, 7, 3 ],
 out = compute.eq( data, 3 );
 // returns [ 0, 0, 0, 0, 1 ]
 
-out = compute.eq( data, [3, 4, 1, 7, 4 ] );
+out = compute.eq( data, [ 3, 4, 1, 7, 4 ] );
 // returns [ 0, 1, 0, 1, 0 ]
 ```
 
 For function `options`, see [compute-eq](https://github.com/compute-io/eq).
+
+
+<a name="neq"></a>
+#### [compute.neq( arr, x[, opts] )](https://github.com/compute-io/neq)
+
+Computes an element-wise comparison (not equal) of an `array`, where `x` may either be an `array` of equal length or a single value (of any type).
+
+The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is __not__ equal to a compared value and `0` means that an element is equal to a compared value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ],
+	out;
+
+out = compute.neq( data, 3 );
+// returns [ 1, 1, 1, 1, 0 ]
+
+out = compute.neq( data, [ 3, 4, 1, 7, 4 ] );
+// returns [ 1, 0, 1, 0, 1 ]
+```
+
+For function `options`, see [compute-neq](https://github.com/compute-io/neq).
 
 
 
