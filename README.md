@@ -44,6 +44,7 @@ Compute.io
 		*	[divide( arr, x )](#divide)
 	- 	[Relational Operations](#relational-operations)
 		*	[gt( arr, x )](#gt)
+		*	[lt( arr, x )](#lt)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	-	[Linear Algebra](#linear-algebra)
@@ -575,6 +576,25 @@ out = compute.gt( data, 3.14 );
 
 out = compute.gt( data, [3, 5, 1, 4, 4 ] );
 // returns [ 0, 0, 1, 1, 0 ]
+```
+
+
+<a name="lt"></a>
+#### [compute.lt( arr, x )](https://github.com/compute-io/lt)
+
+Computes an element-wise comparison (less than) of an `array`, where `x` may either be an `array` of equal length or a single value (`number` or `string`).
+
+The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is less than a compared value and `0` means that an element is __not__ less than a compared value.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ],
+	out;
+
+out = compute.lt( data, 3.14 );
+// returns [ 1, 0, 1, 0, 1 ]
+
+out = compute.lt( data, [3, 5, 1, 4, 4 ] );
+// returns [ 1, 1, 0, 0, 1 ]
 ```
 
 

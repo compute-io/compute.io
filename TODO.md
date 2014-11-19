@@ -5,13 +5,14 @@ TODO
 
 1. 	Method to throw all methods into the global namespace; compute.mean() --> mean(). How to prevent methods from getting clobbered?
 2. 	Should methods explicitly handle cases where the input `array` is empty? e.g., `mean([]) === null` or `NaN`, rather than returning `0`, an initialized value.
-	- 	How else to distinguish from between a mean of `0` and having provided an empty `array`?
+	- 	How else to distinguish between a mean of `0` and having provided an empty `array`?
 	-	Could also throw, but this may be a bit harsh. Type checking and throwing, okay, but throwing due to an empty `array` may be too disruptive.
 3. 	**performance optimization**
 	- 	linspace/logspace/zip/<any method which creates an output array>
 		- 	use push for arrays longer than fast element limit
 		-	see incrspace
 4. 	move `deg2rad` and `rad2deg` to `trigonometry`
+5. 	in all module examples, reuse compute modules (e.g., for computing sum, mean, etc) --> dev dependencies
 
 
 ## Functions
@@ -94,15 +95,15 @@ TODO
 72. geq (element-wise)
 73. leq (element-wise)
 74. seq (element-wise)
-75. lt (element-wise)
+75. sneq (element-wise)
 76. setxor
 77. log(element-wise; arbitrary base; default e)
 78. log2 (element-wise)
 79. log1p (element-wise)
 80. bitwise ops (element-wise)
 81. isdecimal (element-wise)
-82. gcd
-83. egcd
+82. gcd/gcf
+83. egcd (extended)
 84. lcm
 85. loess
 86. kmeans
@@ -129,17 +130,20 @@ TODO
 107. gtest
 108. mva --> mmoments (moving descriptive stats; mu,std,skew,kurt)
 109. sorting (hsort, isort, qsort, msort, ...)
-110. sneq (element-wise)
+110. 
 111. chunkify
 112. select( indices|logical )
+	- 	get
+	-	set( idx|log, val|arr ) --> do we need opts? 2nd arg type, mode (scalar versus element-wise)
 113. partitions (math)
 114. imhist (?)
 115. weighted median (?)
 116. weighted percentile
 117. selection algorithm, median of medians, quickselect
-118. zeros (?)
-119. ones (?)
-120. replace
+118. zeros (?) -- fast elements (opts: sparse)
+119. ones (?) -- fast elements (opts: sparse)
+120. replace (see select-set)
+121. bitwise (element-wise) (note abt int32)
 
 
 

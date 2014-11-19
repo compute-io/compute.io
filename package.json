@@ -84,6 +84,7 @@
     "compute-lmidmean": "^1.0.1",
     "compute-logspace": "^1.0.0",
     "compute-lpnorm": "^1.0.0",
+    "compute-lt": "^1.0.0",
     "compute-max": "^1.0.0",
     "compute-mean": "^1.0.0",
     "compute-median": "^1.1.0",
