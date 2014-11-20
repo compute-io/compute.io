@@ -96,6 +96,7 @@ describe( 'compute.io', function tests() {
 		'nanmean',
 		'incrmean',
 		'mmean',
+		'incrmmean',
 		'wmean',
 		'gmean',
 		'nangmean',

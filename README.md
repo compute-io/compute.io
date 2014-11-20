@@ -77,6 +77,7 @@ Compute.io
 		*	[nanmean( arr )](#nanmean)
 		*	[incrmean()](#incrmean)
 		*	[mmean( arr, window )](#mmean)
+		*	[incrmmean( window )](#incrmmean)
 		*	[wmean( arr, weights )](#wmean)
 		*	[gmean( arr )](#gmean)
 		*	[nangmean( arr )](#nangmean)
@@ -1009,6 +1010,25 @@ Computes a moving arithmetic mean (sliding window average) over a numeric `array
 var data = [ 2, 4, 2, 7, 3 ];
 
 var arr = compute.mmean( data, 2 );
+```
+
+
+<a name="incrmmean"></a>
+#### [compute.incrmmean( window )](https://github.com/compute-io/incrmmean)
+
+Returns a method to compute a moving arithmetic mean incrementally. `window` sets the window size, i.e., the number of values over which to compute a moving mean.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var mmean = compute.incrmmean( 3 ),
+	mu;
+
+for ( var i = 0; i < data.length; i++ ) {
+	mu = mmean( data[ i ] );
+	console.log( mu );
+}
+console.log( mmean() );
 ```
 
 
