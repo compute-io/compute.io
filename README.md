@@ -708,7 +708,7 @@ Note: mutates the input `array`.
 ### Discrete Mathematics
 
 <a name="gcd"></a>
-#### [compute.gcd( arr )](#https://github.com/compute-io/gcd)
+#### [compute.gcd( arr )](https://github.com/compute-io/gcd)
 
 Computes the [greatest common divisor](http://en.wikipedia.org/wiki/Greatest_common_divisor) (gcd) of two or more `integers`. 
 
