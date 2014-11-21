@@ -72,6 +72,7 @@ describe( 'compute.io', function tests() {
 		'lt',
 		'leq',
 		'unique',
+		'gcd',
 		'l1norm',
 		'l2norm',
 		'linfnorm',

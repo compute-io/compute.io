@@ -51,6 +51,8 @@ Compute.io
 		*	[leq( arr, x )](#leq)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
+	- 	[Discrete Mathematics](#discrete-mathematics)
+		*	[gcd( arr )](#gcd)
 	-	[Linear Algebra](#linear-algebra)
 		* 	[l1norm( arr )](#l1norm)
 		* 	[l2norm( arr )](#l2norm)
@@ -701,6 +703,21 @@ compute.unique( data );
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
 
 Note: mutates the input `array`.
+
+
+### Discrete Mathematics
+
+<a name="gcd"></a>
+#### [compute.gcd( arr )](#https://github.com/compute-io/gcd)
+
+Computes the [greatest common divisor](http://en.wikipedia.org/wiki/Greatest_common_divisor) (gcd) of two or more `integers`. 
+
+``` javascript
+var val = compute.gcd( [48, 18] );
+// returns 6
+```
+
+If provided an empty `array`, returns `null`.
 
 
 

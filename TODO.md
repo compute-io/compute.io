@@ -102,7 +102,7 @@ TODO
 79. log1p (element-wise)
 80. bitwise ops (element-wise)
 81. isdecimal (element-wise)
-82. gcd/gcf
+82. 
 83. egcd (extended)
 84. lcm
 85. loess
@@ -166,3 +166,4 @@ TODO
 *	decimal.js
 *	bignum.js
 *	numeral.js
+*	nerdamer.js
