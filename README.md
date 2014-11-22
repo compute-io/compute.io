@@ -53,6 +53,7 @@ Compute.io
 		*	[unique( arr, sorted )](#unique)
 	- 	[Discrete Mathematics](#discrete-mathematics)
 		*	[gcd( arr )](#gcd)
+		*	[lcm( arr )](#lcm)
 	-	[Linear Algebra](#linear-algebra)
 		* 	[l1norm( arr )](#l1norm)
 		* 	[l2norm( arr )](#l2norm)
@@ -718,6 +719,20 @@ var val = compute.gcd( [48, 18] );
 ```
 
 If provided an empty `array`, returns `null`.
+
+
+<a name="lcm"></a>
+#### [compute.lcm( arr )](https://github.com/compute-io/lcm)
+
+Computes the [least common multiple](http://en.wikipedia.org/wiki/Least_common_multiple) (lcm) of two or more `integers`. 
+
+``` javascript
+var val = compute.lcm( [21, 6] );
+// returns 42
+```
+
+If provided an empty `array`, returns `null`.
+
 
 
 

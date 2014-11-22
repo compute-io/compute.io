@@ -104,7 +104,7 @@ TODO
 81. isdecimal (element-wise)
 82. 
 83. egcd (extended)
-84. lcm
+84. 
 85. loess
 86. kmeans
 87. kde
