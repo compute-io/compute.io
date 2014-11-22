@@ -144,7 +144,20 @@ TODO
 119. ones (?) -- fast elements (opts: sparse)
 120. replace (see select-set)
 121. bitwise (element-wise) (note abt int32)
-
+122. ndvariance(dim)
+123. ndmean(dim) --> return new array
+124. ndsum(dim)
+125. ndmin(dim)
+126. ndmax(dim)
+127. ndstdev(dim)
+128. ndskewness(dim)
+129. ndkurtosis
+130. ndmode
+131. ndmedian
+132. ndarray
+133. ndcovariance
+134. ndpcc
+135. 
 
 
 ## Fluent

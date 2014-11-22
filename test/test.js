@@ -35,6 +35,7 @@ describe( 'compute.io', function tests() {
 	'use strict';
 
 	var properties = [
+		// Utilities:
 		'roundn',
 		'polyval',
 		'reverse',
@@ -42,8 +43,7 @@ describe( 'compute.io', function tests() {
 		'circshift',
 		'diff',
 		'find',
-		'deg2rad',
-		'rad2deg',
+		'dims',
 		'issorted',
 		'isnumeric',
 		'isnan',
@@ -54,6 +54,8 @@ describe( 'compute.io', function tests() {
 		'linspace',
 		'incrspace',
 		'logspace',
+
+		// Special functions:
 		'abs',
 		'sqrt',
 		'signum',
@@ -61,25 +63,44 @@ describe( 'compute.io', function tests() {
 		'erfc',
 		'erfinv',
 		'erfcinv',
+
+		// Arithmetic:
 		'add',
 		'subtract',
 		'multiply',
 		'divide',
+
+		// Relational operations:
 		'eq',
 		'neq',
 		'gt',
 		'geq',
 		'lt',
 		'leq',
+
+		// Trigonometry:
+		'deg2rad',
+		'rad2deg',
+
+		// Geometry:
+		'hypot',
+
+		// Sets:
 		'unique',
+
+		// Discrete mathematics:
 		'gcd',
 		'lcm',
+
+		// Linear algebra:
 		'l1norm',
 		'l2norm',
 		'linfnorm',
 		'lpnorm',
 		'dot',
 		'cross',
+
+		// Statistics:
 		'min',
 		'incrmin',
 		'mmin',
@@ -127,7 +148,8 @@ describe( 'compute.io', function tests() {
 		'trimean',
 		'skewness',
 		'kurtosis',
-		'hypot',
+
+		// Information theory:
 		'hamdist'
 	];
 

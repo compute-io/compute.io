@@ -17,8 +17,7 @@ Compute.io
 		*	[circshift( x, k )](#circshift)
 		*	[diff( arr )](#diff)
 		*	[find( arr, opts, clbk )](#find)
-		*	[deg2rad( x )](#deg2rad)
-		*	[rad2deg( x )](#rad2deg)
+		*	[dims( arr, max )](#dims)
 		*	[issorted( arr, clbk )](#issorted)
 		*	[isnumeric( arr )](#isnumeric)
 		*	[isnan( arr )](#isnan)
@@ -49,6 +48,11 @@ Compute.io
 		*	[geq( arr, x )](#geq)
 		*	[lt( arr, x )](#lt)
 		*	[leq( arr, x )](#leq)
+	-	[Trigonometry](#trigonometry)
+		*	[deg2rad( x )](#deg2rad)
+		*	[rad2deg( x )](#rad2deg)
+	-	[Geometry](#geometry)
+		*	[hypot( a, b )](#hypot)
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	- 	[Discrete Mathematics](#discrete-mathematics)
@@ -109,8 +113,6 @@ Compute.io
 		*	[trimean( arr, opts )](#trimean)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
-	-	[Geometry](#geometry)
-		*	[hypot( a, b )](#hypot)
 	- 	[Information Theory](#information-theory)
 		*	[hamdist( a, b )](#hamdist)
 1. 	[Fluent Interface](#fluent-interface)
@@ -258,38 +260,25 @@ var results = compute.find( arr, opts, condition );
 For further documentation, see the [compute-find](https://github.com/compute-io/find) module.
 
 
-<a name="deg2rad"></a>
-#### [compute.deg2rad( x )](https://github.com/compute-io/deg2rad)
+<a name="dims"></a>
+#### [compute.dims( arr[, max] )](https://github.com/compute-io/dims)
 
-Converts degrees to radians, where `x` may be a single `numeric` value or a numeric `array`.
-
-``` javascript
-var val = compute.deg2rad( 90 );
-// returns pi/2
-
-var data = [ 0, 45, 90, 135, 180 ];
-compute.deg2rad( data );
-// returns [ 0, pi/4, pi/2, 3pi/4, pi ]
-```
-
-Note: mutates the input `array`.
-
-
-<a name="rad2deg"></a>
-#### [compute.rad2deg( x )](https://github.com/compute-io/rad2deg)
-
-Converts radians to degrees, where `x` may be a single `numeric` value or a numeric `array`.
+Computes `array` dimensions, including nested `arrays`.
 
 ``` javascript
-var val = compute.rad2deg( Math.PI/2 );
-// returns 90
+var data, d;
 
-var data = [ 0, Math.PI/4, Math.PI/2, 3*Math.PI/4, Math.PI ];
-compute.rad2deg( data );
-// returns [ 0, 45, 90, 135, 180 ]
+data = [ 1, 2 ];
+d = compute.dims( data );
+// returns [2]
+
+data = [ [1,2], [1,2] ];
+d = compute.dims( data );
+// returns [2,2]
 ```
 
-Note: mutates the input `array`.
+To limit the number of dimensions returned, set the `max` option.
+
 
 
 <a name="issorted"></a>
@@ -686,6 +675,61 @@ out = compute.leq( data, 3.14 );
 out = compute.leq( data, [3, 5, 1, 7, 4 ] );
 // returns [ 1, 1, 0, 1, 1 ]
 ```
+
+
+
+### Trigonometry
+
+<a name="deg2rad"></a>
+#### [compute.deg2rad( x )](https://github.com/compute-io/deg2rad)
+
+Converts degrees to radians, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var val = compute.deg2rad( 90 );
+// returns pi/2
+
+var data = [ 0, 45, 90, 135, 180 ];
+compute.deg2rad( data );
+// returns [ 0, pi/4, pi/2, 3pi/4, pi ]
+```
+
+Note: mutates the input `array`.
+
+
+<a name="rad2deg"></a>
+#### [compute.rad2deg( x )](https://github.com/compute-io/rad2deg)
+
+Converts radians to degrees, where `x` may be a single `numeric` value or a numeric `array`.
+
+``` javascript
+var val = compute.rad2deg( Math.PI/2 );
+// returns 90
+
+var data = [ 0, Math.PI/4, Math.PI/2, 3*Math.PI/4, Math.PI ];
+compute.rad2deg( data );
+// returns [ 0, 45, 90, 135, 180 ]
+```
+
+Note: mutates the input `array`.
+
+
+
+### Geometry
+
+<a name="hypot"></a>
+#### [compute.hypot( a, b )](https://github.com/compute-io/hypot)
+
+Computes the hypotenuse of a right triangle.
+
+``` javascript
+var a = 10,
+	b = 12;
+
+var c = compute.hypot( a, b );
+```
+
+
 
 
 ### Sets
@@ -1456,21 +1500,6 @@ var data = [ 2, 4, 2, 7, 3 ];
 var kur = compute.kurtosis( data );
 ```
 
-
-
-### Geometry
-
-<a name="hypot"></a>
-#### [compute.hypot( a, b )](https://github.com/compute-io/hypot)
-
-Computes the hypotenuse of a right triangle.
-
-``` javascript
-var a = 10,
-	b = 12;
-
-var c = compute.hypot( a, b );
-```
 
 
 ### Information Theory

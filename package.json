@@ -29,12 +29,16 @@
     "mathematics",
     "math",
     "geometry",
+    "trigonometry",
     "linear algebra",
+    "discrete",
+    "set",
     "information theory",
     "statistics",
     "stats",
     "utilities",
-    "utils"
+    "utils",
+    "array"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/compute.io/issues"
@@ -49,6 +53,7 @@
     "compute-csum": "^1.0.0",
     "compute-deg2rad": "^1.0.0",
     "compute-diff": "^1.0.0",
+    "compute-dims": "^1.0.0",
     "compute-divide": "^1.0.0",
     "compute-dot": "^1.0.0",
     "compute-eq": "^1.0.0",
