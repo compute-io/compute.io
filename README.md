@@ -74,6 +74,7 @@ Compute.io
 		*	[cmin( arr )](#cmin)
 		*	[max( arr )](#max)
 		*	[argmax( arr )](#argmax)
+		*	[argnanmax( arr )](#argnanmax)
 		*	[incrmax()](#incrmax)
 		*	[mmax( arr, window )](#mmax)
 		*	[cmax( arr )](#cmax)
@@ -957,6 +958,19 @@ var data = [ 2, 4, 2, 7, 7, 3 ];
 
 var idx = compute.argmax( data );
 // returns [3,4]
+```
+
+
+<a name="argnanmax"></a>
+#### [compute.argnanmax( arr )](https://github.com/compute-io/argnanmax)
+
+Computes the maximum value of an `array` ignoring non-numeric values and returns the corresponding `array` indices.
+
+``` javascript
+var data = [ null, -2, -4, -2, null, -7, -3 ];
+
+var idx = compute.argnanmax( data );
+// returns [1,3]
 ```
 
 
