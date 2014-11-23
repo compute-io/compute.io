@@ -72,6 +72,7 @@ Compute.io
 		*	[mmin( arr, window )](#mmin)
 		*	[cmin( arr )](#cmin)
 		*	[max( arr )](#max)
+		*	[argmax( arr )](#argmax)
 		*	[incrmax()](#incrmax)
 		*	[mmax( arr, window )](#mmax)
 		*	[cmax( arr )](#cmax)
@@ -928,6 +929,20 @@ Computes the maximum value of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var max = compute.max( data );
+```
+
+
+
+<a name="argmax"></a>
+#### [compute.argmax( arr )](https://github.com/compute-io/argmax)
+
+Computes the maximum value of a numeric `array` and returns the corresponding `array` indices.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 7, 3 ];
+
+var idx = compute.argmax( data );
+// returns [3,4]
 ```
 
 
