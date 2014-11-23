@@ -68,6 +68,7 @@ Compute.io
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
 		*	[argmin( arr )](#argmin)
+		*	[nanmin( arr )](#nanmin)
 		*	[argnanmin( arr )](#argnanmin)
 		*	[incrmin()](#incrmin)
 		*	[mmin( arr, window )](#mmin)
@@ -877,6 +878,18 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 var idx = compute.argmin( data );
 // returns [0,2]
+```
+
+<a name="nanmin"></a>
+#### [compute.nanmin( arr )](https://github.com/compute-io/nanmin)
+
+Computes the minimum value of an `array` ignoring non-numeric values.
+
+``` javascript
+var data = [ null, 2, 4, 2, null, 7, 3 ];
+
+var min = compute.nanmin( data );
+// returns 2
 ```
 
 

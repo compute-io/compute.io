@@ -26,7 +26,7 @@ TODO
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian
-10. nanmin
+10. 
 11. 
 12. incrmsum
 13. incrkurtosis

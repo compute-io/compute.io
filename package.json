@@ -117,6 +117,7 @@
     "compute-nangmean": "^1.0.0",
     "compute-nanhmean": "^1.0.0",
     "compute-nanmean": "^1.0.0",
+    "compute-nanmin": "^1.0.0",
     "compute-nanqmean": "^1.0.0",
     "compute-nanstdev": "^1.0.0",
     "compute-nansum": "^1.0.0",
