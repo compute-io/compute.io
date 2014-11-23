@@ -103,6 +103,7 @@ describe( 'compute.io', function tests() {
 		// Statistics:
 		'min',
 		'argmin',
+		'argnanmin',
 		'incrmin',
 		'mmin',
 		'cmin',

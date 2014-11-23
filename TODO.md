@@ -21,8 +21,8 @@ TODO
 2. 	
 3. 	mpcc
 4. 	mcov
-5. 	nanargmin
-6. 	nanargmax
+5. 	
+6. 	argnanmax
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian
