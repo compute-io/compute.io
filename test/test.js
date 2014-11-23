@@ -110,6 +110,7 @@ describe( 'compute.io', function tests() {
 		'cmin',
 		'max',
 		'argmax',
+		'nanmax',
 		'argnanmax',
 		'incrmax',
 		'mmax',

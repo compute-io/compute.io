@@ -116,6 +116,7 @@
     "compute-multiply": "^1.0.0",
     "compute-nangmean": "^1.0.0",
     "compute-nanhmean": "^1.0.0",
+    "compute-nanmax": "^1.0.0",
     "compute-nanmean": "^1.0.0",
     "compute-nanmin": "^1.0.0",
     "compute-nanqmean": "^1.0.0",

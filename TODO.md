@@ -35,7 +35,7 @@ TODO
 16. incrnanmean
 17. incrgmean
 18. incrhmean
-19. nanmax
+19. 
 20. incrnanvariance
 21. incrnanstdev
 22. incrnanmax
