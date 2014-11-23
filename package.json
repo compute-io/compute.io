@@ -46,6 +46,7 @@
   "dependencies": {
     "compute-abs": "^1.0.0",
     "compute-add": "^1.0.1",
+    "compute-argmin": "^1.0.0",
     "compute-circshift": "^1.0.0",
     "compute-cmax": "^1.0.0",
     "compute-cmin": "^1.0.0",

@@ -67,6 +67,7 @@ Compute.io
 		*	[cross( x, y )](#cross)
 	- 	[Statistics](#statistics)
 		*	[min( arr )](#min)
+		*	[argmin( arr )](#argmin)
 		*	[incrmin()](#incrmin)
 		*	[mmin( arr, window )](#mmin)
 		*	[cmin( arr )](#cmin)
@@ -860,7 +861,21 @@ Computes the minimum value of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var min = compute.min( data );
+// returns 2
 ```
+
+<a name="argmin"></a>
+#### [compute.argmin( arr )](https://github.com/compute-io/argmin)
+
+Computes the minimum value of a numeric `array` and returns the corresponding `array` indices.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var idx = compute.argmin( data );
+// returns [0,2]
+```
+
 
 <a name="incrmin"></a>
 #### [compute.incrmin()](https://github.com/compute-io/incrmin)

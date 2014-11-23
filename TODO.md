@@ -11,19 +11,18 @@ TODO
 	- 	linspace/logspace/zip/<any method which creates an output array>
 		- 	use push for arrays longer than fast element limit
 		-	see incrspace
-4. 	move `deg2rad` and `rad2deg` to `trigonometry`
+4. 	
 5. 	in all module examples, reuse compute modules (e.g., for computing sum, mean, etc) --> dev dependencies
 
 
 ## Functions
 
-1. 	midsummary
-	- 	add median special case (compute median inline; no need to import compute-median dependency)
+1. 	unzip(col1,col2,...) - assumes zipped array
 2. 	
 3. 	mpcc
 4. 	mcov
-5. 	
-6. 	
+5. 	nanargmin
+6. 	argmax / nanargmax
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian
@@ -91,8 +90,8 @@ TODO
 68. ln (element-wise)
 69. log10 (element-wise)
 70. 
-71. 
-72. 
+71. xcorr
+72. autocorr
 73. silhouette values (kmeans)
 74. voronoi algo (lloyds algo)
 75. kmeans++
@@ -111,7 +110,7 @@ TODO
 88. bandwidth
 89. r2 (coef determination)
 90. binocoef (see substack)
-91. factorial (bignum; <=171)
+91. factorial (bignum; <=171) --> split into factorial and bigfactorial (?)
 92. unit conversion
 93. linear regression
 94. loess
