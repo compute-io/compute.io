@@ -125,6 +125,7 @@ Compute.io
 1. 	[Tests](#tests)
 	- 	[Unit](#unit)
 	-	[Coverage](#test-coverage)
+1. 	[Contributing](#contributing)
 1. 	[License](#license)
 
 
@@ -1700,7 +1701,7 @@ flow.inspect();
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org/) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -1722,6 +1723,11 @@ Istanbul creates a `./reports/coverage` directory. To access an HTML version of 
 ``` bash
 $ make view-cov
 ```
+
+
+## Contributing
+
+To contribute to [compute.io](https://github.com/compute-io), see the contributing [guide](https://github.com/compute-io/contributing).
 
 
 ## License

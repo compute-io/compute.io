@@ -7,27 +7,37 @@ TODO
 2. 	Should methods explicitly handle cases where the input `array` is empty? e.g., `mean([]) === null` or `NaN`, rather than returning `0`, an initialized value.
 	- 	How else to distinguish between a mean of `0` and having provided an empty `array`?
 	-	Could also throw, but this may be a bit harsh. Type checking and throwing, okay, but throwing due to an empty `array` may be too disruptive.
+	- 	see nanmin and nanmax
 3. 	**performance optimization**
 	- 	linspace/logspace/zip/<any method which creates an output array>
 		- 	use push for arrays longer than fast element limit
 		-	see incrspace
 4. 	
 5. 	in all module examples, reuse compute modules (e.g., for computing sum, mean, etc) --> dev dependencies
+6. 	timeseries date utilities
+7. 	csv utilities
+8. 	json utilities
+9. 	tsv utilities
+10. other data formats (?)
+11. .jshintignore --> include jshint makefile target
+12. update mocha link in READMEs
+13. update JS style guide (see recent bookmark)
+14. .jscs.json --> include jscs makefile target
 
 
 ## Functions
 
 1. 	unzip(col1,col2,...) - assumes zipped array
-2. 	
+2. 	histc
 3. 	mpcc
 4. 	mcov
-5. 	
-6. 	
+5. 	histcn
+6. 	binsearch
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian
-10. 
-11. 
+10. binarysearch --> bsearch
+11. bisect/bisectleft/bisectright (d3)
 12. incrmsum
 13. incrkurtosis
 14. incrskewness
@@ -156,7 +166,14 @@ TODO
 132. ndarray
 133. ndcovariance
 134. ndpcc
-135. 
+135. date utilities
+	- 	[datespace](https://github.com/segmentio/chunk-date-range/blob/master/index.js)
+	- 	array utils (e.g., to timestamp, etc)
+	- 	with mind toward timeseries
+136. equivalent to A(:)
+137. deep close to (see also almost-equal)
+138. 
+
 
 
 ## Fluent
@@ -179,3 +196,4 @@ TODO
 *	bignum.js
 *	numeral.js
 *	nerdamer.js
+*	javascript-cas
