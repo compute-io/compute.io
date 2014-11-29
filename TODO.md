@@ -29,7 +29,7 @@ TODO
 
 1. 	unzip(col1,col2,...) - assumes zipped array
 2. 	histc
-3. 	mpcc
+3. 	mpcorr
 4. 	mcov
 5. 	histcn
 6. 	binsearch
@@ -62,7 +62,7 @@ TODO
 33. incrmmin
 34. incrmvariance
 35. incrmstdev
-36. incrpcc
+36. incrpcorr
 37. incrcov
 38. mean deviation (from any value)
 39. cumulative mean deviation
@@ -100,8 +100,8 @@ TODO
 68. ln (element-wise)
 69. log10 (element-wise)
 70. 
-71. xcorr
-72. autocorr
+71. 
+72. 
 73. silhouette values (kmeans)
 74. voronoi algo (lloyds algo)
 75. kmeans++
@@ -165,14 +165,38 @@ TODO
 131. ndmedian
 132. ndarray
 133. ndcovariance
-134. ndpcc
+134. ndpcorr
 135. date utilities
 	- 	[datespace](https://github.com/segmentio/chunk-date-range/blob/master/index.js)
 	- 	array utils (e.g., to timestamp, etc)
 	- 	with mind toward timeseries
-136. equivalent to A(:)
+136. equivalent to A(:) ??
 137. deep close to (see also almost-equal)
-138. 
+138. ccorr (cross-corr)
+139. acorr (auto-corr)
+140. pcorr (pcc)
+141. kcorr (kendall)
+142. scorr (spearman)
+143. kendall's w
+144. kendall tau distance
+145. goodman kruskal gamma
+146. Theil-Sen estimator
+147. median using median of medians algorithm
+148. rv coefficient
+149. distance skewness
+150. distance/brownian correlation
+151. hoeffding's d
+152. mutual information
+153. aic
+154. bic
+155. hannan-quinn information criterion (hqc)
+156. analysis of variance (anova)
+157. wcovariance
+158. nancovariance (see R; pairwise complete, etc)
+159. nanpcorr
+160. residuals (analysis fcns?)
+161. scaled correlation
+162. 
 
 
 

@@ -1,3 +1,4 @@
+'use strict';
 
 // MODULES //
 
@@ -32,7 +33,6 @@ function test_property( name ) {
 // TESTS //
 
 describe( 'compute.io', function tests() {
-	'use strict';
 
 	var properties = [
 		// Utilities:

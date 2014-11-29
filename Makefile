@@ -8,27 +8,29 @@ NODE_ENV ?= test
 
 # NOTES #
 
-NOTES ?= 'TODO|FIXME'
+NOTES ?= 'TODO|FIXME|WARNING|HACK|NOTE'
 
 
 # MOCHA #
 
-# Specify the test framework bin locations:
 MOCHA ?= ./node_modules/.bin/mocha
 _MOCHA ?= ./node_modules/.bin/_mocha
-
-# Specify the mocha reporter:
 MOCHA_REPORTER ?= spec
 
 
 # ISTANBUL #
 
-# Istanbul configuration:
 ISTANBUL ?= ./node_modules/.bin/istanbul
 ISTANBUL_OUT ?= ./reports/coverage
 ISTANBUL_REPORT ?= lcov
 ISTANBUL_LCOV_INFO_PATH ?= $(ISTANBUL_OUT)/lcov.info
 ISTANBUL_HTML_REPORT_PATH ?= $(ISTANBUL_OUT)/lcov-report/index.html
+
+
+# JSHINT #
+
+JSHINT ?= ./node_modules/.bin/jshint
+JSHINT_REPORTER ?= ./node_modules/jshint-stylish/stylish.js
 
 
 
@@ -98,6 +100,18 @@ view-cov: view-istanbul-report
 view-istanbul-report:
 	open $(ISTANBUL_HTML_REPORT_PATH)
 
+
+
+# LINT #
+
+.PHONY: lint lint-jshint
+
+lint: lint-jshint
+
+lint-jshint: node_modules
+	$(JSHINT) \
+		--reporter $(JSHINT_REPORTER) \
+		./
 
 
 # NODE #

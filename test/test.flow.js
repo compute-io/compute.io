@@ -1,3 +1,4 @@
+'use strict';
 
 // MODULES //
 
@@ -20,7 +21,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'compute.io flow', function tests() {
-	'use strict';
 
 	// SETUP //
 

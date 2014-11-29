@@ -101,7 +101,7 @@ Compute.io
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
 		*	[incrvariance()](#incrvariance)
-		*	[covariance()](#covariance)
+		*	[covariance( arr1, arr2,..., opts )](#covariance)
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
