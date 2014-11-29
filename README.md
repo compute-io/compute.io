@@ -101,6 +101,7 @@ Compute.io
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
 		*	[incrvariance()](#incrvariance)
+		*	[covariance()](#covariance)
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
@@ -1318,6 +1319,22 @@ for ( var i = 0; i < data.length; i++ ) {
 }
 console.log( variance() );
 ```
+
+
+<a name="covariance"></a>
+#### [compute.covariance( arr1[, arr2,...,opts] )](https://github.com/compute-io/covariance)
+
+Computes the [covariance](http://en.wikipedia.org/wiki/Covariance) between one or more numeric arrays.
+
+``` javascript
+var x = [ 1, 2, 3, 4, 5 ],
+	y = [ 5, 4, 3, 2, 1 ];
+
+var mat = compute.covariance( x, y );
+// returns [[2.5,-2.5],[-2.5,2.5]]
+```
+
+For method options, see [compute-covariance](https://github.com/compute-io/covariance).
 
 
 <a name="stdev"></a>

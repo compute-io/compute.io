@@ -53,6 +53,7 @@
     "compute-circshift": "^1.0.0",
     "compute-cmax": "^1.0.0",
     "compute-cmin": "^1.0.0",
+    "compute-covariance": "^1.0.0",
     "compute-cross": "^1.0.0",
     "compute-csum": "^1.0.0",
     "compute-deg2rad": "^1.0.0",

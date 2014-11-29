@@ -136,6 +136,7 @@ describe( 'compute.io', function tests() {
 		'variance',
 		'nanvariance',
 		'incrvariance',
+		'covariance',
 		'stdev',
 		'nanstdev',
 		'incrstdev',
