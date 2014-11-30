@@ -25,6 +25,7 @@ Compute.io
 		*	[isinteger( arr )](#isinteger)
 		*	[isinf( arr )](#isinf)
 		*	[zip( arr1, arr2,..., opts )](#zip)
+		*	[unzip( arr, idx )](#unzip)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
 		*	[logspace( a, b, length )](#logspace)
@@ -380,6 +381,28 @@ var zipped = compute.zip( [1,2], ['a','b'] );
 ```
 
 For function `options`, see the [compute-zip](https://github.com/compute-io/zip) module.
+
+
+<a name="unzip"></a>
+#### [compute.unzip( arr[, idx] )](https://github.com/compute-io/unzip)
+
+Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., a nested `array` of tuples).
+
+``` javascript
+var arr = [ [1,'a',3], [2,'b',4] ];
+
+var out = compute.unzip( arr );
+// returns [ [1,2], ['a','b'], [3,4] ];
+```
+
+To unzip specific tuple elements, you can provide an `array` of indices as an optional second argument.
+
+``` javascript
+var arr = [ [1,'a',3], [2,'b',4] ];
+
+var out = compute.unzip( arr, [0,2] );
+// returns [ [1,2], [3,4] ];
+```
 
 
 
@@ -1609,7 +1632,7 @@ For method options, see [compute-covariance](https://github.com/compute-io/covar
 <a name="pcorr"></a>
 #### [compute.pcorr( arr1[, arr2,...] )](https://github.com/compute-io/pcorr)
 
-Computes the [correlation matrix](http://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices) for one or more numeric arrays.
+Computes a [correlation matrix](http://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices) for one or more numeric arrays.
 
 ``` javascript
 var x = [ 1, 2, 3, 4, 5 ],

@@ -27,7 +27,7 @@ TODO
 
 ## Functions
 
-1. 	unzip(col1,col2,...) - assumes zipped array
+1. 	
 2. 	histc
 3. 	mpcorr
 4. 	mcov

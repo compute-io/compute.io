@@ -51,6 +51,7 @@ describe( 'compute.io', function tests() {
 		'isinteger',
 		'isinf',
 		'zip',
+		'unzip',
 		'linspace',
 		'incrspace',
 		'logspace',
