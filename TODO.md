@@ -174,7 +174,7 @@ TODO
 137. deep close to (see also almost-equal)
 138. ccorr (cross-corr)
 139. acorr (auto-corr)
-140. pcorr (pcc)
+140. 
 141. kcorr (kendall)
 142. scorr (spearman)
 143. kendall's w
@@ -196,7 +196,7 @@ TODO
 159. nanpcorr
 160. residuals (analysis fcns?)
 161. scaled correlation
-162. 
+162. **optimize** pcorr and covariance by using a single linear array consisting of upper triangle elements; simply compute the index of the `i,j` element in the linear array. Space optimization and no nested arrays.
 
 
 

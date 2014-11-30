@@ -101,7 +101,6 @@ Compute.io
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
 		*	[incrvariance()](#incrvariance)
-		*	[covariance( arr1, arr2,..., opts )](#covariance)
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
@@ -120,6 +119,8 @@ Compute.io
 		*	[trimean( arr, opts )](#trimean)
 		*	[skewness( arr )](#skewness)
 		*	[kurtosis( arr )](#kurtosis)
+		*	[covariance( arr1, arr2,..., opts )](#covariance)
+		*	[pcorr( arr1, arr2,... )](#pcorr)
 	- 	[Information Theory](#information-theory)
 		*	[hamdist( a, b )](#hamdist)
 1. 	[Fluent Interface](#fluent-interface)
@@ -1320,23 +1321,6 @@ for ( var i = 0; i < data.length; i++ ) {
 console.log( variance() );
 ```
 
-
-<a name="covariance"></a>
-#### [compute.covariance( arr1[, arr2,...,opts] )](https://github.com/compute-io/covariance)
-
-Computes the [covariance](http://en.wikipedia.org/wiki/Covariance) between one or more numeric arrays.
-
-``` javascript
-var x = [ 1, 2, 3, 4, 5 ],
-	y = [ 5, 4, 3, 2, 1 ];
-
-var mat = compute.covariance( x, y );
-// returns [[2.5,-2.5],[-2.5,2.5]]
-```
-
-For method options, see [compute-covariance](https://github.com/compute-io/covariance).
-
-
 <a name="stdev"></a>
 #### [compute.stdev( arr )](https://github.com/compute-io/stdev)
 
@@ -1602,6 +1586,37 @@ Computes the sample excess kurtosis of an `array` of values.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var kur = compute.kurtosis( data );
+```
+
+
+<a name="covariance"></a>
+#### [compute.covariance( arr1[, arr2,...,opts] )](https://github.com/compute-io/covariance)
+
+Computes the [covariance](http://en.wikipedia.org/wiki/Covariance) between one or more numeric arrays.
+
+``` javascript
+var x = [ 1, 2, 3, 4, 5 ],
+	y = [ 5, 4, 3, 2, 1 ];
+
+var mat = compute.covariance( x, y );
+// returns [[2.5,-2.5],[-2.5,2.5]]
+```
+
+For method options, see [compute-covariance](https://github.com/compute-io/covariance).
+
+
+
+<a name="pcorr"></a>
+#### [compute.pcorr( arr1[, arr2,...] )](https://github.com/compute-io/pcorr)
+
+Computes the [correlation matrix](http://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices) for one or more numeric arrays.
+
+``` javascript
+var x = [ 1, 2, 3, 4, 5 ],
+	y = [ 5, 4, 3, 2, 1 ];
+
+var mat = compute.pcorr( x, y );
+// returns [[1,-1],[-1,1]]
 ```
 
 

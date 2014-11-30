@@ -136,7 +136,6 @@ describe( 'compute.io', function tests() {
 		'variance',
 		'nanvariance',
 		'incrvariance',
-		'covariance',
 		'stdev',
 		'nanstdev',
 		'incrstdev',
@@ -155,6 +154,8 @@ describe( 'compute.io', function tests() {
 		'trimean',
 		'skewness',
 		'kurtosis',
+		'covariance',
+		'pcorr',
 
 		// Information theory:
 		'hamdist'

@@ -47,5 +47,6 @@ Desktop.ini
 # Utilities #
 #############
 .jshintrc
+.jshintignore
 .travis.yml
 .editorconfig
