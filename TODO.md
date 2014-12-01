@@ -19,10 +19,13 @@ TODO
 8. 	json utilities
 9. 	tsv utilities
 10. other data formats (?)
-11. .jshintignore --> include jshint makefile target
+11. .jshintignore
+	-	include jshint makefile target in all deps
 12. update mocha link in READMEs
-13. update JS style guide (see recent bookmark)
-14. .jscs.json --> include jscs makefile target
+13. 
+14. .jscs.json
+	-	include jscs makefile target
+	- 	use jsdoc [plugin](https://github.com/jscs-dev/jscs-jsdoc)
 
 
 ## Functions
@@ -99,7 +102,7 @@ TODO
 67. tan (element-wise)
 68. ln (element-wise)
 69. log10 (element-wise)
-70. 
+70. gamma (erf)
 71. 
 72. 
 73. silhouette values (kmeans)
@@ -109,7 +112,17 @@ TODO
 77. log(element-wise; arbitrary base; default e)
 78. log2 (element-wise)
 79. log1p (element-wise)
-80. bitwise ops (element-wise)
+80. logical/bitwise ops (element-wise)
+	- 	&& (and) --> 1s and 0s; not T/F
+	- 	|| (or)
+	-	! (not)
+	- 	xor
+	- 	band
+	-	bor
+	-	bxor
+	-	bnot
+	-	blshift
+	- 	brshift (sign opt --> >> vs >>>)
 81. isdecimal (element-wise)
 82. 
 83. egcd (extended)
@@ -172,8 +185,8 @@ TODO
 	- 	with mind toward timeseries
 136. equivalent to A(:) ??
 137. deep close to (see also almost-equal)
-138. ccorr (cross-corr)
-139. acorr (auto-corr)
+138. ccorr (cross-corr) --> fft
+139. acorr (auto-corr) --> fft
 140. 
 141. kcorr (kendall)
 142. scorr (spearman)
@@ -197,6 +210,9 @@ TODO
 160. residuals (analysis fcns?)
 161. scaled correlation
 162. **optimize** pcorr and covariance by using a single linear array consisting of upper triangle elements; simply compute the index of the `i,j` element in the linear array. Space optimization and no nested arrays.
+163. some (min threshold option; see underscore; clbk to apply condition)
+164. all/every
+165. none (same as all!)
 
 
 

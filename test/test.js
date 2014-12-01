@@ -1,3 +1,4 @@
+/* globals describe, it, require */
 'use strict';
 
 // MODULES //
@@ -18,16 +19,16 @@ var expect = chai.expect,
 // FUNCTIONS //
 
 /**
-* FUNCTION: test_property( name )
+* FUNCTION: testProperty( name )
 *	Tests that the compute library has a property and that the property value is a function.
 *
 * @param {string} name - property name
 */
-function test_property( name ) {
-	it ( 'should have a `'+ name + '` property that is a function', function test() {
+function testProperty( name ) {
+	it( 'should have a `'+ name + '` property that is a function', function test() {
 		expect( compute ).to.have.property( name ).that.is.a( 'function' );
 	});
-} // end FUNCTION test_property()
+} // end FUNCTION testProperty()
 
 
 // TESTS //
@@ -168,7 +169,7 @@ describe( 'compute.io', function tests() {
 
 	// Run the property tests...
 	for ( var i = 0; i < properties.length; i++ ) {
-		test_property( properties[ i ] );
+		testProperty( properties[ i ] );
 	}
 
 	it( 'should have a fluent interface', function test() {

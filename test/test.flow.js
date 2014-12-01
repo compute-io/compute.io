@@ -1,3 +1,4 @@
+/* globals describe, it, beforeEach, require */
 'use strict';
 
 // MODULES //
@@ -26,7 +27,7 @@ describe( 'compute.io flow', function tests() {
 
 	var Flow;
 
-	beforeEach( function() {
+	beforeEach( function task() {
 		Flow = createFlow( compute );
 	});
 
