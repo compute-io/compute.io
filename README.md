@@ -29,6 +29,7 @@ Compute.io
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
 		*	[logspace( a, b, length )](#logspace)
+		*	[datespace( start, stop, length, opts )](#datespace)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -438,6 +439,29 @@ var arr = compute.logspace( 0, 2, 6 );
 // returns [ 1, ~2.5, ~6.31, ~15.85, ~39.81, 100 ]
 ```
 
+
+<a name="datespace"></a>
+#### [compute.datespace( start, stop[, length, opts] )](https://github.com/compute-io/datespace)
+
+Generates an `array` of linearly spaced [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) objects. If a `length` is not provided, the default output `array` length is `100`.
+
+``` javascript
+var stop = '2014-12-02T07:00:54.973Z',
+	start = new Date( stop ) - 60000;
+
+var arr = compute.datespace( start, stop, 6 );
+/* returns [
+	'Mon Dec 01 2014 22:59:54 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:06 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:18 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:30 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:42 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:54 GMT-0800 (PST)'
+]
+*/
+```
+
+For function `options`, see the [compute-datespace](https://github.com/compute-io/datespace) module.
 
 
 

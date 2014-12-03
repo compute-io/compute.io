@@ -31,17 +31,17 @@ TODO
 ## Functions
 
 1. 	
-2. 	histc
+2. 	_histc_
 3. 	mpcorr
 4. 	mcov
 5. 	histcn
-6. 	binsearch
+6. 	_binsearch_
 7. 	truncated mean
 8. 	winsorized mean
 9. 	nanmedian
 10. binarysearch --> bsearch
 11. bisect/bisectleft/bisectright (d3)
-12. incrmsum
+12. _incrmsum_
 13. incrkurtosis
 14. incrskewness
 15. incrwmean
@@ -61,24 +61,28 @@ TODO
 29. nanquantiles
 30. naniqr
 31. nanrange
-32. incrmmax
-33. incrmmin
-34. incrmvariance
-35. incrmstdev
+32. _incrmmax_
+33. _incrmmin_
+34. _incrmvariance_
+35. _incrmstdev_
 36. incrpcorr
 37. incrcov
-38. mean deviation (from any value)
-39. cumulative mean deviation
-40. repmat (???)
+38. mean/median deviation (mdev; from any value)
+	- 	Is this necessary? Just `array` subtract and take mean/median.
+	- 	Probably not needed.
+39. cumulative deviation (cdev)
+	- 	Just `array` subtract and compute csum
+	- 	Probably not needed.
+40. _absolute deviation_ (absdev)
+	- 	absdev( arr, x )
 41. mean/median absolute deviation
-	- mad( arr, opts )
+	-	mad( arr, opts )
 		- 
 42. z-score
 43. linear regression
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
 45. moving median (clean-up)
-46. absolute deviation (absdev)
-	- 	absdev( arr, x )
+46. repmat (???)
 47. Holt-Winters time series forecasting algorithm
 48. expm1 (element-wise)
 49. cbrt (element-wise)
@@ -102,7 +106,7 @@ TODO
 67. tan (element-wise)
 68. ln (element-wise)
 69. log10 (element-wise)
-70. gamma (erf)
+70. _gamma_ (erf)
 71. 
 72. 
 73. silhouette values (kmeans)
@@ -152,7 +156,7 @@ TODO
 107. gtest
 108. mva --> mmoments (moving descriptive stats; mu,std,skew,kurt)
 109. sorting (hsort, isort, qsort, msort, ...)
-110. 
+110. [linear partition](https://github.com/the-swerve/linear-partitioning)
 111. chunkify
 112. select( indices|logical )
 	- 	get
@@ -180,8 +184,14 @@ TODO
 133. ndcovariance
 134. ndpcorr
 135. date utilities
-	- 	[datespace](https://github.com/segmentio/chunk-date-range/blob/master/index.js)
-	- 	array utils (e.g., to timestamp, etc)
+	- 	[incrdatespace](https://github.com/segmentio/chunk-date-range/blob/master/index.js)
+		-	number || string
+		-	presets: `ms`, `s`, `m`, `h`, `d`, `month`, `yr` (abbrev and full)
+		-	parseable text: `5d12h30m` --> capture all number unit pairs `/(\d+\w)/`
+	- 	array utils
+		- to timestamp
+		- to iso string
+		- ...
 	- 	with mind toward timeseries
 136. equivalent to A(:) ??
 137. deep close to (see also almost-equal)
@@ -204,6 +214,7 @@ TODO
 154. bic
 155. hannan-quinn information criterion (hqc)
 156. analysis of variance (anova)
+	-	[non-parametric](http://en.wikipedia.org/wiki/Kruskal%E2%80%93Wallis_one-way_analysis_of_variance)
 157. wcovariance
 158. nancovariance (see R; pairwise complete, etc)
 159. nanpcorr
@@ -237,3 +248,31 @@ TODO
 *	numeral.js
 *	nerdamer.js
 *	javascript-cas
+
+
+## Update
+
+*	README.md - mocha link
+*	README.md - `make view-cov`
+*	README.md - api documentation
+*	.gitattributes
+*	.editorconfig
+*	.jshintrc
+*	.jshintignore
+*	.npmignore - ignore benchmark dir and dot files
+*	Makefile - notes
+*	Makefile - jshint target
+*	test.js - 'use strict' at top
+*	test.js - /* globals */ at top
+*	examples/index.js - 'use strict' at top
+*	examples/index.js - use compute-io modules where possible (dev deps); e.g., to compute sum, min, max, etc.
+*	package.json - include jshint and jshint-stylish as dev deps
+* 	lib/index.js - remove IIFE
+
+
+### Extra
+
+*	benchmarks
+*	cli.js
+*	jscs
+*	jsfmt

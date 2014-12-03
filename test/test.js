@@ -56,6 +56,7 @@ describe( 'compute.io', function tests() {
 		'linspace',
 		'incrspace',
 		'logspace',
+		'datespace',
 
 		// Special functions:
 		'abs',

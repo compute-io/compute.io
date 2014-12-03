@@ -56,6 +56,7 @@
     "compute-covariance": "^1.0.0",
     "compute-cross": "^1.0.0",
     "compute-csum": "^1.0.0",
+    "compute-datespace": "^1.0.0",
     "compute-deg2rad": "^1.0.0",
     "compute-diff": "^1.0.0",
     "compute-dims": "^1.0.0",
