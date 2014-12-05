@@ -9,9 +9,9 @@ TODO
 	-	Could also throw, but this may be a bit harsh. Type checking and throwing, okay, but throwing due to an empty `array` may be too disruptive.
 	- 	see nanmin and nanmax
 3. 	**performance optimization**
-	- 	linspace/logspace/zip/<any method which creates an output array>
+	- 	linspace/logspace/datespace/zip/<any method which creates an output array>
 		- 	use push for arrays longer than fast element limit
-		-	see incrspace
+		-	see incrspace/incrdatespace
 4. 	
 5. 	in all module examples, reuse compute modules (e.g., for computing sum, mean, etc) --> dev dependencies
 6. 	timeseries date utilities
@@ -184,15 +184,12 @@ TODO
 133. ndcovariance
 134. ndpcorr
 135. date utilities
-	- 	[incrdatespace](https://github.com/segmentio/chunk-date-range/blob/master/index.js)
-		-	number || string
-		-	presets: `ms`, `s`, `m`, `h`, `d`, `month`, `yr` (abbrev and full)
-		-	parseable text: `5d12h30m` --> capture all number unit pairs `/(\d+\w)/`
 	- 	array utils
 		- to timestamp
 		- to iso string
 		- ...
-	- 	with mind toward timeseries
+	- 	**with** mind toward timeseries
+	- 	human readable array diff, where array contains dates (e.g., '5days', '2days', etc)(?)
 136. equivalent to A(:) ??
 137. deep close to (see also almost-equal)
 138. ccorr (cross-corr) --> fft

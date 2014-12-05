@@ -30,6 +30,7 @@ Compute.io
 		*	[incrspace( start, stop, increment )](#incrspace)
 		*	[logspace( a, b, length )](#logspace)
 		*	[datespace( start, stop, length, opts )](#datespace)
+		*	[incrdatespace( start, stop, increment, opts )](#incrdatespace)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -462,6 +463,29 @@ var arr = compute.datespace( start, stop, 6 );
 ```
 
 For function `options`, see the [compute-datespace](https://github.com/compute-io/datespace) module.
+
+
+<a name="incrdatespace"></a>
+#### [compute.incrdatespace( start, stop[, increment, opts] )](https://github.com/compute-io/incrdatespace)
+
+Generates an `array` of linearly spaced [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) objects. If an `increment` is not provided, the default `increment` is `day`.
+
+``` javascript
+var stop = '2014-12-02T07:00:54.973Z',
+	start = new Date( stop ) - 60000;
+
+var arr = incrdatespace( start, stop, '8sec' );
+/* returns [
+	'Mon Dec 01 2014 22:59:54 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:06 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:18 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:30 GMT-0800 (PST)',
+	'Mon Dec 01 2014 23:00:42 GMT-0800 (PST)'
+]
+*/
+```
+
+For function `options`, see the [compute-incrdatespace](https://github.com/compute-io/incrdatespace) module.
 
 
 
