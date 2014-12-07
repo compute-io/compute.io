@@ -72,12 +72,14 @@ TODO
 	- 	Probably not needed.
 39. cumulative deviation (cdev)
 	- 	Just `array` subtract and compute csum
-	- 	Probably not needed.
+	- 	Probably not needed. If not, same logic applies to 38-41!!!
 40. _absolute deviation_ (absdev)
 	- 	absdev( arr, x )
+	- 	Just `array` subtract and `array` abs
 41. mean/median absolute deviation
 	-	mad( arr, opts )
 		- 
+	-	Just `array` substract and `array` mean/median
 42. z-score
 43. linear regression
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
@@ -221,6 +223,7 @@ TODO
 163. some (min threshold option; see underscore; clbk to apply condition)
 164. all/every
 165. none (same as all!)
+166. [gini coefficient](http://en.wikipedia.org/wiki/Gini_coefficient)
 
 
 

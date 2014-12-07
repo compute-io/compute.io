@@ -474,7 +474,7 @@ Generates an `array` of linearly spaced [`Date`](https://developer.mozilla.org/e
 var stop = '2014-12-02T07:00:54.973Z',
 	start = new Date( stop ) - 60000;
 
-var arr = incrdatespace( start, stop, '8sec' );
+var arr = compute.incrdatespace( start, stop, '8sec' );
 /* returns [
 	'Mon Dec 01 2014 22:59:54 GMT-0800 (PST)',
 	'Mon Dec 01 2014 23:00:06 GMT-0800 (PST)',
