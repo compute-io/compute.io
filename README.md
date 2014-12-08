@@ -12,9 +12,6 @@ Compute.io
 	- 	[Utilities](#utilities)
 		* 	[roundn( x, n )](#roundn)
 		*	[polyval( coef, x )](#polyval)
-		*	[reverse( arr )](#reverse)
-		*	[shuffle( arr )](#shuffle)
-		*	[circshift( x, k )](#circshift)
 		*	[diff( arr )](#diff)
 		*	[find( arr, opts, clbk )](#find)
 		*	[dims( arr, max )](#dims)
@@ -24,14 +21,18 @@ Compute.io
 		*	[isfinite( arr )](#isfinite)
 		*	[isinteger( arr )](#isinteger)
 		*	[isinf( arr )](#isinf)
-		*	[zip( arr1, arr2,..., opts )](#zip)
-		*	[unzip( arr, idx )](#unzip)
 	-	[Array Creation](#array-creation)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
 		*	[logspace( a, b, length )](#logspace)
 		*	[datespace( start, stop, length, opts )](#datespace)
 		*	[incrdatespace( start, stop, increment, opts )](#incrdatespace)
+		*	[zip( arr1, arr2,..., opts )](#zip)
+		*	[unzip( arr, idx )](#unzip)
+	- 	[Sorting and Reshaping Arrays](#sorting-and-reshaping-arrays)
+		*	[reverse( arr )](#reverse)
+		*	[shuffle( arr )](#shuffle)
+		*	[circshift( x, k )](#circshift)
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
@@ -189,51 +190,6 @@ var x = compute.polyval( coef, [ 10, -3] );
 ```
 
 
-<a name="reverse"></a>
-#### [compute.reverse( arr )](https://github.com/compute-io/reverse)
-
-Reverses an `array` in place.
-
-``` javascript
-var arr = [ 1, 2, 3, 4 ];
-
-compute.reverse( arr );
-// returns [ 4, 3, 2, 1 ]
-```
-
-Note: the `array` is mutated.
-
-
-<a name="shuffle"></a>
-#### [compute.shuffle( arr )](https://github.com/compute-io/shuffle)
-
-Generates a random permutation of (shuffles) an `array` in place.
-
-``` javascript
-var arr = [ 1, 2, 3, 4 ];
-
-compute.shuffle( arr );
-```
-
-Note: the `array` is mutated.
-
-
-<a name="circshift"></a>
-#### [compute.circshift( x, k )](https://github.com/compute-io/circshift)
-
-Circularly shifts elements/characters. `x` may be an `array` or a `string`. `k` is an `integer` specifying the number of positions to shift. The sign of `k` specifies the shift direction.
-
-``` javascript
-compute.circshift( [1,2,3,4,5], 2 );
-// returns [4,5,1,2,3]
-
-var str = compute.circshift( 'beepboop', -3 );
-// returns 'pboopbee'
-```
-
-Note: if provided an `array`, the `array`, is mutated.
-
-
 <a name="diff"></a>
 #### [compute.diff( arr )](https://github.com/compute-io/diff)
 
@@ -373,39 +329,6 @@ var out = compute.isinf( [ 2, 1/0, 'beep', 5, 4, -1/0 ] );
 
 
 
-<a name="zip"></a>
-#### [compute.zip( arr1, arr2,...[, opts] )](https://github.com/compute-io/zip)
-
-Returns an `array` of `arrays`, where the ith element (tuple) in the returned `array` contains the ith elements of the input `arrays`.
-
-``` javascript
-var zipped = compute.zip( [1,2], ['a','b'] );
-// returns [ [1,'a'], [2,'b'] ]
-```
-
-For function `options`, see the [compute-zip](https://github.com/compute-io/zip) module.
-
-
-<a name="unzip"></a>
-#### [compute.unzip( arr[, idx] )](https://github.com/compute-io/unzip)
-
-Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., a nested `array` of tuples).
-
-``` javascript
-var arr = [ [1,'a',3], [2,'b',4] ];
-
-var out = compute.unzip( arr );
-// returns [ [1,2], ['a','b'], [3,4] ];
-```
-
-To unzip specific tuple elements, you can provide an `array` of indices as an optional second argument.
-
-``` javascript
-var arr = [ [1,'a',3], [2,'b',4] ];
-
-var out = compute.unzip( arr, [0,2] );
-// returns [ [1,2], [3,4] ];
-```
 
 
 ### Array Creation
@@ -488,6 +411,92 @@ var arr = compute.incrdatespace( start, stop, '8sec' );
 ```
 
 For function `options`, see the [compute-incrdatespace](https://github.com/compute-io/incrdatespace) module.
+
+
+
+<a name="zip"></a>
+#### [compute.zip( arr1, arr2,...[, opts] )](https://github.com/compute-io/zip)
+
+Returns an `array` of `arrays`, where the ith element (tuple) in the returned `array` contains the ith elements of the input `arrays`.
+
+``` javascript
+var zipped = compute.zip( [1,2], ['a','b'] );
+// returns [ [1,'a'], [2,'b'] ]
+```
+
+For function `options`, see the [compute-zip](https://github.com/compute-io/zip) module.
+
+
+<a name="unzip"></a>
+#### [compute.unzip( arr[, idx] )](https://github.com/compute-io/unzip)
+
+Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., a nested `array` of tuples).
+
+``` javascript
+var arr = [ [1,'a',3], [2,'b',4] ];
+
+var out = compute.unzip( arr );
+// returns [ [1,2], ['a','b'], [3,4] ];
+```
+
+To unzip specific tuple elements, you can provide an `array` of indices as an optional second argument.
+
+``` javascript
+var arr = [ [1,'a',3], [2,'b',4] ];
+
+var out = compute.unzip( arr, [0,2] );
+// returns [ [1,2], [3,4] ];
+```
+
+
+
+### Sorting and Reshaping Arrays
+
+<a name="reverse"></a>
+#### [compute.reverse( arr )](https://github.com/compute-io/reverse)
+
+Reverses an `array` in place.
+
+``` javascript
+var arr = [ 1, 2, 3, 4 ];
+
+compute.reverse( arr );
+// returns [ 4, 3, 2, 1 ]
+```
+
+Note: the `array` is mutated.
+
+
+<a name="shuffle"></a>
+#### [compute.shuffle( arr )](https://github.com/compute-io/shuffle)
+
+Generates a random permutation of (shuffles) an `array` in place.
+
+``` javascript
+var arr = [ 1, 2, 3, 4 ];
+
+compute.shuffle( arr );
+```
+
+Note: the `array` is mutated.
+
+
+<a name="circshift"></a>
+#### [compute.circshift( x, k )](https://github.com/compute-io/circshift)
+
+Circularly shifts elements/characters. `x` may be an `array` or a `string`. `k` is an `integer` specifying the number of positions to shift. The sign of `k` specifies the shift direction.
+
+``` javascript
+compute.circshift( [1,2,3,4,5], 2 );
+// returns [4,5,1,2,3]
+
+var str = compute.circshift( 'beepboop', -3 );
+// returns 'pboopbee'
+```
+
+Note: if provided an `array`, the `array`, is mutated.
+
+
 
 
 
