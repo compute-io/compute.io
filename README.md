@@ -26,6 +26,7 @@ Compute.io
 		*	[isinf( arr )](#isinf)
 		*	[zip( arr1, arr2,..., opts )](#zip)
 		*	[unzip( arr, idx )](#unzip)
+	-	[Array Creation](#array-creation)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
 		*	[logspace( a, b, length )](#logspace)
@@ -407,6 +408,7 @@ var out = compute.unzip( arr, [0,2] );
 ```
 
 
+### Array Creation
 
 <a name="linspace"></a>
 #### [compute.linspace( start, stop[, length] )](https://github.com/compute-io/linspace)

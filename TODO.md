@@ -80,6 +80,7 @@ TODO
 	-	mad( arr, opts )
 		- 
 	-	Just `array` substract and `array` mean/median
+	- 	[outlier detection](http://stackoverflow.com/questions/22354094/pythonic-way-of-detecting-outliers-in-one-dimensional-observation-data)
 42. z-score
 43. linear regression
 44. multiple methods for interpolating quantile value (ala R; see Wiki on Quantile)
@@ -168,8 +169,12 @@ TODO
 115. weighted median (?)
 116. weighted percentile
 117. selection algorithm, median of medians, quickselect
-118. zeros (?) -- fast elements (opts: sparse)
-119. ones (?) -- fast elements (opts: sparse)
+118. zeros (?)
+	- 	fast elements (opts: sparse)
+	-	recursive
+119. ones (?)
+	-	fast elements (opts: sparse)
+	- 	recursive
 120. replace (see select-set)
 121. bitwise (element-wise) (note abt int32)
 122. ndvariance(dim)
@@ -224,6 +229,11 @@ TODO
 164. all/every
 165. none (same as all!)
 166. [gini coefficient](http://en.wikipedia.org/wiki/Gini_coefficient)
+167. DTW
+168. isPow2
+169. nextPow2
+170. prevPow2
+171. [pad](http://www.mathworks.com/help/images/ref/padarray.html)
 
 
 
