@@ -111,6 +111,7 @@ Compute.io
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
+		*	[mstdev( arr, window )](#mstdev)
 		*	[mode( arr )](#mode)
 		*	[median( arr, sorted )](#median)
 		*	[quantile( arr, p, opts )](#quantile)
@@ -1470,6 +1471,18 @@ for ( var i = 0; i < data.length; i++ ) {
 	console.log( sigma );
 }
 console.log( stdev() );
+```
+
+<a name="mstdev"></a>
+#### [compute.mstdev( arr, window )](https://github.com/compute-io/mstdev)
+
+Computes a moving (sliding window) sample standard deviation over a numeric `array`.
+
+``` javascript
+var data = [ 1, 5, 0, 10, 2 ];
+
+var arr = compute.mstdev( data, 3 );
+// returns [ ~2.6, 5, ~5.3 ]
 ```
 
 

@@ -150,6 +150,7 @@ describe( 'compute.io', function tests() {
 		'stdev',
 		'nanstdev',
 		'incrstdev',
+		'mstdev',
 		'mode',
 		'median',
 		'quantile',

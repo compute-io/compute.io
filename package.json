@@ -115,6 +115,7 @@
     "compute-mmean": "^1.0.0",
     "compute-mmin": "^1.0.0",
     "compute-mode": "^1.0.0",
+    "compute-mstdev": "^1.0.0",
     "compute-msum": "^1.0.0",
     "compute-multiply": "^1.0.0",
     "compute-mvariance": "^1.0.0",
