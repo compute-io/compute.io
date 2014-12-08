@@ -14,11 +14,6 @@ Compute.io
 		*	[find( arr, opts, clbk )](#find)
 		*	[dims( arr, max )](#dims)
 		*	[issorted( arr, clbk )](#issorted)
-		*	[isnumeric( arr )](#isnumeric)
-		*	[isnan( arr )](#isnan)
-		*	[isfinite( arr )](#isfinite)
-		*	[isinteger( arr )](#isinteger)
-		*	[isinf( arr )](#isinf)
 	-	[Array Creation](#array-creation)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
@@ -53,6 +48,12 @@ Compute.io
 		*	[geq( arr, x )](#geq)
 		*	[lt( arr, x )](#lt)
 		*	[leq( arr, x )](#leq)
+	-	[Logical Operations](#logical-operations)
+		*	[isnumeric( arr )](#isnumeric)
+		*	[isnan( arr )](#isnan)
+		*	[isfinite( arr )](#isfinite)
+		*	[isinteger( arr )](#isinteger)
+		*	[isinf( arr )](#isinf)
 	-	[Trigonometry](#trigonometry)
 		*	[deg2rad( x )](#deg2rad)
 		*	[rad2deg( x )](#rad2deg)
@@ -236,60 +237,6 @@ var bool = compute.issorted( [ 5, 4, 3, 2 ] );
 ```
 
 
-<a name="isnumeric"></a>
-#### [compute.isnumeric( arr )](https://github.com/compute-io/isnumeric)
-
-Computes for each `array` element whether an element is numeric. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is numeric and `0` means that an element is __not__ numeric.
-
-``` javascript
-var out = compute.isnumeric( [ 2, '3', 5, 4, null, NaN ] );
-// returns [ 1, 0, 1, 1, 0, 0 ]
-```
-
-
-<a name="isnan"></a>
-#### [compute.isnan( arr )](https://github.com/compute-io/isnan)
-
-Computes for each `array` element whether an element is `NaN`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is `NaN` and `0` means that an element is __not__ `NaN`.
-
-``` javascript
-var out = compute.isnan( [ 2, '3', 5, 4, null ] );
-// returns [ 0, 1, 0, 0, 1 ]
-```
-
-
-<a name="isfinite"></a>
-#### [compute.isfinite( arr )](https://github.com/compute-io/isfinite)
-
-Computes for each `array` element whether an element is a finite `number`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is a finite `number` and `0` means that an element is __not__ a finite `number`.
-
-``` javascript
-var out = compute.isfinite( [ 2, 1/0, 'beep', 5, 4, -1/0, null, NaN ] );
-// returns [ 1, 0, 0, 1, 1, 0, 0, 0 ]
-```
-
-
-<a name="isinteger"></a>
-#### [compute.isinteger( arr )](https://github.com/compute-io/isinteger)
-
-Computes for each `array` element whether an element is an `integer`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is an `integer` and `0` means that an element is __not__ an `integer`.
-
-``` javascript
-var out = compute.isinteger( [ 2, 1/0, 'beep', 0, -4, 3.14, null, NaN ] );
-// returns [ 1, 0, 0, 1, 1, 0, 0, 0 ]
-```
-
-
-
-<a name="isinf"></a>
-#### [compute.isinf( arr )](https://github.com/compute-io/isinf)
-
-Computes for each `array` element whether an element is infinite. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is infinite and `0` means that an element is __not__ infinite.
-
-``` javascript
-var out = compute.isinf( [ 2, 1/0, 'beep', 5, 4, -1/0 ] );
-// returns [ 0, 1, 0, 0, 0, 1 ]
-```
 
 
 
@@ -773,6 +720,65 @@ out = compute.leq( data, 3.14 );
 out = compute.leq( data, [3, 5, 1, 7, 4 ] );
 // returns [ 1, 1, 0, 1, 1 ]
 ```
+
+
+### Logical Operations
+
+<a name="isnumeric"></a>
+#### [compute.isnumeric( arr )](https://github.com/compute-io/isnumeric)
+
+Computes for each `array` element whether an element is numeric. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is numeric and `0` means that an element is __not__ numeric.
+
+``` javascript
+var out = compute.isnumeric( [ 2, '3', 5, 4, null, NaN ] );
+// returns [ 1, 0, 1, 1, 0, 0 ]
+```
+
+
+<a name="isnan"></a>
+#### [compute.isnan( arr )](https://github.com/compute-io/isnan)
+
+Computes for each `array` element whether an element is `NaN`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is `NaN` and `0` means that an element is __not__ `NaN`.
+
+``` javascript
+var out = compute.isnan( [ 2, '3', 5, 4, null ] );
+// returns [ 0, 1, 0, 0, 1 ]
+```
+
+
+<a name="isfinite"></a>
+#### [compute.isfinite( arr )](https://github.com/compute-io/isfinite)
+
+Computes for each `array` element whether an element is a finite `number`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is a finite `number` and `0` means that an element is __not__ a finite `number`.
+
+``` javascript
+var out = compute.isfinite( [ 2, 1/0, 'beep', 5, 4, -1/0, null, NaN ] );
+// returns [ 1, 0, 0, 1, 1, 0, 0, 0 ]
+```
+
+
+<a name="isinteger"></a>
+#### [compute.isinteger( arr )](https://github.com/compute-io/isinteger)
+
+Computes for each `array` element whether an element is an `integer`. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is an `integer` and `0` means that an element is __not__ an `integer`.
+
+``` javascript
+var out = compute.isinteger( [ 2, 1/0, 'beep', 0, -4, 3.14, null, NaN ] );
+// returns [ 1, 0, 0, 1, 1, 0, 0, 0 ]
+```
+
+
+
+<a name="isinf"></a>
+#### [compute.isinf( arr )](https://github.com/compute-io/isinf)
+
+Computes for each `array` element whether an element is infinite. The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is infinite and `0` means that an element is __not__ infinite.
+
+``` javascript
+var out = compute.isinf( [ 2, 1/0, 'beep', 5, 4, -1/0 ] );
+// returns [ 0, 1, 0, 0, 0, 1 ]
+```
+
 
 
 
