@@ -10,9 +10,7 @@ Compute.io
 1. 	[Installation](#installation)
 1. 	[Usage](#usage)
 	- 	[Utilities](#utilities)
-		* 	[roundn( x, n )](#roundn)
 		*	[polyval( coef, x )](#polyval)
-		*	[diff( arr )](#diff)
 		*	[find( arr, opts, clbk )](#find)
 		*	[dims( arr, max )](#dims)
 		*	[issorted( arr, clbk )](#issorted)
@@ -46,6 +44,8 @@ Compute.io
 		*	[subtract( arr, x )](#subtract)
 		*	[multiply( arr, x )](#multiply)
 		*	[divide( arr, x )](#divide)
+		* 	[roundn( x, n )](#roundn)
+		*	[diff( arr )](#diff)
 	- 	[Relational Operations](#relational-operations)
 		* 	[eq( arr, x, opts)](#eq)
 		* 	[neq( arr, x, opts)](#neq)
@@ -157,27 +157,6 @@ The compute module has the following methods...
 
 ### Utilities
 
-<a name="roundn"></a>
-#### [compute.roundn( x, n )](https://github.com/compute-io/roundn)
-
-Rounds values to the nearest multiple of `10^n`. `x` may be either a single numeric value or an array of values. `n` must be an `integer`.
-
-``` javascript
-compute.roundn( Math.PI, -2 );
-// returns 3.14
-
-var x = compute.roundn( 111, 2 );
-// returns 100
-
-var data = [ 2.342, 4.943, 2.234, 7.992, 3.142 ];
-
-compute.roundn( data, -2 );
-// returns [...] where each value is rounded to nearest hundredth
-```
-
-Note: if provided an `array`, the `array` is mutated.
-
-
 <a name="polyval"></a>
 #### [compute.polyval( coef, x )](https://github.com/compute-io/polynomial)
 
@@ -188,21 +167,6 @@ var coef = [ 4, 2, 6, -17 ];
 
 var x = compute.polyval( coef, [ 10, -3] );
 ```
-
-
-<a name="diff"></a>
-#### [compute.diff( arr )](https://github.com/compute-io/diff)
-
-Calculates the differences between adjacent elements in an `array`.
-
-``` javascript
-var arr = [ 2, 1, 3, 4 ];
-
-var diff = compute.diff( arr );
-// returns [ 1, -2, -1 ]
-```
-
-Note: the length of the returned `array` is one less than the length of the original `array`.
 
 
 <a name="find"></a>
@@ -644,6 +608,49 @@ compute.divide( data, 5.5 );
 ```
 
 Note: mutates the input `array`.
+
+
+<a name="roundn"></a>
+#### [compute.roundn( x, n )](https://github.com/compute-io/roundn)
+
+Rounds values to the nearest multiple of `10^n`. `x` may be either a single numeric value or an array of values. `n` must be an `integer`.
+
+``` javascript
+compute.roundn( Math.PI, -2 );
+// returns 3.14
+
+var x = compute.roundn( 111, 2 );
+// returns 100
+
+var data = [ 2.342, 4.943, 2.234, 7.992, 3.142 ];
+
+compute.roundn( data, -2 );
+// returns [...] where each value is rounded to nearest hundredth
+```
+
+Note: if provided an `array`, the `array` is mutated.
+
+
+<a name="diff"></a>
+#### [compute.diff( arr )](https://github.com/compute-io/diff)
+
+Calculates the differences between adjacent elements in an `array`.
+
+``` javascript
+var arr = [ 2, 1, 3, 4 ];
+
+var diff = compute.diff( arr );
+// returns [ 1, -2, -1 ]
+```
+
+Note: the length of the returned `array` is one less than the length of the original `array`.
+
+
+
+
+
+
+
 
 
 ### Relational Operations
