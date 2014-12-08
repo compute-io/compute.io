@@ -117,6 +117,7 @@
     "compute-mode": "^1.0.0",
     "compute-msum": "^1.0.0",
     "compute-multiply": "^1.0.0",
+    "compute-mvariance": "^1.0.0",
     "compute-nangmean": "^1.0.0",
     "compute-nanhmean": "^1.0.0",
     "compute-nanmax": "^1.0.0",

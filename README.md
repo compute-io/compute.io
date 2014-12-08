@@ -107,6 +107,7 @@ Compute.io
 		*	[variance( arr )](#variance)
 		*	[nanvariance( arr )](#nanvariance)
 		*	[incrvariance()](#incrvariance)
+		*	[mvariance( arr, window )](#mvariance)
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
@@ -1270,6 +1271,7 @@ Computes a moving arithmetic mean (sliding window average) over a numeric `array
 var data = [ 2, 4, 2, 7, 3 ];
 
 var arr = compute.mmean( data, 2 );
+// returns [ 3, 3, 4.5, 5 ]
 ```
 
 
@@ -1415,6 +1417,19 @@ for ( var i = 0; i < data.length; i++ ) {
 }
 console.log( variance() );
 ```
+
+<a name="mvariance"></a>
+#### [compute.mvariance( arr, window )](https://github.com/compute-io/mvariance)
+
+Computes a moving (sliding window) sample variance over a numeric `array`.
+
+``` javascript
+var data = [ 1, 5, 0, 10, 2 ];
+
+var arr = compute.mvariance( data, 3 );
+// returns [ 7, 25, 28 ]
+```
+
 
 <a name="stdev"></a>
 #### [compute.stdev( arr )](https://github.com/compute-io/stdev)

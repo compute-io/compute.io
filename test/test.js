@@ -37,27 +37,24 @@ describe( 'compute.io', function tests() {
 
 	var properties = [
 		// Utilities:
-		'roundn',
 		'polyval',
-		'reverse',
-		'shuffle',
-		'circshift',
-		'diff',
 		'find',
 		'dims',
 		'issorted',
-		'isnumeric',
-		'isnan',
-		'isfinite',
-		'isinteger',
-		'isinf',
-		'zip',
-		'unzip',
+
+		// Array creation:
 		'linspace',
 		'incrspace',
 		'logspace',
 		'datespace',
 		'incrdatespace',
+		'zip',
+		'unzip',
+
+		// Sorting and reshaping arrays:
+		'reverse',
+		'shuffle',
+		'circshift',
 
 		// Special functions:
 		'abs',
@@ -73,6 +70,8 @@ describe( 'compute.io', function tests() {
 		'subtract',
 		'multiply',
 		'divide',
+		'roundn',
+		'diff',
 
 		// Relational operations:
 		'eq',
@@ -81,6 +80,13 @@ describe( 'compute.io', function tests() {
 		'geq',
 		'lt',
 		'leq',
+
+		// Logical operations:
+		'isnumeric',
+		'isnan',
+		'isfinite',
+		'isinteger',
+		'isinf',
 
 		// Trigonometry:
 		'deg2rad',
@@ -140,6 +146,7 @@ describe( 'compute.io', function tests() {
 		'variance',
 		'nanvariance',
 		'incrvariance',
+		'mvariance',
 		'stdev',
 		'nanstdev',
 		'incrstdev',
