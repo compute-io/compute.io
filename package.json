@@ -81,6 +81,7 @@
     "compute-incrmean": "^1.0.0",
     "compute-incrmin": "^1.0.0",
     "compute-incrmmean": "^1.0.0",
+    "compute-incrmvariance": "^1.0.0",
     "compute-incrspace": "^1.0.0",
     "compute-incrstdev": "^1.0.0",
     "compute-incrsum": "^1.0.0",

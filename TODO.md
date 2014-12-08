@@ -63,7 +63,7 @@ TODO
 31. nanrange
 32. _incrmmax_
 33. _incrmmin_
-34. _incrmvariance_
+34. 
 35. _incrmstdev_
 36. incrpcorr
 37. incrcov

@@ -108,6 +108,7 @@ Compute.io
 		*	[nanvariance( arr )](#nanvariance)
 		*	[incrvariance()](#incrvariance)
 		*	[mvariance( arr, window )](#mvariance)
+		*	[incrmvariance( window )](#incrmvariance)
 		*	[stdev( arr )](#stdev)
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
@@ -234,7 +235,7 @@ function descending( a, b ) {
 	return b - a;
 }
 
-var bool = compute.issorted( [ 5, 4, 3, 2 ] );
+var bool = compute.issorted( [ 5, 4, 3, 2 ], descending );
 // returns true
 ```
 
@@ -1429,6 +1430,24 @@ var data = [ 1, 5, 0, 10, 2 ];
 
 var arr = compute.mvariance( data, 3 );
 // returns [ 7, 25, 28 ]
+```
+
+<a name="incrmvariance"></a>
+#### [compute.incrmvariance( window )](https://github.com/compute-io/incrmvariance)
+
+Returns a method to compute a moving sample variance incrementally. `window` sets the window size, i.e., the number of values over which to compute a moving sample variance.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var mvariance = compute.incrmvariance( 3 ),
+	s2;
+
+for ( var i = 0; i < data.length; i++ ) {
+	s2 = mvariance( data[ i ] );
+	console.log( s2 );
+}
+console.log( mvariance() );
 ```
 
 
