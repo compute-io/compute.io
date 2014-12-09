@@ -152,6 +152,7 @@ describe( 'compute.io', function tests() {
 		'nanstdev',
 		'incrstdev',
 		'mstdev',
+		'incrmstdev',
 		'mode',
 		'median',
 		'quantile',

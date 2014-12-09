@@ -26,6 +26,13 @@ TODO
 14. .jscs.json
 	-	include jscs makefile target
 	- 	use jsdoc [plugin](https://github.com/jscs-dev/jscs-jsdoc)
+15. reorganize stats modules
+	-	descriptive
+	-	nan
+	-	incremental
+	-	weighted
+	-	moving
+	- 	multivariate
 
 
 ## Functions
@@ -64,7 +71,7 @@ TODO
 32. _incrmmax_
 33. _incrmmin_
 34. 
-35. _incrmstdev_
+35. 
 36. incrpcorr
 37. incrcov
 38. mean/median deviation (mdev; from any value)

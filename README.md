@@ -113,6 +113,7 @@ Compute.io
 		*	[nanstdev( arr )](#nanstdev)
 		*	[incrstdev()](#incrstdev)
 		*	[mstdev( arr, window )](#mstdev)
+		*	[incrmstdev( arr, window )](#incrmstdev)
 		*	[mode( arr )](#mode)
 		*	[median( arr, sorted )](#median)
 		*	[quantile( arr, p, opts )](#quantile)
@@ -1502,6 +1503,24 @@ var data = [ 1, 5, 0, 10, 2 ];
 
 var arr = compute.mstdev( data, 3 );
 // returns [ ~2.6, 5, ~5.3 ]
+```
+
+<a name="incrmstdev"></a>
+#### [compute.incrmstdev( window )](https://github.com/compute-io/incrmstdev)
+
+Returns a method to compute a moving sample standard deviation incrementally. `window` sets the window size, i.e., the number of values over which to compute a moving sample standard deviation.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var mstdev = compute.incrmstdev( 3 ),
+	sigma;
+
+for ( var i = 0; i < data.length; i++ ) {
+	sigma = mstdev( data[ i ] );
+	console.log( sigma );
+}
+console.log( mstdev() );
 ```
 
 
