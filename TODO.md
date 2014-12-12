@@ -50,7 +50,7 @@ TODO
 9. 	nanmedian
 10. binarysearch --> bsearch
 11. bisect/bisectleft/bisectright (d3)
-12. _incrmsum_
+12. 
 13. incrkurtosis
 14. incrskewness
 15. incrwmean

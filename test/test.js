@@ -130,6 +130,7 @@ describe( 'compute.io', function tests() {
 		'nansum',
 		'incrsum',
 		'msum',
+		'incrmsum',
 		'csum',
 		'mean',
 		'nanmean',

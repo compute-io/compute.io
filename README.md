@@ -95,6 +95,7 @@ Compute.io
 			*	[nansum( arr )](#nansum)
 			*	[incrsum()](#incrsum)
 			*	[msum( arr, window )](#msum)
+			*	[incrmsum( window )](#incrmsum)
 			*	[csum( arr )](#csum)
 		*	[Arithmetic Mean](#stats-mean)
 			*	[mean( arr )](#mean)
@@ -1232,6 +1233,25 @@ Computes a moving sum over a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var arr = compute.msum( data, 2 );
+```
+
+
+<a name="incrmsum"></a>
+#### [compute.incrmsum( window )](https://github.com/compute-io/incrmsum)
+
+Returns a method to compute a moving sum incrementally. `window` sets the window size, i.e., the number of values over which to compute a moving sum.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var msum = compute.incrmsum( 3 ),
+	sum;
+
+for ( var i = 0; i < data.length; i++ ) {
+	sum = msum( data[ i ] );
+	console.log( sum );
+}
+console.log( msum() );
 ```
 
 
