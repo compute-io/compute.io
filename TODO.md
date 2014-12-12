@@ -178,7 +178,7 @@ TODO
 117. selection algorithm, median of medians, quickselect
 118. zeros (?)
 	- 	fast elements (opts: sparse)
-	-	recursive
+	-	type arrays? ndarray support?
 119. ones (?)
 	-	fast elements (opts: sparse)
 	- 	recursive
@@ -241,6 +241,8 @@ TODO
 169. nextPow2
 170. prevPow2
 171. [pad](http://www.mathworks.com/help/images/ref/padarray.html)
+172. average shifted histogram
+173. various bin selection for histogram algorithms (options to histc)
 
 
 
