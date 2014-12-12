@@ -975,6 +975,8 @@ var val = compute.cross( [1,2,3], [4,5,6] );
 
 ### Statistics
 
+<a name="stats-min"></a>
+
 <a name="min"></a>
 #### [compute.min( arr )](https://github.com/compute-io/min)
 
@@ -1066,6 +1068,8 @@ var data = [ 7, 4, 2, 4, 3 ];
 var arr = compute.cmin( data );
 ```
 
+
+<a name="stats-max"></a>
 
 <a name="max"></a>
 #### [compute.max( arr )](https://github.com/compute-io/max)
@@ -1162,6 +1166,8 @@ var arr = compute.cmax( data );
 ```
 
 
+<a name="stats-range"></a>
+
 <a name="range"></a>
 #### [compute.range( arr )](https://github.com/compute-io/range)
 
@@ -1173,6 +1179,8 @@ var data = [ 2, 4, 2, 7, 3 ];
 var range = compute.range( data );
 ```
 
+
+<a name="stats-sum"></a>
 
 <a name="sum"></a>
 #### [compute.sum( arr )](https://github.com/compute-io/sum)
@@ -1238,6 +1246,8 @@ var data = [ 2, 4, 2, 7, 3 ];
 var arr = compute.csum( data );
 ```
 
+
+<a name="stats-mean"></a>
 
 <a name="mean"></a>
 #### [compute.mean( arr )](https://github.com/compute-io/mean)
@@ -1313,6 +1323,8 @@ console.log( mmean() );
 ```
 
 
+<a name="stats-wmean"></a>
+
 <a name="wmean"></a>
 #### [compute.wmean( arr, weights )](https://github.com/compute-io/wmean)
 
@@ -1324,6 +1336,8 @@ var data = [ 2, 4, 2, 7, 3 ],
 
 var wmean = compute.wmean( data, weights );
 ```
+
+<a name="stats-gmean"></a>
 
 <a name="gmean"></a>
 #### [compute.gmean( arr )](https://github.com/compute-io/gmean)
@@ -1349,6 +1363,8 @@ var gmean = compute.nangmean( data );
 ```
 
 
+<a name="stats-hmean"></a>
+
 <a name="hmean"></a>
 #### [compute.hmean( arr )](https://github.com/compute-io/hmean)
 
@@ -1371,6 +1387,8 @@ var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 var hmean = compute.nanhmean( data );
 ```
 
+
+<a name="stats-qmean"></a>
 
 <a name="qmean"></a>
 #### [compute.qmean( arr )](https://github.com/compute-io/qmean)
@@ -1395,6 +1413,8 @@ var data = [ 2, 4, NaN, 2, 7, NaN, 3 ];
 var qmean = compute.nanqmean( data );
 ```
 
+
+<a name="stats-variance"></a>
 
 <a name="variance"></a>
 #### [compute.variance( arr )](https://github.com/compute-io/variance)
@@ -1468,6 +1488,8 @@ console.log( mvariance() );
 ```
 
 
+<a name="stats-stdev"></a>
+
 <a name="stdev"></a>
 #### [compute.stdev( arr )](https://github.com/compute-io/stdev)
 
@@ -1540,6 +1562,8 @@ console.log( mstdev() );
 ```
 
 
+<a name="stats-mode"></a>
+
 <a name="mode"></a>
 #### [compute.mode( arr )](https://github.com/compute-io/mode)
 
@@ -1551,6 +1575,8 @@ var data = [ 2, 4, 2, 7, 3 ];
 var mode = compute.mode( data );
 ```
 
+
+<a name="stats-rank"></a>
 
 <a name="median"></a>
 #### [compute.median( arr[, sorted] )](https://github.com/compute-io/median)
@@ -1742,6 +1768,8 @@ If the input `array` is already sorted in __ascending__ order, set the `sorted` 
 
 
 
+<a name="stats-skewness"></a>
+
 <a name="skewness"></a>
 #### [compute.skewness( arr )](https://github.com/compute-io/skewness)
 
@@ -1754,6 +1782,8 @@ var skew = compute.skewness( data );
 ```
 
 
+<a name="stats-kurtosis"></a>
+
 <a name="kurtosis"></a>
 #### [compute.kurtosis( arr )](https://github.com/compute-io/kurtosis)
 
@@ -1765,6 +1795,8 @@ var data = [ 2, 4, 2, 7, 3 ];
 var kur = compute.kurtosis( data );
 ```
 
+
+<a name="stats-multivariate"></a>
 
 <a name="covariance"></a>
 #### [compute.covariance( arr1[, arr2,...,opts] )](https://github.com/compute-io/covariance)

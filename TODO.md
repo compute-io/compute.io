@@ -33,6 +33,8 @@ TODO
 	-	weighted
 	-	moving
 	- 	multivariate
+16. move API docs to README (?)
+	- 	maybe TOC in README which links to Wiki page?
 
 
 ## Functions
@@ -243,6 +245,7 @@ TODO
 171. [pad](http://www.mathworks.com/help/images/ref/padarray.html)
 172. average shifted histogram
 173. various bin selection for histogram algorithms (options to histc)
+174. exp wmean
 
 
 
