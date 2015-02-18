@@ -35,11 +35,25 @@ TODO
 	- 	multivariate
 16. move API docs to README (?)
 	- 	maybe TOC in README which links to Wiki page?
+17. [pretty exponential](https://github.com/bmcustodio/pretty-exponential)
+18. (almost) every fcn should accept an accessor and an opt to return a copy
+	- 	default now is mainly mutation with example showing copy
+	-	currently rely on data always being a simple array; limits utility when data often stored as array of objects
+	``` javascript
+	var opts = {
+		'accessor': foo,
+		'copy': true
+	};
+	```
+	- 	ensure accessor check does __not__ occur every iter; duplicate procedure if need be
+	- 	when provided an accessor, returned array should be a new array (no mutation!)
+19. `erf` fcns should, by default, mutate!
+20. [graph](http://networkx.github.io/documentation/latest/reference/algorithms.html) algorithms; see also Gephi
 
 
 ## Functions
 
-1. 	
+1. 	incrmpcorr/incrmcov
 2. 	_histc_
 3. 	mpcorr
 4. 	mcov
@@ -50,14 +64,16 @@ TODO
 9. 	nanmedian
 10. binarysearch --> bsearch
 11. bisect/bisectleft/bisectright (d3)
-12. 
+12. isPositive (element-wise)
+	- recall 0
 13. incrkurtosis
 14. incrskewness
 15. incrwmean
 16. incrnanmean
 17. incrgmean
 18. incrhmean
-19. 
+19. isNegative (element-wise)
+	- recall 0
 20. incrnanvariance
 21. incrnanstdev
 22. incrnanmax
@@ -72,8 +88,8 @@ TODO
 31. nanrange
 32. _incrmmax_
 33. _incrmmin_
-34. 
-35. 
+34. isOdd (element-wise)
+35. isEven (element-wise)
 36. incrpcorr
 37. incrcov
 38. mean/median deviation (mdev; from any value)
@@ -103,6 +119,7 @@ TODO
 52. pow (element-wise)
 53. exp (element-wise)
 54. sin (element-wise)
+	-	option which defaults to built-in
 55. cos (element-wise)
 56. acos (element-wise)
 57. asin (element-wise)
@@ -119,11 +136,11 @@ TODO
 68. ln (element-wise)
 69. log10 (element-wise)
 70. _gamma_ (erf)
-71. 
-72. 
+71. em
+72. gmm
 73. silhouette values (kmeans)
-74. voronoi algo (lloyds algo)
-75. kmeans++
+74. voronoi algo (lloyds algo --> kmeans!)
+75. 
 76. setxor
 77. log(element-wise; arbitrary base; default e)
 78. log2 (element-wise)
@@ -133,6 +150,8 @@ TODO
 	- 	|| (or)
 	-	! (not)
 	- 	xor
+	-	nand
+	-	nor
 	- 	band
 	-	bor
 	-	bxor
@@ -140,16 +159,19 @@ TODO
 	-	blshift
 	- 	brshift (sign opt --> >> vs >>>)
 81. isdecimal (element-wise)
-82. 
+82. loess
 83. egcd (extended)
-84. 
-85. loess
-86. kmeans
+84. kmeans
+85. kmeans++
+86. kmedians
 87. kde
 88. bandwidth
 89. r2 (coef determination)
 90. binocoef (see substack)
-91. factorial (bignum; <=171) --> split into factorial and bigfactorial (?)
+91. factorial (bignum; <=171)
+	-	split into factorial and bigfactorial (?)
+	-	Precompute!!! Table look-up.
+	-	fraction support (gamma)
 92. unit conversion
 93. linear regression
 94. loess
@@ -246,6 +268,49 @@ TODO
 172. average shifted histogram
 173. various bin selection for histogram algorithms (options to histc)
 174. exp wmean
+175. general sort method (see find)
+176. comparator set
+	- ascending
+	- descending
+	- any others?
+177. separate chunked fcns or fine to force user scripting?
+178. [parfor](https://github.com/adambom/parallel.js/issues)
+	- numcores
+	- [reuse](https://github.com/adambom/parallel.js/pull/87/files)
+179. fibo
+180. [esmooth](https://github.com/zaphod1984/exponential-smoothing-stream)
+181. arma
+182. arima
+183. exp mwa (see wiki)
+184. concat
+	-	multiple columns
+	-	across columns is affectively zip
+185. [quadtree](http://en.wikipedia.org/wiki/Quadtree)
+	-	see d3
+186. colorspace
+	-	determine format of bounds
+		-	 hex, rgb, hcl, etc
+	-	interpolate between the bounds
+	-	see D3
+187. rgb2hex
+188. rgb2hcl
+189. hex2rgb
+190. hex2hcl
+191. rgb2cmyk
+192. hex2cmyk
+193. rgb2hsv
+194. hex2hsv
+195. rgb2hcl
+196. hex2hcl
+197. rgb2lab
+198. hex2lab
+199. rgba
+200. data-frame
+201. lcs
+202. simple linear regression
+203. multiple linear regression
+204. ols
+205. 
 
 
 
@@ -290,6 +355,10 @@ TODO
 *	examples/index.js - use compute-io modules where possible (dev deps); e.g., to compute sum, min, max, etc.
 *	package.json - include jshint and jshint-stylish as dev deps
 * 	lib/index.js - remove IIFE
+*	cli.js
+	-	add cmd to package.json `bin`
+	-	no! --> this should be a flow.io feature, as cli requires streams. Otherwise, we duplicate much of the flow.io functionality. Let streams be the universal interface. The compute modules are for node environment use.
+*	move `---` above `license` section in README (update the generator, as well)
 
 
 ### Extra
