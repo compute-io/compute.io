@@ -150,6 +150,7 @@ Compute.io
 			*	[pcorr( arr1, arr2,... )](#pcorr)
 	- 	[Information Theory](#information-theory)
 		*	[hamdist( a, b )](#hamdist)
+		*	[tversky( a, b, opts)](#tversky)
 1. 	[Fluent Interface](#fluent-interface)
 1. 	[Tests](#tests)
 	- 	[Unit](#unit)
@@ -1867,6 +1868,24 @@ var c = [ 4, 2, 3, 4 ],
 	d = [ 2, 4, 3, 1 ];
 
 var dist = compute.hamdist( c, d );
+```
+
+
+<a name="tversky"></a>
+#### [compute.tversky( a, b[, opts] )](https://github.com/compute-io/tversky-index)
+
+Computes the [Tversky Index](http://en.wikipedia.org/wiki/Tversky_index) between two sequences.
+
+``` javascript
+var a = 'beep',
+	b = 'boop';
+
+var idx = compute.tversky( a, b );
+
+var c = [ 4, 2, 3, 5, 7 ],
+	d = [ 2, 4, 3, 1 ];
+
+var idx = compute.tversky( c, d );
 ```
 
 

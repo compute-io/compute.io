@@ -310,7 +310,24 @@ TODO
 202. simple linear regression
 203. multiple linear regression
 204. ols
-205. 
+205. relative complement
+206. complement
+207. interp
+	-	quadratic
+	-	barycentric
+	-	pchip
+	-	linear
+	-	poly (order)
+	-	spline (order)
+	-	cubic
+	-	...
+208. replace(arr1,arr2[,accessor])
+	-	arr1.length === arr2.length
+	- 	replace( regexp, val, accessor)
+209. permutation parity
+210. permutation rank
+211. permutation inverse
+212. 
 
 
 

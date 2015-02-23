@@ -149,6 +149,7 @@
     "compute-subtract": "^1.0.1",
     "compute-sum": "^1.0.0",
     "compute-trimean": "^1.0.0",
+    "compute-tversky-index": "^1.0.0",
     "compute-umidmean": "^1.0.1",
     "compute-unique": "^1.0.0",
     "compute-unzip": "^1.0.0",

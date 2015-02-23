@@ -173,7 +173,8 @@ describe( 'compute.io', function tests() {
 		'pcorr',
 
 		// Information theory:
-		'hamdist'
+		'hamdist',
+		'tversky'
 	];
 
 	it( 'should export an object', function test() {
