@@ -8,6 +8,7 @@ TODO
 	- 	How else to distinguish between a mean of `0` and having provided an empty `array`?
 	-	Could also throw, but this may be a bit harsh. Type checking and throwing, okay, but throwing due to an empty `array` may be too disruptive.
 	- 	see nanmin and nanmax
+	-	see prod!!! --> returns `null`
 3. 	**performance optimization**
 	- 	linspace/logspace/datespace/zip/<any method which creates an output array>
 		- 	use push for arrays longer than fast element limit
@@ -46,9 +47,13 @@ TODO
 	};
 	```
 	- 	ensure accessor check does __not__ occur every iter; duplicate procedure if need be
+		- e.g., `if ( clbk )  { /* procedure 1 */} else { /* procedure 2 */}`
 	- 	when provided an accessor, returned array should be a new array (no mutation!)
 19. `erf` fcns should, by default, mutate!
 20. [graph](http://networkx.github.io/documentation/latest/reference/algorithms.html) algorithms; see also Gephi
+21. does `Product` belong in `stats`? dido for `sum`?
+	-	 possible move to arithmetic
+22.
 
 
 ## Functions
@@ -327,7 +332,11 @@ TODO
 209. permutation parity
 210. permutation rank
 211. permutation inverse
-212. 
+212. incrmprod
+213. incrprod
+214. incrnanprod
+215. cnansum / nancsum ??? dido for others
+216. 
 
 
 
@@ -376,6 +385,7 @@ TODO
 	-	add cmd to package.json `bin`
 	-	no! --> this should be a flow.io feature, as cli requires streams. Otherwise, we duplicate much of the flow.io functionality. Let streams be the universal interface. The compute modules are for node environment use.
 *	move `---` above `license` section in README (update the generator, as well)
+*	upgrade all modules to use Chai 2.x.x and mocha 2.x.x
 
 
 ### Extra

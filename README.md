@@ -97,6 +97,11 @@ Compute.io
 			*	[msum( arr, window )](#msum)
 			*	[incrmsum( window )](#incrmsum)
 			*	[csum( arr )](#csum)
+		*	[Product](#stats-product)
+			*	[prod( arr, accessor )](#prod)
+			*	[nanprod( arr, accessor)](#nanprod)
+			*	[mprod( arr, window, accessor)](#mprod)
+			*	[cprod( arr, accessor)](#cprod)
 		*	[Arithmetic Mean](#stats-mean)
 			*	[mean( arr )](#mean)
 			*	[nanmean( arr )](#nanmean)
@@ -1266,6 +1271,132 @@ var data = [ 2, 4, 2, 7, 3 ];
 
 var arr = compute.csum( data );
 ```
+
+
+
+<a name="stats-prod"></a>
+
+<a name="prod"></a>
+#### [compute.prod( arr[, accessor] )](https://github.com/compute-io/prod)
+
+Computes the product of an `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var prod = compute.prod( data );
+// returns 336
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	{'x':2},
+	{'x':1},
+	{'x':3}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var prod = compute.prod( data, getValue );
+// returns 6
+```
+
+<a name="nanprod"></a>
+#### [compute.nanprod( arr[, accessor] )](https://github.com/compute-io/nanprod)
+
+Computes the product of an `array` ignoring any non-numeric values.
+
+``` javascript
+var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
+
+var prod = compute.nanprod( data );
+// returns 336
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	{'x':2},
+	{'x':NaN},
+	{'x':'beep'},
+	{'x':1},
+	{'x':3}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var prod = compute.nanprod( data, getValue );
+// returns 6
+```
+
+
+<a name="mprod"></a>
+#### [compute.mprod( arr, window[, accessor] )](https://github.com/compute-io/mprod)
+
+Computes a moving product over an `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var arr = compute.mprod( data, 2 );
+// returns [ 8, 8, 14, 21 ]
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[2],
+	[1],
+	[3]
+];
+
+function getValue( d ) {
+	return d[ 0 ];
+}
+
+var arr = compute.mprod( data, 2, getValue );
+// returns [ 2, 3 ]
+```
+
+
+<a name="cprod"></a>
+#### [compute.cprod( arr[, accessor] )](https://github.com/compute-io/cprod)
+
+Computes the cumulative product of an `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var arr = compute.cprod( data );
+// returns [ 2, 8, 16, 112, 336 ]
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,1],
+	[3,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var arr = compute.cprod( data, getValue );
+// returns [ 2, 2, 6 ]
+```
+
+
 
 
 <a name="stats-mean"></a>
