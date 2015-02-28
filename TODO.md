@@ -66,7 +66,7 @@ TODO
 6. 	_binsearch_
 7. 	truncated mean
 8. 	winsorized mean
-9. 	nanmedian
+9. 	
 10. binarysearch --> bsearch
 11. bisect/bisectleft/bisectright (d3)
 12. isPositive (element-wise)
@@ -90,7 +90,7 @@ TODO
 28. nanmode
 29. nanquantiles
 30. naniqr
-31. nanrange
+31. 
 32. _incrmmax_
 33. _incrmmin_
 34. isOdd (element-wise)
@@ -336,7 +336,22 @@ TODO
 213. incrprod
 214. incrnanprod
 215. cnansum / nancsum ??? dido for others
-216. 
+216. toLogical
+	-	method to convert to a logical array
+217. toBoolean
+	-	method to convert to a boolean array
+218. module to parse `[5:9:1]` into 1d array
+219. incrspace has a bug
+	-	increment allowed to be 0!!! allows for infinite length. May want to check also that len is not infinite, given a small enough incr. Should top out at maximum array length. Throw error: maximum array length exceeded.
+220. toInt( arr[, base] )
+221. toFloat( arr );
+222. range has a bug
+	-	if input array length is 0, should return `null`
+223. median has a bug
+	-	if empty input array, should return `null`
+224. quantiles has a bug
+	-	if empty input array, should return `null`
+225. 
 
 
 
@@ -384,8 +399,9 @@ TODO
 *	cli.js
 	-	add cmd to package.json `bin`
 	-	no! --> this should be a flow.io feature, as cli requires streams. Otherwise, we duplicate much of the flow.io functionality. Let streams be the universal interface. The compute modules are for node environment use.
-*	move `---` above `license` section in README (update the generator, as well)
+*	move `---` from above `copyright` section to above `license` section in README
 *	upgrade all modules to use Chai 2.x.x and mocha 2.x.x
+*	use validate.io validators!
 
 
 ### Extra
@@ -394,3 +410,44 @@ TODO
 *	cli.js
 *	jscs
 *	jsfmt
+
+
+### Accessors
+
+Modules requiring accessor fcns...
+
+1. abs
+2. sqrt
+3. signum
+4. erf
+5. erfc
+6. erfinv
+7. erfcinv
+8. add
+9. subtract
+10. multiply
+11. divide
+12. roundn
+13. diff
+14. eq
+15. neq
+16. gt
+17. geq
+18. lt
+19. leq
+20. isnumeric
+21. isnan
+22. isfinite
+23. isinteger
+24. isinf
+25. deg2rad
+26. rad2deg
+27. gcd (?)
+28. lcm (?)
+29. l1norm
+30. l2norm
+31. linfnorm
+32. dot
+33. cross
+34. ...all stats modules
+35. 

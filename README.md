@@ -90,6 +90,7 @@ Compute.io
 			*	[cmax( arr )](#cmax)
 		*	[Range](#stats-range)
 			*	[range( arr )](#range)
+			*	[nanrange( arr, accessor )](#nanrange)
 		*	[Sum](#stats-sum)
 			*	[sum( arr )](#sum)
 			*	[nansum( arr )](#nansum)
@@ -135,6 +136,7 @@ Compute.io
 			*	[mode( arr )](#mode)
 		*	[Rank Statistics](#stats-rank)
 			*	[median( arr, sorted )](#median)
+			*	[nanmedian( arr, opts )](#nanmedian)
 			*	[quantile( arr, p, opts )](#quantile)
 			*	[quantiles( arr, num, opts )](#quantiles)
 			*	[iqr( arr, opts )](#iqr)
@@ -1184,7 +1186,44 @@ Computes the arithmetic range of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var range = compute.range( data );
+// returns [2,7]
 ```
+
+
+
+<a name="nanrange"></a>
+#### [compute.nanrange( arr[, accessor] )](https://github.com/compute-io/nanrange)
+
+Computes the arithmetic range of an `array` ignoring non-numeric values.
+
+``` javascript
+var data = [ 2, null, 4, 2, NaN, 7, 3 ];
+
+var range = compute.nanrange( data );
+// returns [2,7]
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,null],
+	[3,4],
+	[5,2],
+	[6,NaN],
+	[7,7],
+	[8,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var range = compute.nanrange( data, getValue );
+// returns [2,7]
+```
+
 
 
 <a name="stats-sum"></a>
@@ -1198,6 +1237,7 @@ Computes the sum of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var sum = compute.sum( data );
+// returns 18
 ```
 
 <a name="nansum"></a>
@@ -1209,6 +1249,7 @@ Computes the sum of an `array` ignoring any non-numeric values.
 var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
 
 var sum = compute.nansum( data );
+// returns 18
 ```
 
 <a name="incrsum"></a>
@@ -1739,9 +1780,57 @@ Computes the median of a numeric `array`.
 var data = [ 2, 4, 2, 7, 3 ];
 
 var median = compute.median( data );
+// returns 3
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+
+
+<a name="nanmedian"></a>
+#### [compute.nanmedian( arr[, opts] )](https://github.com/compute-io/nanmedian)
+
+Computes the median of an `array` ignoring non-numeric values.
+
+``` javascript
+var data = [ 2, null, 4, 2, NaN, 7, 3 ];
+
+var median = compute.nanmedian( data );
+// returns 3
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
+
+``` javascript
+var data = [ 2, null, 2, 3, NaN, 4, 7 ];
+
+var median = compute.nanmedian( data, {
+	'sorted': true	
+});
+// returns 3
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,null],
+	[3,4],
+	[4,2],
+	[5,NaN],
+	[6,7],
+	[7,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var median = compute.nanmedian( data, {
+	'accessor': getValue
+});
+// returns 3
+```
 
 
 <a name="quantile"></a>
