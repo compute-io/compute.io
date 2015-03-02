@@ -139,6 +139,7 @@ Compute.io
 			*	[nanmedian( arr, opts )](#nanmedian)
 			*	[quantile( arr, p, opts )](#quantile)
 			*	[quantiles( arr, num, opts )](#quantiles)
+			*	[nanquantiles( arr, num, opts )](#nanquantiles)
 			*	[iqr( arr, opts )](#iqr)
 			*	[idr( arr, opts )](#idr)
 			*	[midrange( arr, sorted )](#midrange)
@@ -1879,6 +1880,59 @@ var data = [ 2, 2, 3, 4, 7 ];
 
 var arr = compute.quantiles( data, 2, opts );
 ```
+
+
+
+<a name="nanquantiles"></a>
+#### [compute.nanquantiles( arr, num[, opts] )](https://github.com/compute-io/nanquantiles)
+
+Computes quantiles for an `array` ignoring non-numeric values. `num` specifies the number of quantiles to compute.
+
+``` javascript
+var data = [ 2, 4, null, 2, 7, NaN, 3 ];
+
+var arr = compute.nanquantiles( data, 3 );
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
+
+``` javascript
+var opts = {
+	'sorted': true
+};
+
+var data = [ 2, 2, null, 3, 4, NaN, 7 ];
+
+var arr = compute.nanquantiles( data, 2, opts );
+// returns [ 2, 3, 7 ]
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,2],
+	[3,null],
+	[4,3],
+	[5,4],
+	[6,NaN],
+	[7,7]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var opts = {
+	'sorted': true,
+	'accessor': getValue
+};
+
+var arr = compute.nanquantiles( data, 2, opts );
+// returns [2, 3, 7 ]
+```
+
 
 
 <a name="iqr"></a>

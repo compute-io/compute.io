@@ -132,6 +132,7 @@
     "compute-nanmin": "^1.0.0",
     "compute-nanprod": "^1.0.0",
     "compute-nanqmean": "^1.0.0",
+    "compute-nanquantiles": "^1.0.0",
     "compute-nanrange": "^1.0.0",
     "compute-nanstdev": "^1.0.0",
     "compute-nansum": "^1.0.0",
@@ -164,12 +165,12 @@
     "compute-zip": "^1.1.0"
   },
   "devDependencies": {
-    "chai": "1.x.x",
+    "chai": "2.x.x",
     "coveralls": "^2.11.1",
     "istanbul": "^0.3.0",
     "jshint": "2.x.x",
     "jshint-stylish": "^1.0.0",
-    "mocha": "1.x.x"
+    "mocha": "2.x.x"
   },
   "licenses": [
     {

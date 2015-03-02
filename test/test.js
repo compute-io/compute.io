@@ -164,6 +164,7 @@ describe( 'compute.io', function tests() {
 		'nanmedian',
 		'quantile',
 		'quantiles',
+		'nanquantiles',
 		'iqr',
 		'idr',
 		'midrange',
