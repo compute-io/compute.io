@@ -5,6 +5,8 @@ node_js:
   - '0.10'
   - '0.8'
   - 'iojs'
+before_script:
+  - npm update -g npm
 after_script:
   - npm run coveralls
 

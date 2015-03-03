@@ -63,8 +63,11 @@ TODO
 19. `erf` fcns should, by default, mutate!
 20. 
 21. does `Product` belong in `stats`? dido for `sum`?
-	-	 possibly move to arithmetic
-22.
+	-	possibly move to arithmetic
+22. update generator with new `travis.yml`
+	-	build on 0.8, 0.10, 0.11, 0.12, iojs
+	- 	add to todo
+23. 
 
 
 
