@@ -89,7 +89,7 @@ Compute.io
 			*	[mmax( arr, window )](#mmax)
 			*	[cmax( arr )](#cmax)
 		*	[Range](#stats-range)
-			*	[range( arr )](#range)
+			*	[range( arr, accessor )](#range)
 			*	[nanrange( arr, accessor )](#nanrange)
 		*	[Sum](#stats-sum)
 			*	[sum( arr )](#sum)
@@ -1179,14 +1179,33 @@ var arr = compute.cmax( data );
 <a name="stats-range"></a>
 
 <a name="range"></a>
-#### [compute.range( arr )](https://github.com/compute-io/range)
+#### [compute.range( arr[, accessor] )](https://github.com/compute-io/range)
 
-Computes the arithmetic range of a numeric `array`.
+Computes the arithmetic range of an `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
 var range = compute.range( data );
+// returns [2,7]
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,4],
+	[3,2],
+	[4,7],
+	[5,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var range = compute.range( data, getValue );
 // returns [2,7]
 ```
 
