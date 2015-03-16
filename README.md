@@ -95,7 +95,7 @@ Compute.io
 			*	[sum( arr )](#sum)
 			*	[nansum( arr )](#nansum)
 			*	[incrsum()](#incrsum)
-			*	[msum( arr, window )](#msum)
+			*	[msum( arr, window, opts )](#msum)
 			*	[incrmsum( window )](#incrmsum)
 			*	[csum( arr )](#csum)
 		*	[Product](#stats-product)
