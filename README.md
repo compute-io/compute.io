@@ -135,7 +135,7 @@ Compute.io
 		*	[Mode](#stats-mode)
 			*	[mode( arr )](#mode)
 		*	[Rank Statistics](#stats-rank)
-			*	[median( arr, sorted )](#median)
+			*	[median( arr, opts )](#median)
 			*	[nanmedian( arr, opts )](#nanmedian)
 			*	[quantile( arr, p, opts )](#quantile)
 			*	[quantiles( arr, num, opts )](#quantiles)
@@ -1273,14 +1273,61 @@ console.log( sum() );
 
 
 <a name="msum"></a>
-#### [compute.msum( arr, window )](https://github.com/compute-io/msum)
+#### [compute.msum( arr, window[, opts] )](https://github.com/compute-io/msum)
 
-Computes a moving sum over a numeric `array`.
+Computes a moving sum over an `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var arr = compute.msum( data, 2 );
+var values = compute.msum( data, 2 );
+// returns [ 6, 6, 9, 10 ]
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values.
+
+``` javascript
+var data = [
+	{'x':2},
+	{'x':4},
+	{'x':2},
+	{'x':7},
+	{'x':3}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var values = compute.msum( data, 2, {
+	'accessor': getValue	
+});
+// returns [ 6, 6, 9, 10 ]
+```
+
+By default, a new `array` is returned. To compute the sums in place, i.e., mutate the input `array`, set the `copy` option to `false`.
+
+``` javascript
+var data = [
+	{'x':2},
+	{'x':4},
+	{'x':2},
+	{'x':7},
+	{'x':3}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var values = compute.msum( data, 2, {
+	'accessor': getValue,
+	'copy': false	
+});
+// returns [ 6, 6, 9, 10 ]
+
+console.log( values === copy );
+// returns true
 ```
 
 
@@ -1773,9 +1820,9 @@ var mode = compute.mode( data );
 <a name="stats-rank"></a>
 
 <a name="median"></a>
-#### [compute.median( arr[, sorted] )](https://github.com/compute-io/median)
+#### [compute.median( arr[, opts] )](https://github.com/compute-io/median)
 
-Computes the median of a numeric `array`.
+Computes the median of an `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
@@ -1784,7 +1831,37 @@ var median = compute.median( data );
 // returns 3
 ```
 
-If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
+
+``` javascript
+var data = [ 2, 2, 3, 4, 7 ];
+
+var median = compute.median( data, {
+	'sorted': true	
+});
+// returns 3
+```
+
+For object `arrays`, provide an accessor `function` for accessing numeric `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,4],
+	[3,2],
+	[4,7],
+	[5,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var median = compute.median( data, {
+	'accessor': getValue
+});
+// returns 3
+```
 
 
 <a name="nanmedian"></a>
