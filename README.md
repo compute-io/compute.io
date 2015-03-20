@@ -92,7 +92,7 @@ Compute.io
 			*	[range( arr, accessor )](#range)
 			*	[nanrange( arr, accessor )](#nanrange)
 		*	[Sum](#stats-sum)
-			*	[sum( arr )](#sum)
+			*	[sum( arr, accessor )](#sum)
 			*	[nansum( arr )](#nansum)
 			*	[incrsum()](#incrsum)
 			*	[msum( arr, window, opts )](#msum)
@@ -1250,9 +1250,9 @@ var range = compute.nanrange( data, getValue );
 <a name="stats-sum"></a>
 
 <a name="sum"></a>
-#### [compute.sum( arr )](https://github.com/compute-io/sum)
+#### [compute.sum( arr[, accessor] )](https://github.com/compute-io/sum)
 
-Computes the sum of a numeric `array`.
+Computes the sum of an `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
@@ -1260,6 +1260,27 @@ var data = [ 2, 4, 2, 7, 3 ];
 var sum = compute.sum( data );
 // returns 18
 ```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,4],
+	[3,2],
+	[4,7],
+	[5,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var sum = compute.sum( data, getValue );
+// returns 18
+```
+
+
 
 <a name="nansum"></a>
 #### [compute.nansum( arr )](https://github.com/compute-io/nansum)

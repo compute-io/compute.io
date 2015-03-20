@@ -154,7 +154,7 @@
     "compute-sqrt": "^1.0.0",
     "compute-stdev": "^1.0.0",
     "compute-subtract": "^1.0.1",
-    "compute-sum": "^1.0.0",
+    "compute-sum": "^1.1.0",
     "compute-trimean": "^1.0.0",
     "compute-truncmean": "^1.0.1",
     "compute-tversky-index": "^1.0.0",
