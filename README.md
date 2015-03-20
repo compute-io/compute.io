@@ -107,7 +107,7 @@ Compute.io
 			*	[mean( arr )](#mean)
 			*	[nanmean( arr )](#nanmean)
 			*	[incrmean()](#incrmean)
-			*	[mmean( arr, window )](#mmean)
+			*	[mmean( arr, window, opts )](#mmean)
 			*	[incrmmean( window )](#incrmmean)
 		*	[Weighted Mean](#stats-wmean)
 			*	[wmean( arr, weights )](#wmean)
@@ -148,6 +148,7 @@ Compute.io
 			*	[midmean( arr, sorted )](#midmean)
 			*	[lmidmean( arr, sorted )](#lmidmean)
 			*	[umidmean( arr, sorted )](#umidmean)
+			*	[truncmean( arr, discard, opts )](#truncmean)
 			*	[trimean( arr, opts )](#trimean)
 		*	[Skewness](#stats-skewness)
 			*	[skewness( arr )](#skewness)
@@ -1552,15 +1553,61 @@ console.log( mean() );
 
 
 <a name="mmean"></a>
-#### [compute.mmean( arr, window )](https://github.com/compute-io/mmean)
+#### [compute.mmean( arr, window[, opts] )](https://github.com/compute-io/mmean)
 
-Computes a moving arithmetic mean (sliding window average) over a numeric `array`.
+Computes a moving arithmetic mean (sliding window average) over an `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
 var arr = compute.mmean( data, 2 );
 // returns [ 3, 3, 4.5, 5 ]
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values.
+
+``` javascript
+var data = [
+	{'x':2},
+	{'x':4},
+	{'x':2},
+	{'x':7},
+	{'x':3}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var values = compute.mmean( data, 2, {
+	'accessor': getValue	
+});
+// returns [ 3, 3, 4.5, 5 ]
+```
+
+By default, a new `array` is returned. To compute the means in place, i.e., mutate the input `array`, set the `copy` option to `false`.
+
+``` javascript
+var data = [
+	{'x':2},
+	{'x':4},
+	{'x':2},
+	{'x':7},
+	{'x':3}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var values = compute.mmean( data, 2, {
+	'accessor': getValue,
+	'copy': false	
+});
+// returns [ 3, 3, 4.5, 5 ]
+
+console.log( values === copy );
+// returns true
 ```
 
 
@@ -2095,7 +2142,7 @@ Computes the *n*% midsummary of a numeric `array`. `n` exists on the interval `[
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
-var ms = compute.midsummary( data );
+var ms = compute.midsummary( data, 0.25 );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` options flag to `true`.
@@ -2142,6 +2189,58 @@ var umm = compute.umidmean( data );
 ```
 
 If the input `array` is already sorted in __ascending__ order, set the `sorted` flag to `true`.
+
+
+<a name="truncmean"></a>
+#### [compute.truncmean( arr, discard[, opts] )](https://github.com/compute-io/truncmean)
+
+Computes the [truncated mean](http://en.wikipedia.org/wiki/Truncated_mean) of an `array`. The `discard` parameter specifies how many values are excluded from both ends of the input `array` when computing the statistic. `discard` may either be expressed as a percentage on the interval `[0,0.5]` or as an `integer` less than half the input `array` length.
+
+``` javascript
+var data = [ 2, 4, 5, 3, 8, 2, 4, 4, 100, 0 ];
+
+var mu = compute.truncmean( data, 0.1 );
+// returns 4
+```
+
+If the input `array` is already sorted in __ascending__ order, set the `sorted` option to `true`.
+
+``` javascript
+var data = [ 0, 2, 2, 3, 4, 4, 4, 5, 8, 100 ];
+
+var mu = compute.truncmean( data, 2, {
+	'sorted': true
+});
+// returns ~3.67
+```
+
+For non-numeric `arrays`, provide an accessor `function` for accessing numeric `array` values.
+
+``` javascript
+var data = [
+    {'x':2},
+    {'x':4},
+    {'x':5},
+    {'x':3},
+    {'x':8},
+    {'x':2},
+    {'x':4},
+    {'x':4},
+    {'x':100},
+    {'x':0}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var mu = compute.truncmean( data, 0.1, {
+	'accessor': getValue
+});
+// returns 4
+```
+
+For additional options, see [compute-truncmean](https://github.com/compute-io/truncmean).
 
 
 <a name="trimean"></a>

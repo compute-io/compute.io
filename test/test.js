@@ -173,6 +173,7 @@ describe( 'compute.io', function tests() {
 		'midmean',
 		'lmidmean',
 		'umidmean',
+		'truncmean',
 		'trimean',
 		'skewness',
 		'kurtosis',
