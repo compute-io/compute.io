@@ -2479,15 +2479,15 @@ $ make view-cov
 To contribute to [compute.io](https://github.com/compute-io), see the contributing [guide](https://github.com/compute-io/contributing).
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
-Copyright &copy; 2014. Athan Reines.
+Copyright &copy; 2014-2015. Athan Reines.
 
 
 
