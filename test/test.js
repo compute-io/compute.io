@@ -45,6 +45,7 @@ describe( 'compute.io', function tests() {
 		// Array creation:
 		'linspace',
 		'incrspace',
+		'indexspace',
 		'logspace',
 		'datespace',
 		'incrdatespace',

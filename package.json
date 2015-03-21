@@ -89,6 +89,7 @@
     "compute-incrstdev": "^1.0.0",
     "compute-incrsum": "^1.0.0",
     "compute-incrvariance": "^1.0.0",
+    "compute-indexspace": "^1.0.0",
     "compute-iqr": "^1.1.0",
     "compute-isfinite": "^1.0.0",
     "compute-isinf": "^1.0.0",

@@ -17,6 +17,7 @@ Compute.io
 	-	[Array Creation](#array-creation)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
+		*	[indexspace( str, len )](#indexspace)
 		*	[logspace( a, b, length )](#logspace)
 		*	[datespace( start, stop, length, opts )](#datespace)
 		*	[incrdatespace( start, stop, increment, opts )](#incrdatespace)
@@ -100,9 +101,9 @@ Compute.io
 			*	[csum( arr )](#csum)
 		*	[Product](#stats-product)
 			*	[prod( arr, accessor )](#prod)
-			*	[nanprod( arr, accessor)](#nanprod)
-			*	[mprod( arr, window, accessor)](#mprod)
-			*	[cprod( arr, accessor)](#cprod)
+			*	[nanprod( arr, accessor )](#nanprod)
+			*	[mprod( arr, window, accessor )](#mprod)
+			*	[cprod( arr, accessor )](#cprod)
 		*	[Arithmetic Mean](#stats-mean)
 			*	[mean( arr )](#mean)
 			*	[nanmean( arr )](#nanmean)
@@ -295,6 +296,62 @@ Generates a linearly spaced numeric `array`. If an `increment` is not provided, 
 var arr = compute.incrspace( 0, 11, 2 );
 // returns [ 0, 2, 4, 6, 8, 10 ]
 ```
+
+
+<a name="indexspace"></a>
+#### [compute.indexspace( str, len )](https://github.com/compute-io/indexspace)
+
+Generates a linearly spaced index `array` from a subsequence `string`. `len` specifies the output index `array` length.
+
+``` javascript
+var arr = compute.indexspace( ':', 5 );
+// returns [ 0, 1, 2, 3, 4 ]
+
+arr = compute.indexspace( '2:', 5 );
+// returns [ 2, 3, 4 ]
+
+arr = compute.indexspace( '1:4:2', 5 );
+// returns [ 1, 3 ]
+
+arr = compute.indexspace( '-3:', 5 );
+// returns [ 2, 3, 4 ];
+
+arr = compute.indexspace( ':-2', 5 );
+// returns [ 0, 1, 2 ]
+
+arr = compute.indexspace( ':', 0 );
+// returns []
+```
+
+The subsequence `string` syntax is similar to Python's [slice](https://docs.python.org/2/tutorial/introduction.html) notation.
+
+``` javascript
+var str = '<start>:<stop>:<increment>';
+```
+
+The method also recognizes the `end` keyword, which refers to the last index; i.e., `len-1`. If specified as the `stop` index, `end` is __inclusive__ and equivalent to `<start>::<increment>`.
+
+``` javascript
+arr = compute.indexspace( 'end::-1', 5 );
+// returns [ 4, 3, 2, 1, 0 ]
+
+arr = compute.indexspace( ':end', 5 );
+// returns [ 0, 1, 2, 3, 4 ]
+```
+
+Basic arithmetic (subtraction and division) may be performed on the `end` keyword. The result from division is __rounded up__ to the next integer.
+
+``` javascript
+arr = compute.indexspace( 'end-2::-1', 5 );
+// returns [ 2, 1, 0 ];
+
+arr = compute.indexspace( ':end/2', 5 );
+// returns [ 0, 1 ]
+```
+
+For further details about syntax and additional examples, see [compute-indexspace](https://github.com/compute-io/indexspace).
+
+
 
 
 <a name="logspace"></a>
