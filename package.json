@@ -136,7 +136,7 @@
     "compute-nanquantiles": "^1.0.0",
     "compute-nanrange": "^1.0.0",
     "compute-nanstdev": "^1.0.0",
-    "compute-nansum": "^1.0.0",
+    "compute-nansum": "^1.1.0",
     "compute-nanvariance": "^1.0.0",
     "compute-neq": "^1.0.0",
     "compute-pcorr": "^1.0.0",

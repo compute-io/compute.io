@@ -94,7 +94,7 @@ Compute.io
 			*	[nanrange( arr, accessor )](#nanrange)
 		*	[Sum](#stats-sum)
 			*	[sum( arr, accessor )](#sum)
-			*	[nansum( arr )](#nansum)
+			*	[nansum( arr, accessor )](#nansum)
 			*	[incrsum()](#incrsum)
 			*	[msum( arr, window, opts )](#msum)
 			*	[incrmsum( window )](#incrmsum)
@@ -1342,7 +1342,7 @@ var sum = compute.sum( data, getValue );
 <a name="nansum"></a>
 #### [compute.nansum( arr )](https://github.com/compute-io/nansum)
 
-Computes the sum of an `array` ignoring any non-numeric values.
+Computes the sum of an `array` ignoring non-numeric values.
 
 ``` javascript
 var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
@@ -1350,6 +1350,28 @@ var data = [ 2, NaN, 4, 2, 7, NaN, 3 ];
 var sum = compute.nansum( data );
 // returns 18
 ```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,NaN],
+	[3,4],
+	[4,2],
+	[5,7],
+	[6,NaN],
+	[7,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var sum = compute.nansum( data, getValue );
+// returns 18
+```
+
 
 <a name="incrsum"></a>
 #### [compute.incrsum()](https://github.com/compute-io/incrsum)
