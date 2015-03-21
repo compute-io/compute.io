@@ -162,7 +162,7 @@
     "compute-umidmean": "^1.0.1",
     "compute-unique": "^1.0.0",
     "compute-unzip": "^1.0.1",
-    "compute-variance": "^1.0.0",
+    "compute-variance": "^1.1.0",
     "compute-wmean": "^1.0.0",
     "compute-zip": "^1.1.2"
   },

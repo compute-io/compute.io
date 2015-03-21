@@ -122,7 +122,7 @@ Compute.io
 			*	[qmean( arr )](#qmean)
 			*	[nanqmean( arr )](#nanqmean)
 		*	[Variance](#stats-variance)
-			*	[variance( arr )](#variance)
+			*	[variance( arr, opts )](#variance)
 			*	[nanvariance( arr )](#nanvariance)
 			*	[incrvariance()](#incrvariance)
 			*	[mvariance( arr, window )](#mvariance)
@@ -1824,14 +1824,47 @@ var qmean = compute.nanqmean( data );
 <a name="stats-variance"></a>
 
 <a name="variance"></a>
-#### [compute.variance( arr )](https://github.com/compute-io/variance)
+#### [compute.variance( arr[, opts] )](https://github.com/compute-io/variance)
 
-Computes the sample variance over a numeric `array`.
+Computes the variance of an `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
 var s2 = compute.variance( data );
+// returns 4.3
+```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,4],
+	[3,2],
+	[4,7],
+	[5,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var s2 = compute.variance( data, {
+	'accessor': getValue
+});
+// returns 4.3
+```
+
+To compute the population variance (or a *biased* sample variance), set the `bias` option to `true`
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var value = compute.variance( data, {
+	'bias': true
+});
+// returns 3.44
 ```
 
 
