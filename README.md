@@ -113,7 +113,7 @@ Compute.io
 		*	[Weighted Mean](#stats-wmean)
 			*	[wmean( arr, weights )](#wmean)
 		*	[Geometric Mean](#stats-gmean)
-			*	[gmean( arr )](#gmean)
+			*	[gmean( arr, accessor )](#gmean)
 			*	[nangmean( arr )](#nangmean)
 		*	[Harmonic Mean](#stats-hmean)
 			*	[hmean( arr )](#hmean)
@@ -1747,14 +1747,34 @@ var wmean = compute.wmean( data, weights );
 <a name="stats-gmean"></a>
 
 <a name="gmean"></a>
-#### [compute.gmean( arr )](https://github.com/compute-io/gmean)
+#### [compute.gmean( arr[, accessor] )](https://github.com/compute-io/gmean)
 
-Computes the geometric mean of a numeric `array`.
+Computes the geometric mean of an `array`. For numeric `arrays`,
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
 var gmean = compute.gmean( data );
+// returns ~3.2
+```
+
+For non-numeric `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	[1,2],
+	[2,4],
+	[3,2],
+	[4,7],
+	[5,3]
+];
+
+function getValue( d ) {
+	return d[ 1 ];
+}
+
+var gmean = compute.gmean( data, getValue );
+// returns ~3.2
 ```
 
 
