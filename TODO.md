@@ -85,7 +85,7 @@ Modules requiring accessor fcns...
 
 1. abs
 2. sqrt
-3. signum
+3. 
 4. erf
 5. erfc
 6. erfinv

@@ -30,7 +30,7 @@ Compute.io
 	-	[Special Functions](#special-functions)
 		*	[abs( arr )](#abs)
 		*	[sqrt( arr )](#sqrt)
-		*	[signum( x )](#signum)
+		*	[signum( x, opts )](#signum)
 		*	[erf( x )](#erf)
 		*	[erfc( x )](#erfc)
 		*	[erfinv( x )](#erfinv)
@@ -530,15 +530,43 @@ Note: mutates the input `array`.
 
 
 <a name="signum"></a>
-#### [compute.signum( x )](https://github.com/compute-io/signum)
+#### [compute.signum( x[, opts] )](https://github.com/compute-io/signum)
 
 Evaluates the signum function, where `x` may be a single `numeric` value or a numeric `array`.
 
 ``` javascript
-var data = [ -10, -1, -0, 0, 1, 10 ];
+var sgn = compute.signum( -10 );
+// returns -1
 
-var x = compute.signum( data );
+var sgns = compute.signum( [ -10, -1, -0, 0, 1, 10 ] );
+// returns [ -1, -1, -0, 0, 1, 1 ]
 ```
+
+For object `arrays`, provide an accessor `function` for accessing `numeric` values.
+
+``` javascript
+var data = [
+	[1,-10],
+	[2,-1],
+	[3,-0],
+	[4,0],
+	[5,1],
+	[6,10]
+];
+
+function getValue( d, i ) {
+	return d[ 1 ];
+}
+
+var sgns = compute.signum( data, {
+	'accessor': getValue
+});
+// returns [ -1, -1, -0, 0, 1, 1 ]
+```
+
+For additional `options`, see [compute-signum](https://gitub.com/compute-io/signum).
+
+
 
 <a name="erf"></a>
 #### [compute.erf( x )](https://github.com/compute-io/erf)
