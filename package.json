@@ -85,7 +85,7 @@
 	"compute-incrmstdev": "^1.0.0",
 	"compute-incrmsum": "^1.0.0",
 	"compute-incrmvariance": "^1.0.0",
-	"compute-incrspace": "^1.0.0",
+	"compute-incrspace": "^1.0.1",
 	"compute-incrstdev": "^1.0.0",
 	"compute-incrsum": "^1.0.0",
 	"compute-incrvariance": "^1.0.0",
