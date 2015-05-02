@@ -63,7 +63,7 @@ Compute.io
 	- 	[Sets](#sets)
 		*	[unique( arr, sorted )](#unique)
 	- 	[Discrete Mathematics](#discrete-mathematics)
-		*	[gcd( arr )](#gcd)
+		*	[gcd( arr, clbk )](#gcd)
 		*	[lcm( arr )](#lcm)
 	-	[Linear Algebra](#linear-algebra)
 		* 	[l1norm( arr )](#l1norm)
@@ -973,7 +973,7 @@ Note: mutates the input `array`.
 ### Discrete Mathematics
 
 <a name="gcd"></a>
-#### [compute.gcd( arr )](https://github.com/compute-io/gcd)
+#### [compute.gcd( arr[, accessor] )](https://github.com/compute-io/gcd)
 
 Computes the [greatest common divisor](http://en.wikipedia.org/wiki/Greatest_common_divisor) (gcd) of two or more `integers`. 
 
@@ -982,7 +982,24 @@ var val = compute.gcd( [48, 18] );
 // returns 6
 ```
 
-If provided an empty `array`, returns `null`.
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	{'x':48},
+	{'x':18},
+	{'x':30}
+];
+
+function getValue( d, i ) {
+	return d.x;
+}
+
+var val = compute.gcd( data, getValue );
+// returns 6
+```
+
+If provided an `array` with a length less than `2`, returns `null`.
 
 
 <a name="lcm"></a>
