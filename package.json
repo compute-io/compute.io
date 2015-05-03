@@ -54,7 +54,7 @@
 	"compute-cmax": "^1.0.0",
 	"compute-cmin": "^1.0.0",
 	"compute-covariance": "^1.0.0",
-	"compute-cprod": "^1.0.0",
+	"compute-cprod": "^2.0.0",
 	"compute-cross": "^1.0.0",
 	"compute-csum": "^1.0.0",
 	"compute-datespace": "^1.0.0",

@@ -103,7 +103,7 @@ Compute.io
 			*	[prod( arr, clbk )](#prod)
 			*	[nanprod( arr, clbk )](#nanprod)
 			*	[mprod( arr, window, clbk )](#mprod)
-			*	[cprod( arr, clbk )](#cprod)
+			*	[cprod( arr, opts )](#cprod)
 		*	[Arithmetic Mean](#stats-mean)
 			*	[mean( arr )](#mean)
 			*	[nanmean( arr )](#nanmean)
@@ -1622,7 +1622,7 @@ var arr = compute.mprod( data, 2, getValue );
 
 
 <a name="cprod"></a>
-#### [compute.cprod( arr[, accessor] )](https://github.com/compute-io/cprod)
+#### [compute.cprod( arr[, opts] )](https://github.com/compute-io/cprod)
 
 Computes the cumulative product of an `array`.
 
@@ -1633,7 +1633,7 @@ var arr = compute.cprod( data );
 // returns [ 2, 8, 16, 112, 336 ]
 ```
 
-For object `arrays`, provide an accessor `function` for accessing `array` values
+For object `arrays`, provide an accessor `function` for accessing numeric `array` values
 
 ``` javascript
 var data = [
@@ -1642,12 +1642,28 @@ var data = [
 	[3,3]
 ];
 
-function getValue( d ) {
+function getValue( d, i ) {
 	return d[ 1 ];
 }
 
-var arr = compute.cprod( data, getValue );
+var arr = compute.cprod( data, {
+	'accessor': getValue
+});
 // returns [ 2, 2, 6 ]
+```
+
+By default, the method returns a new `array`. To calculate the cumulative product in-place, set the `copy` option to `false` to mutate the input `array`.
+
+``` javascript
+var data = [ 2, 4, 2, 7, 3 ];
+
+var arr = compute.cprod( data, {
+	'copy': false
+});
+// returns [ 2, 8, 16, 112, 336 ]
+
+console.log( data === arr );
+// returns true
 ```
 
 
