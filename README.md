@@ -159,7 +159,7 @@ Compute.io
 			*	[covariance( arr1, arr2,..., opts )](#covariance)
 			*	[pcorr( arr1, arr2,... )](#pcorr)
 	- 	[Information Theory](#information-theory)
-		*	[hamdist( a, b )](#hamdist)
+		*	[hamdist( a, b, clbk )](#hamdist)
 		*	[tversky( a, b, opts)](#tversky)
 1. 	[Fluent Interface](#fluent-interface)
 1. 	[Tests](#tests)
@@ -2537,7 +2537,7 @@ var mat = compute.pcorr( x, y );
 ### Information Theory
 
 <a name="hamdist"></a>
-#### [compute.hamdist( a, b )](https://github.com/compute-io/hamming)
+#### [compute.hamdist( a, b[, accessor] )](https://github.com/compute-io/hamming)
 
 Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) between two sequences of equal length.
 
@@ -2546,11 +2546,41 @@ var a = 'beep',
 	b = 'boop';
 
 var dist = compute.hamdist( a, b );
+// returns 2
 
 var c = [ 4, 2, 3, 4 ],
 	d = [ 2, 4, 3, 1 ];
 
 var dist = compute.hamdist( c, d );
+// returns 3
+```
+
+To compute the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) between nested `array` values, provide an accessor `function` for accessing `array` values.
+
+``` javascript
+var a = [
+	{'x':4},
+	{'x':2},
+	{'x':3},
+	{'x':4}
+];
+
+var b = [
+	[1,2],
+	[2,4],
+	[3,3],
+	[4,1]
+];
+
+function getValue( d, i, j ) {
+	if ( j === 0 ) {
+		return d.x;
+	}
+	return d[ 1 ];
+}
+
+var dist = compute.hamdist( a, b, getValue );
+// returns 3
 ```
 
 
