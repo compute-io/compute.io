@@ -14,7 +14,7 @@ Compute.io
 		*	[find( arr, opts, clbk )](#find)
 		*	[dims( arr, max )](#dims)
 		*	[issorted( arr, clbk )](#issorted)
-		*	[flatten]( arr, opts )(#flatten)
+		*	[flatten( arr, opts )](#flatten)
 	-	[Array Creation](#array-creation)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
