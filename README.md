@@ -14,6 +14,7 @@ Compute.io
 		*	[find( arr, opts, clbk )](#find)
 		*	[dims( arr, max )](#dims)
 		*	[issorted( arr, clbk )](#issorted)
+		*	[flatten]( arr, opts )(#flatten)
 	-	[Array Creation](#array-creation)
 		*	[linspace( start, stop, length )](#linspace)
 		*	[incrspace( start, stop, increment )](#incrspace)
@@ -268,6 +269,20 @@ var bool = compute.issorted( [ 5, 4, 3, 2 ], descending );
 // returns true
 ```
 
+
+<a name="flatten"></a>
+#### [compute.flatten( arr[, options] )](https://github.com/compute-io/flatten)
+
+Flattens an `array`.
+
+``` javascript
+var arr = [ 1, [2, [3, [4, [ 5 ], 6], 7], 8], 9 ];
+
+var out = compute.flatten( arr );
+// returns [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+```
+
+For method `options`, such as limiting depth, deep copying, and function generation, see [compute-flatten](https://github.com/compute-io/flatten).
 
 
 

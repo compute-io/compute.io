@@ -41,6 +41,7 @@ describe( 'compute.io', function tests() {
 		'find',
 		'dims',
 		'issorted',
+		'flatten',
 
 		// Array creation:
 		'linspace',
