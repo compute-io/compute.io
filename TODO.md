@@ -36,32 +36,8 @@ TODO
 16. move API docs to Wiki (?)
 	- 	maybe TOC in README which links to Wiki page?
 17. [pretty exponential](https://github.com/bmcustodio/pretty-exponential)
-18. (almost) every fcn should accept an accessor and an opt to return a copy
-	- 	default now is mainly mutation with example showing copy
-	-	currently rely on data always being a simple array; limits utility when data often stored as array of objects
-
-	``` javascript
-	var opts = {
-		'accessor': foo,
-		'copy': true
-	};
-	```
-
-	- 	ensure accessor check does __not__ occur every iter; duplicate procedure if need be
-		- e.g., 
-
-		``` javascript
-		if ( clbk ) {
-			/* procedure 1 */
-		} else {
-			/* procedure 2 */
-		}
-		```
-
-	- 	when provided an accessor, returned array should be a new array (no mutation!)
-		* 	maybe, maybe not
-19. `erf` fcns should, by default, mutate!
-	-	or not; option to return a `copy`.
+18. 
+19. 
 20. 
 21. does `Product` belong in `stats`? dido for `sum`?
 	-	possibly move to arithmetic

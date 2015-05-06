@@ -25,7 +25,7 @@ Compute.io
 		*	[zip( arr1, arr2,..., opts )](#zip)
 		*	[unzip( arr, idx )](#unzip)
 	- 	[Sorting and Reshaping Arrays](#sorting-and-reshaping-arrays)
-		*	[reverse( arr )](#reverse)
+		*	[reverse( arr, opts )](#reverse)
 		*	[shuffle( arr )](#shuffle)
 		*	[circshift( x, k )](#circshift)
 	-	[Special Functions](#special-functions)
@@ -467,18 +467,30 @@ var out = compute.unzip( arr, [0,2] );
 ### Sorting and Reshaping Arrays
 
 <a name="reverse"></a>
-#### [compute.reverse( arr )](https://github.com/compute-io/reverse)
+#### [compute.reverse( arr[, opts] )](https://github.com/compute-io/reverse)
 
-Reverses an `array` in place.
+Reverses an `array`.
 
 ``` javascript
 var arr = [ 1, 2, 3, 4 ];
 
-compute.reverse( arr );
+var out = compute.reverse( arr );
 // returns [ 4, 3, 2, 1 ]
 ```
 
-Note: the `array` is mutated.
+By default, the input `array` is __mutated__. To return a new `array`, set the `copy` option to `true`.
+
+``` javascript
+var arr = [ 1, 2, 3, 4 ];
+
+var out = compute.reverse( arr, {
+	'copy': true
+});
+// returns [ 4, 3, 2, 1 ];
+
+console.log( arr === out );
+// returns false
+```
 
 
 <a name="shuffle"></a>

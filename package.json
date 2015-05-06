@@ -148,7 +148,7 @@
     "compute-quantiles": "^1.1.0",
     "compute-rad2deg": "^1.0.0",
     "compute-range": "^1.1.0",
-    "compute-reverse": "^1.0.0",
+    "compute-reverse": "^1.1.0",
     "compute-roundn": "^1.0.3",
     "compute-shuffle": "^1.0.0",
     "compute-signum": "^1.1.0",
