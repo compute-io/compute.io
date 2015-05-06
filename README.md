@@ -10,7 +10,7 @@ Compute.io
 1. 	[Installation](#installation)
 1. 	[Usage](#usage)
 	- 	[Utilities](#utilities)
-		*	[polyval( coef, x )](#polyval)
+		*	[polyval( coef, x, opts )](#polyval)
 		*	[find( arr, opts, clbk )](#find)
 		*	[dims( arr, max )](#dims)
 		*	[issorted( arr, clbk )](#issorted)
@@ -192,15 +192,40 @@ The compute module has the following methods...
 ### Utilities
 
 <a name="polyval"></a>
-#### [compute.polyval( coef, x )](https://github.com/compute-io/polynomial)
+#### [compute.polyval( coef, x[, opts] )](https://github.com/compute-io/polynomial)
 
-Evaluates a polynomial with coefficients `coef`, where `x` may be a single `numeric` value or an `array` of numeric values.
+Evaluates a polynomial whose coefficients are defined by `coef`. `x` may be either a single `numeric` value or an `array` of values at which to evaluate to the polynomial.
 
 ``` javascript
 var coef = [ 4, 2, 6, -17 ];
 
-var x = compute.polyval( coef, [ 10, -3] );
+var vals = compute.polyval( coef, [ 10, -3] );
+// returns [ 4243, -125 ]
 ```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values.
+
+``` javascript
+var coefs = [ 4, 2, 6, -17 ];
+
+var data = [
+    ['beep', 10],
+    ['boop', -3]
+];
+
+function getValue( d, i ) {
+    return d[ 1 ];
+}
+
+var vals = compute.polyval( coefs, data, {
+    'accessor': getValue
+});
+// returns [ 4243, -125 ]
+```
+
+For additional `options`, see [compute-polynomial](https://github.com/compute-io/polynomial).
+
+
 
 
 <a name="find"></a>

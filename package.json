@@ -141,7 +141,7 @@
     "compute-nanvariance": "^1.0.0",
     "compute-neq": "^1.0.0",
     "compute-pcorr": "^1.0.0",
-    "compute-polynomial": "^1.0.0",
+    "compute-polynomial": "^1.1.0",
     "compute-prod": "^1.0.0",
     "compute-qmean": "^1.0.0",
     "compute-quantile": "^1.0.0",
