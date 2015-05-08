@@ -65,7 +65,7 @@ Compute.io
 		*	[unique( arr, sorted )](#unique)
 	- 	[Discrete Mathematics](#discrete-mathematics)
 		*	[gcd( arr, clbk )](#gcd)
-		*	[lcm( arr )](#lcm)
+		*	[lcm( arr, clbk )](#lcm)
 	-	[Linear Algebra](#linear-algebra)
 		* 	[l1norm( arr )](#l1norm)
 		* 	[l2norm( arr )](#l2norm)
@@ -1051,13 +1051,14 @@ var val = compute.gcd( data, getValue );
 // returns 6
 ```
 
-If provided an `array` with a length less than `2`, returns `null`.
+If provided an `array` with a length less than `2`, the method returns `null`.
 
-Note that the method also provides a variadic interface. See [compute-gcd](https://github.com/compute-io/gcd) for additional details.
+__Note__: the method also provides a variadic interface. See [compute-gcd](https://github.com/compute-io/gcd) for additional details.
+
 
 
 <a name="lcm"></a>
-#### [compute.lcm( arr )](https://github.com/compute-io/lcm)
+#### [compute.lcm( arr[, accessor] )](https://github.com/compute-io/lcm)
 
 Computes the [least common multiple](http://en.wikipedia.org/wiki/Least_common_multiple) (lcm) of two or more `integers`. 
 
@@ -1066,7 +1067,26 @@ var val = compute.lcm( [21, 6] );
 // returns 42
 ```
 
-If provided an empty `array`, returns `null`.
+For object `arrays`, provide an accessor `function` for accessing `array` values
+
+``` javascript
+var data = [
+	{'x':8},
+	{'x':12},
+	{'x':16}
+];
+
+function getValue( d, i ) {
+	return d.x;
+}
+
+var val = compute.lcm( data, getValue );
+// returns 48
+```
+
+If provided an `array` with a length less than `2`, the method returns `null`.
+
+__Note__: the method also provides a variadic interface. See [compute-lcm](https://github.com/compute-io/lcm) for additional details.
 
 
 

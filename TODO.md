@@ -86,7 +86,7 @@ Modules requiring accessor fcns...
 25. deg2rad
 26. rad2deg
 27. 
-28. lcm (?)
+28. 
 29. l1norm
 30. l2norm
 31. linfnorm
