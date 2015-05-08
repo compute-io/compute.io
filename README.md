@@ -1053,6 +1053,8 @@ var val = compute.gcd( data, getValue );
 
 If provided an `array` with a length less than `2`, returns `null`.
 
+Note that the method also provides a variadic interface. See [compute-gcd](https://github.com/compute-io/gcd) for additional details.
+
 
 <a name="lcm"></a>
 #### [compute.lcm( arr )](https://github.com/compute-io/lcm)
