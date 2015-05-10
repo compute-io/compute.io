@@ -71,7 +71,7 @@
     "compute-find": "^1.0.0",
     "compute-flatten": "^1.0.0",
     "compute-gcd": "^1.2.0",
-    "compute-geq": "^1.0.0",
+    "compute-geq": "^1.1.0",
     "compute-gmean": "^1.1.0",
     "compute-gt": "^1.1.0",
     "compute-hamming": "^1.1.0",

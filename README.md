@@ -47,7 +47,7 @@ Compute.io
 		* 	[eq( arr, x, opts)](#eq)
 		* 	[neq( arr, x, opts)](#neq)
 		*	[gt( arr, x, opts )](#gt)
-		*	[geq( arr, x )](#geq)
+		*	[geq( arr, x, opts )](#geq)
 		*	[lt( arr, x )](#lt)
 		*	[leq( arr, x )](#leq)
 	-	[Logical Operations](#logical-operations)
@@ -891,11 +891,11 @@ For additional `options`, see [compute-gt](https://github.com/compute-io/gt).
 
 
 <a name="geq"></a>
-#### [compute.geq( arr, x )](https://github.com/compute-io/geq)
+#### [compute.geq( arr, x[, opts] )](https://github.com/compute-io/geq)
 
-Computes an element-wise comparison (greater than or equal to) of an `array`, where `x` may either be an `array` of equal length or a single value (`number` or `string`).
+Computes an element-wise comparison (greater than or equal to) for each input `array` element. `x` may either be an `array` of equal length or a single value (`number` or `string`).
 
-The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is greater than or equal to a compared value and `0` means that an element is __not__ greater than or equal to a compared value.
+The function returns an `array` with a length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is greater than or equal to a compared value and `0` means that an element is __not__ greater than or equal to a compared value.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ],
@@ -907,6 +907,64 @@ out = compute.geq( data, 3.14 );
 out = compute.geq( data, [3, 5, 1, 7, 4 ] );
 // returns [ 0, 0, 1, 1, 0 ]
 ```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values.
+
+``` javascript
+var data = [
+	['beep', 5],
+	['boop', 3],
+	['bip', 8],
+	['bap', 3],
+	['baz', 2]
+];
+
+function getValue( d, i ) {
+	return d[ 1 ];
+}
+
+var out = compute.geq( data, 3, {
+	'accessor': getValue
+});
+// returns [ 1, 1, 1, 1, 0 ]
+```
+
+When comparing values between two object `arrays`, provide an accessor `function` which accepts `3` arguments.
+
+``` javascript
+var data = [
+	['beep', 5],
+	['boop', 3],
+	['bip', 8],
+	['bap', 3],
+	['baz', 2]
+];
+
+var arr = [
+	{'x': 4},
+	{'x': 3},
+	{'x': 6},
+	{'x': 5},
+	{'x': 3}
+];
+
+function getValue( d, i, j ) {
+	if ( j === 0 ) {
+		return d[ 1 ];
+	}
+	return d.x;
+}
+
+var out = compute.geq( data, arr, {
+	'accessor': getValue
+});
+// returns [ 1, 1, 1, 0, 0 ]
+```
+
+For additional `options`, see [compute-geq](https://github.com/compute-io/geq).
+
+
+
 
 
 <a name="lt"></a>

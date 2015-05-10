@@ -75,7 +75,7 @@ Modules requiring accessor fcns...
 14. eq
 15. neq
 16. 
-17. geq
+17. 
 18. lt
 19. leq
 20. isnumeric
