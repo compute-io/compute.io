@@ -68,7 +68,7 @@ Compute.io
 		*	[lcm( arr, clbk )](#lcm)
 	-	[Linear Algebra](#linear-algebra)
 		* 	[l1norm( arr )](#l1norm)
-		* 	[l2norm( arr )](#l2norm)
+		* 	[l2norm( arr, clbk )](#l2norm)
 		* 	[linfnorm( arr )](#linfnorm)
 		* 	[lpnorm( arr )](#lpnorm)
 		*	[dot( x, y, clbk )](#dot)
@@ -1105,15 +1105,38 @@ var norm = compute.l1norm( data );
 ```
 
 <a name="l2norm"></a>
-#### [compute.l2norm( arr )](https://github.com/compute-io/l2norm)
+#### [compute.l2norm( arr[, accessor] )](https://github.com/compute-io/l2norm)
 
-Computes the _L2_ norm (Euclidean norm) of an `array` of values.
+Computes the _L2_ norm (Euclidean norm) of an `array`.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ];
 
 var norm = compute.l2norm( data );
+// returns ~9.06
 ```
+
+For object `arrays`, provide an accessor `function` for accessing `numeric` values.
+
+``` javascript
+var data = [
+	{'x':2},
+	{'x':4},
+	{'x':2},
+	{'x':7},
+	{'x':3}
+];
+
+function getValue( d, i ) {
+	return d.x;
+}
+
+var norm = compute.l2norm( data, getValue );
+// returns ~9.06
+```
+
+If provided an empty `array`, the method returns `null`.
+
 
 
 <a name="linfnorm"></a>

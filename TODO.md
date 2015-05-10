@@ -88,7 +88,7 @@ Modules requiring accessor fcns...
 27. 
 28. 
 29. l1norm
-30. l2norm
+30. 
 31. linfnorm
 32. 
 33. cross
