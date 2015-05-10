@@ -90,7 +90,7 @@ Modules requiring accessor fcns...
 29. l1norm
 30. l2norm
 31. linfnorm
-32. dot
+32. 
 33. cross
 34. ...all stats modules
 35. 

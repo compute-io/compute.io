@@ -71,7 +71,7 @@ Compute.io
 		* 	[l2norm( arr )](#l2norm)
 		* 	[linfnorm( arr )](#linfnorm)
 		* 	[lpnorm( arr )](#lpnorm)
-		*	[dot( x, y )](#dot)
+		*	[dot( x, y, clbk )](#dot)
 		*	[cross( x, y )](#cross)
 	- 	[Statistics](#statistics)
 		*	[Min](#stats-min)
@@ -1141,13 +1141,39 @@ var norm = compute.lpnorm( data, 5 );
 
 
 <a name="dot"></a>
-#### [compute.dot( x, y )](https://github.com/compute-io/dot)
+#### [compute.dot( x, y[, accessor] )](https://github.com/compute-io/dot)
 
 Computes the dot product between two `arrays` of equal length.
 
 ``` javascript
 var val = compute.dot( [1,2,3], [4,5,6] );
+// returns 32
 ```
+
+For object arrays, provide an accessor `function` for accessing `numeric` values.
+
+``` javascript
+function getValue( d, i, j ) {
+	if ( j === 0 ) {
+		return d.x;
+	}
+	return d;
+}
+
+var x = [
+	{'x':1},
+	{'x':2},
+	{'x':3}
+];
+
+var y = [ 4, 5, 6 ];
+
+var val = compute.dot( x, y, getValue );
+// returns 32
+```
+
+If provided empty `arrays`, the method returns `null`.
+
 
 
 <a name="cross"></a>
