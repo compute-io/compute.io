@@ -73,7 +73,7 @@
     "compute-gcd": "^1.2.0",
     "compute-geq": "^1.0.0",
     "compute-gmean": "^1.1.0",
-    "compute-gt": "^1.0.0",
+    "compute-gt": "^1.1.0",
     "compute-hamming": "^1.1.0",
     "compute-hmean": "^1.0.0",
     "compute-hypot": "^1.0.0",
