@@ -48,7 +48,7 @@ Compute.io
 		* 	[neq( arr, x, opts)](#neq)
 		*	[gt( arr, x, opts )](#gt)
 		*	[geq( arr, x, opts )](#geq)
-		*	[lt( arr, x )](#lt)
+		*	[lt( arr, x, opts )](#lt)
 		*	[leq( arr, x )](#leq)
 	-	[Logical Operations](#logical-operations)
 		*	[isnumeric( arr )](#isnumeric)
@@ -968,11 +968,11 @@ For additional `options`, see [compute-geq](https://github.com/compute-io/geq).
 
 
 <a name="lt"></a>
-#### [compute.lt( arr, x )](https://github.com/compute-io/lt)
+#### [compute.lt( arr, x[, opts] )](https://github.com/compute-io/lt)
 
-Computes an element-wise comparison (less than) of an `array`, where `x` may either be an `array` of equal length or a single value (`number` or `string`).
+Computes an element-wise comparison (less than) for each input `array` element. `x` may either be an `array` of equal length or a single value (`number` or `string`).
 
-The function returns an `array` with length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is less than a compared value and `0` means that an element is __not__ less than a compared value.
+The function returns an `array` with a length equal to that of the input `array`. Each output `array` element is either `0` or `1`. A value of `1` means that an element is less than a compared value and `0` means that an element is __not__ less than a compared value.
 
 ``` javascript
 var data = [ 2, 4, 2, 7, 3 ],
@@ -984,6 +984,62 @@ out = compute.lt( data, 3.14 );
 out = compute.lt( data, [3, 5, 1, 4, 4 ] );
 // returns [ 1, 1, 0, 0, 1 ]
 ```
+
+For object `arrays`, provide an accessor `function` for accessing `array` values.
+
+``` javascript
+var data = [
+	['beep', 2],
+	['boop', 4],
+	['bip', 2],
+	['bap', 7],
+	['baz', 3]
+];
+
+function getValue( d, i ) {
+	return d[ 1 ];
+}
+
+var out = compute.lt( data, 3.14, {
+	'accessor': getValue
+});
+// returns [ 1, 0, 1, 0, 1 ]
+```
+
+When comparing values between two object `arrays`, provide an accessor `function` which accepts `3` arguments.
+
+``` javascript
+var data = [
+	['beep', 5],
+	['boop', 3],
+	['bip', 8],
+	['bap', 3],
+	['baz', 2]
+];
+
+var arr = [
+	{'x': 4},
+	{'x': 5},
+	{'x': 6},
+	{'x': 5},
+	{'x': 3}
+];
+
+function getValue( d, i, j ) {
+	if ( j === 0 ) {
+		return d[ 1 ];
+	}
+	return d.x;
+}
+
+var out = compute.lt( data, arr, {
+	'accessor': getValue
+});
+// returns [ 0, 1, 0, 1, 1 ]
+```
+
+For additional `options`, see [compute-lt](https://github.com/compute-io/lt).
+
 
 
 <a name="leq"></a>
