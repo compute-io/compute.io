@@ -102,7 +102,7 @@
     "compute-l1norm": "^1.0.0",
     "compute-l2norm": "^1.1.0",
     "compute-lcm": "^1.1.0",
-    "compute-leq": "^1.0.0",
+    "compute-leq": "^1.1.0",
     "compute-linfnorm": "^1.0.0",
     "compute-linspace": "^1.0.0",
     "compute-lmidmean": "^1.0.1",
