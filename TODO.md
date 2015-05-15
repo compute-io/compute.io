@@ -66,10 +66,10 @@ Modules requiring accessor fcns...
 5. erfc
 6. erfinv
 7. erfcinv
-8. add
-9. subtract
+8. 
+9. 
 10. multiply
-11. divide
+11. 
 12. roundn
 13. diff
 14. eq
