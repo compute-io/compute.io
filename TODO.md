@@ -33,8 +33,7 @@ TODO
 	-	weighted
 	-	moving
 	- 	multivariate
-16. move API docs to Wiki (?)
-	- 	maybe TOC in README which links to Wiki page?
+16. 
 17. [pretty exponential](https://github.com/bmcustodio/pretty-exponential)
 18. 
 19. 
