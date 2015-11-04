@@ -5,6 +5,15 @@
 # Set the node.js environment to test:
 NODE_ENV ?= test
 
+# Kernel name:
+KERNEL ?= $(shell uname -s)
+
+ifeq ($(KERNEL), Darwin)
+	OPEN ?= open
+else
+	OPEN ?= xdg-open
+endif
+
 
 # NOTES #
 
@@ -30,7 +39,7 @@ ISTANBUL_HTML_REPORT_PATH ?= $(ISTANBUL_OUT)/lcov-report/index.html
 # JSHINT #
 
 JSHINT ?= ./node_modules/.bin/jshint
-JSHINT_REPORTER ?= ./node_modules/jshint-stylish/stylish.js
+JSHINT_REPORTER ?= ./node_modules/jshint-stylish
 
 
 
@@ -98,8 +107,7 @@ test-istanbul-mocha: node_modules
 view-cov: view-istanbul-report
 
 view-istanbul-report:
-	open $(ISTANBUL_HTML_REPORT_PATH)
-
+	$(OPEN) $(ISTANBUL_HTML_REPORT_PATH)
 
 
 # LINT #
@@ -116,7 +124,7 @@ lint-jshint: node_modules
 
 # NODE #
 
-# Installing node_modules:
+# Install node_modules:
 .PHONY: install
 
 install:

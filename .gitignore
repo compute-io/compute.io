@@ -1,4 +1,8 @@
 
+# Files #
+#########
+
+
 # Directories #
 ###############
 reports/
@@ -12,6 +16,28 @@ build/
 *.exe
 *.o
 *.so
+*.slo
+*.lo
+*.obj
+*.dylib
+*.dll
+*.lai
+*.la
+*.a
+*.lib
+*.ko
+*.elf
+
+# Precompiled headers #
+#######################
+*.gch
+*.pch
+
+# Executables #
+###############
+*.exe
+*.out
+*.app
 
 # Packages #
 ############
@@ -51,12 +77,65 @@ Desktop.ini
 # Node.js #
 ###########
 /node_modules/
+pids
+*.pid
+*.seed
 
 # Matlab #
 ##########
-
-# Windows default autosave extension
 *.asv
-
-# Compiled MEX binaries (all platforms)
 *.mex*
+
+# Fortran #
+###########
+*.mod
+
+# R #
+#####
+.Rhistory
+.Rapp.history
+.Rproj.user/
+
+# TeX #
+#######
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.dvi
+*-converted-to.*
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+*.alg
+*.loa
+acs-*.bib
+*.thm
+*.nav
+*.snm
+*.vrb
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.brf
+*-concordance.tex
+*.tikz
+*-tikzDictionary
+*.idx
+*.ilg
+*.ind
+*.ist
