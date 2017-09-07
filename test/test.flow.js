@@ -3,13 +3,8 @@
 
 // MODULES //
 
-var // Expectation library:
-	chai = require( 'chai' ),
-
-	// Computation library:
+var chai = require( 'chai' ),
 	compute = require( './../lib' ),
-
-	// Module to be tested:
 	createFlow = require( './../lib/flow.js' );
 
 

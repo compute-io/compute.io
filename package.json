@@ -110,7 +110,7 @@
 	"compute-lpnorm": "^1.0.0",
 	"compute-lt": "^1.1.0",
 	"compute-max": "^1.0.0",
-	"compute-mean": "^1.0.0",
+	"compute-mean": "^2.0.0",
 	"compute-median": "^2.0.0",
 	"compute-midhinge": "^1.0.1",
 	"compute-midmean": "^1.0.3",
@@ -163,7 +163,7 @@
 	"compute-umidmean": "^1.0.1",
 	"compute-unique": "^1.0.0",
 	"compute-unzip": "^1.0.1",
-	"compute-variance": "^1.1.0",
+	"compute-variance": "^2.0.0",
 	"compute-wmean": "^1.0.0",
 	"compute-zip": "^1.1.2"
   },

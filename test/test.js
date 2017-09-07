@@ -3,10 +3,7 @@
 
 // MODULES //
 
-var // Expectation library:
-	chai = require( 'chai' ),
-
-	// Module to be tested:
+var chai = require( 'chai' ),
 	compute = require( './../lib' );
 
 
